@@ -1,7 +1,7 @@
 import sys
 import time
 import pygame
-from game import Game
+from game import Game, InvalidMoveException
 from math import floor
 from human_player import HumanPlayer
 from computer_player import ComputerPlayer
@@ -33,23 +33,35 @@ def main():
 
 def update():
     event()
-    # Tell bots to do stuff
-    for player in players:
-        if game.current_player == player.player:
-            player.make_move()
     draw()
+    if game.is_running:
+        # Tell bots to do stuff
+        for player in players:
+            if game.current_player == player.player:
+                if len(game.liberties()) == 0:
+                    game.pass_move()
+                else:
+                    player.make_move()
+                break
 
 def event():
     # Make player move
     ev = pygame.event.get()
     for event in ev:
         if event.type == pygame.MOUSEBUTTONUP:
-            pos = pygame.mouse.get_pos()
-            x, y = pos[0] // SP, pos[1] // SP
-            for player in players:
-                if game.current_player == player.player:
-                    player.make_move(x, y)
-                    break
+            if game.is_running:
+                pos = pygame.mouse.get_pos()
+                x, y = pos[0] // SP, pos[1] // SP
+                for player in players:
+                    if game.current_player == player.player:
+                        if len(game.liberties()) == 0:
+                            game.pass_move()
+                        else:
+                            try:
+                                player.make_move(x, y)
+                            except InvalidMoveException:
+                                print("Invalid move!")
+                        break
 
 def draw():
     global screen

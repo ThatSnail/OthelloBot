@@ -1,7 +1,7 @@
 class Game(object):
 
     # State
-    NONE, BLACK, WHITE = range(3)
+    NONE, BLACK, WHITE, DRAW = range(4)
 
     def __init__(self):
         self.state = [[Game.NONE for x in range(8)] for y in range(8)]
@@ -10,6 +10,7 @@ class Game(object):
         self.state[3][4] = Game.WHITE
         self.state[4][3] = Game.WHITE
         self.current_player = Game.BLACK
+        self.result = Game.NONE
 
     def is_tile(x, y):
         return (0 <= x and x < 8 and 0 <= y and y < 8)
@@ -22,7 +23,10 @@ class Game(object):
         else:
             raise Exception("Invalid other call: {0}".format(player))
 
-    def move(self, x, y, player=None):
+    def pass_move(self):
+        self.current_player = Game.other(self.current_player)
+
+    def move(self, x, y, player=None, preserve_state=False):
         if player == None:
             player = self.current_player
             self.current_player = Game.other(self.current_player)
@@ -42,11 +46,22 @@ class Game(object):
                         flip.append((nx, ny))
                     elif self.state[nx][ny] == player: # Your tile
                         for (fx, fy) in flip:
-                            self.state[fx][fy] = player
+                            if not preserve_state:
+                                self.state[fx][fy] = player
                             flipped_stone = True
                         break
             if flipped_stone:
-                self.state[x][y] = player
+                if not preserve_state:
+                    self.state[x][y] = player
+                    # Check if game is over
+                    if self.liberties(Game.BLACK) == 0 and self.liberties(Game.WHITE) == 0:
+                        black, white = self.stones(Game.BLACK), self.stones(Game.WHITE)
+                        if black > white:
+                            self.result = Game.BLACK
+                        elif white > black:
+                            self.result = Game.WHITE
+                        else:
+                            self.result = Game.DRAW
             else:
                 raise InvalidMoveException("Invalid move: ({0}, {1}) doesn't flip any stones".format(x, y))
         else:
@@ -56,20 +71,12 @@ class Game(object):
         if player == None:
             player = self.current_player
         
-        # Save the game state
-        old_state = [row[:] for row in self.state]
-        old_player = self.current_player
-
         # Simulate move
         valid = True
         try:
-            self.move(x, y, player)
+            self.move(x, y, player, preserve_state=True)
         except InvalidMoveException:
             valid = False
-        finally:
-            # Restore state
-            self.state = old_state
-            self.player = old_player
         return valid
 
     def liberties(self, player=None, state=None):
@@ -82,6 +89,19 @@ class Game(object):
             if self.is_valid_move(x, y, player):
                 liberties.append((x, y))
         return liberties
+
+    def stones(self, player, state=None):
+        if state == None:
+            state = self.state
+        stones = 0
+        for (x, y) in [(x, y) for x in range(8) for y in range(8)]:
+            if state[x][y] == player:
+                stones += 1
+        return stones
+
+    @property
+    def is_running(self):
+        return self.result == Game.NONE
 
 class InvalidMoveException(Exception):
     pass
