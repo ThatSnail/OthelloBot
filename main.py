@@ -32,9 +32,14 @@ def main():
 
 def update():
     event()
+    # Tell bots to do stuff
+    for player in players:
+        if game.current_player == player.player:
+            player.make_move()
     draw()
 
 def event():
+    # Make player move
     ev = pygame.event.get()
     for event in ev:
         if event.type == pygame.MOUSEBUTTONUP:
