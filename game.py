@@ -72,7 +72,6 @@ class Game(object):
             self.player = old_player
         return valid
 
-    @property
     def liberties(self, player=None, state=None):
         if player == None:
             player = self.current_player

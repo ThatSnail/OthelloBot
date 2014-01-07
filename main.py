@@ -4,6 +4,7 @@ import pygame
 from game import Game
 from math import floor
 from human_player import HumanPlayer
+from computer_player import ComputerPlayer
 
 screen = None
 game = None
@@ -24,7 +25,7 @@ def main():
     game = Game()
     players = []
     players.append(HumanPlayer(game, Game.BLACK))
-    players.append(HumanPlayer(game, Game.WHITE))
+    players.append(ComputerPlayer(game, Game.WHITE))
 
     while True:
         update()
@@ -69,7 +70,7 @@ def draw():
         }[game.state[x][y]]()
     
     # Draw liberties
-    for (x, y) in game.liberties:
+    for (x, y) in game.liberties():
         pygame.draw.circle(screen, color_white, (x * SP + SP // 2, y * SP + SP // 2), 4)
 
     # Update
