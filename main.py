@@ -3,9 +3,11 @@ import time
 import pygame
 from game import Game
 from math import floor
+from human_player import HumanPlayer
 
 screen = None
 game = None
+players = None
 SW, SH = 400, 400
 SP = SW // 8
 color_white = (255, 255, 255)
@@ -15,11 +17,14 @@ color_green = (0, 128, 0)
 def main():
     # Init
     pygame.init()
-    global screen, game
+    global screen, game, players
     screen = pygame.display.set_mode((SW, SH))
     screen.fill(color_green)
 
     game = Game()
+    players = []
+    players.append(HumanPlayer(game, Game.BLACK))
+    players.append(HumanPlayer(game, Game.WHITE))
 
     while True:
         update()
@@ -35,7 +40,10 @@ def event():
         if event.type == pygame.MOUSEBUTTONUP:
             pos = pygame.mouse.get_pos()
             x, y = pos[0] // SP, pos[1] // SP
-            game.move(x, y)
+            for player in players:
+                if game.current_player == player.player:
+                    player.make_move(x, y)
+                    break
 
 def draw():
     global screen
