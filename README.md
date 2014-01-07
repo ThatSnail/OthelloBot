@@ -1,0 +1,4 @@
+OthelloBot
+==========
+
+Othello bot
