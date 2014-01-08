@@ -6930,8 +6930,10 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['floor'] = $p['___import___']('math.floor', null, null, false);
 	$m['HumanPlayer'] = $p['___import___']('human_player.HumanPlayer', null, null, false);
 	$m['ComputerPlayer'] = $p['___import___']('computer_player.ComputerPlayer', null, null, false);
+	$m['pyjs'] = $p['___import___']('pyjs', null);
 	$m['Widget'] = $p['___import___']('widget.Widget', null, null, false);
 	$m['USING_PYGAME'] = false;
+	$m['widget'] = null;
 	$m['screen'] = null;
 	$m['game'] = null;
 	$m['players'] = null;
@@ -6945,14 +6947,11 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['color_black'] = $p['tuple']([0, 0, 0]);
 	$m['color_green'] = $p['tuple']([0, 128, 0]);
 	$m['main'] = function() {
-		var widget;
+
 		if ($p['bool']($m['USING_PYGAME'])) {
 			$m.pygame['init']();
 			$m['screen'] = $m.pygame['display']['set_mode']($p['tuple']([$m['SW'], $m['SH']]));
 			$m['screen']['fill']($m['color_green']);
-		}
-		else {
-			widget = $m['Widget']($m['SW'], $m['SH']);
 		}
 		$m['game'] = $m['Game']();
 		$m['players'] = $p['list']([]);
@@ -7125,7 +7124,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 			$m.pygame['display']['update']();
 		}
 		else {
-			$m.widget['draw']($m['game']);
+			$m['widget']['draw']($m['game']);
 		}
 		return null;
 	};
@@ -7134,6 +7133,10 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['draw'].__bind_type__ = 0;
 	$m['draw'].__args__ = [null,null];
 	if ($p['bool']($p['op_eq']((typeof __name__ == "undefined"?$m.__name__:__name__), '__main__'))) {
+		$m.pyjd['setup']('main.html');
+		$m['widget'] = $m['Widget']($m['SW'], $m['SH']);
+		$m.RootPanel()['add']($m['widget']);
+		$m.pyjd['run']();
 		$m['main']();
 	}
 	return this;
@@ -7144,7 +7147,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 
 
 /*
-PYJS_DEPS: ['sys', 'time', 'game.Game', 'game', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'widget.Widget', 'widget']
+PYJS_DEPS: ['sys', 'time', 'game.Game', 'game', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'pyjs', 'widget.Widget', 'widget']
 */
 
 --></script>

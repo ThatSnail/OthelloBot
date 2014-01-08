@@ -5,9 +5,12 @@ from math import floor
 from human_player import HumanPlayer
 from computer_player import ComputerPlayer
 #import pygame
+import pyjs
 from widget import Widget
 
 USING_PYGAME = False
+
+widget = None
 
 screen = None
 game = None
@@ -25,8 +28,6 @@ def main():
         global screen
         screen = pygame.display.set_mode((SW, SH))
         screen.fill(color_green)
-    else:
-        widget = Widget(SW, SH)
 
     global game, players
     game = Game()
@@ -87,4 +88,8 @@ def draw():
         widget.draw(game)
 
 if __name__ == "__main__":
+    pyjd.setup("main.html")
+    widget = Widget(SW, SH)
+    RootPanel().add(widget)
+    pyjd.run()
     main()
