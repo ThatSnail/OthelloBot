@@ -3,6 +3,7 @@ from player import Player
 from game import Game
 from strategy import Strategy
 from strategy_random import RandomStrategy
+from strategy_corner import CornerStrategy
 
 class ComputerPlayer(Player):
     def make_move(self, x=None, y=None):
