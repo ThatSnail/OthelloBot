@@ -115,6 +115,7 @@ if __name__ == "__main__":
     panel = FocusPanel(Widget=main_widget.context)
     RootPanel().add(panel)
     panel.addKeyboardListener(main_widget.context)
+    panel.addClickListener(main_widget.context)
     panel.setFocus(True)
     RootPanel().add(main_widget)
     pyjd.run()
