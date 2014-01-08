@@ -13,4 +13,4 @@ class ComputerPlayer(Player):
         heuristic = RandomStrategy.apply(self.player, self.state, liberties)
         x, y = Strategy.run(heuristic)
         self.game.move(x, y)
-        sleep(0.05)
+        #sleep(0.05)
