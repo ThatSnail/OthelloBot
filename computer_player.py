@@ -1,4 +1,4 @@
-from time import sleep
+#from time import sleep
 from player import Player
 from game import Game
 from strategy import Strategy
