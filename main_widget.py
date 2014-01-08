@@ -11,7 +11,6 @@ class MainWidget(HorizontalPanel):
         self.SH = SH
         self.context = GWTCanvas(SW, SH, SW, SH)
         self.context.addStyleName("gwt-canvas")
-        setattr(self.context, "onClick", lambda: lala())
         self.add(self.context)
 
     def draw(self, game=None):

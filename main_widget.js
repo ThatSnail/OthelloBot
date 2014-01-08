@@ -25,21 +25,12 @@ $pyjs.loaded_modules['main_widget'] = function (__mod_name__) {
 				SW = arguments[1];
 				SH = arguments[2];
 			}
-			var $lambda1;
+
 			$m['HorizontalPanel']['__init__'](self);
 			self.SW = SW;
 			self.SH = SH;
 			self.context = $m['GWTCanvas'](SW, SH, SW, SH);
 			self['context']['addStyleName']('gwt-canvas');
-			var 			$lambda1 = function() {
-
-				return (typeof lala == "undefined"?$m.lala:lala)();
-			};
-			$lambda1.__name__ = '$lambda1';
-
-			$lambda1.__bind_type__ = 0;
-			$lambda1.__args__ = [null,null];
-			$p['setattr']($p['getattr'](self, 'context'), 'onClick', $lambda1);
 			self['add']($p['getattr'](self, 'context'));
 			return null;
 		}

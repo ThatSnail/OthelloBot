@@ -7,10 +7,8 @@ from human_player import HumanPlayer
 from computer_player import ComputerPlayer
 #import pygame
 from main_widget import MainWidget
-from pyjamas.ui.ClickListener import ClickHandler
 from pyjamas.ui.FocusPanel import FocusPanel
-from pyjamas.ui.KeyboardListener import KeyboardHandler
-from pyjamas.ui.RootPanel import RootPanel, RootPanelCls
+from pyjamas.ui.RootPanel import RootPanel
 
 USING_PYGAME = False
 
@@ -44,11 +42,11 @@ def main():
         #time.sleep(0.01)
 
 def update():
-    #event()
+    event()
     # Tell bots to do stuff
-    #for player in players:
-    #    if game.current_player == player.player:
-    #        player.make_move()
+    for player in players:
+        if game.current_player == player.player:
+            player.make_move()
     draw()
 
 def event():
@@ -64,8 +62,12 @@ def handle_click(x, y):
     x, y = x // SP, y // SP
     for player in players:
         if game.current_player == player.player:
-            player.make_move(x, y)
+            try:
+                player.make_move(x, y)
+            except InvalidMoveException:
+                return
             break
+    update()
 
 def draw():
     if USING_PYGAME:
@@ -95,27 +97,12 @@ def draw():
     else:
         main_widget.draw(game)
 
-class RootPanelListener(RootPanelCls, KeyboardHandler, ClickHandler):
-    def __init__(self, Parent, *args, **kwargs):
-        self.Parent = Parent
-        self.focussed = False
-        RootPanelCls.__init__(self, *args, **kwargs)
-        ClickHandler.__init__(self)
-        KeyboardHandler.__init__(self)
-
-        self.addClickListener(self)
-
-    def onClick(self, Sender):
-        self.focussed = not self.focussed
-        self.Parent.setFocus(self.focussed)
-
 if __name__ == "__main__":
     pyjd.setup("output/main.html")
     main_widget = MainWidget(SW, SH)
     panel = FocusPanel(Widget=main_widget.context)
-    setattr(panel, "onClick", lambda: burg())
-    panel.addClickListener(main_widget.context)
-    panel.setFocus(True)
+    panel.addMouseListener(main_widget.context)
+    setattr(main_widget.context, "onMouseUp", lambda sender, x, y: handle_click(x, y))
     RootPanel().add(panel)
     RootPanel().add(main_widget)
     pyjd.run()
