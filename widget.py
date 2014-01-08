@@ -1,5 +1,6 @@
 from pyjamas.ui.HorizontalPanel import HorizontalPanel
 from pyjamas.ui.Composite import Composite
+from pyjamas.Canvas.GWTCanvas import GWTCanvas
 from game import Game
 
 class Widget(Composite):

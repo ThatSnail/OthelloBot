@@ -10,6 +10,7 @@ $pyjs.loaded_modules['widget'] = function (__mod_name__) {
 
 	$m['HorizontalPanel'] = $p['___import___']('pyjamas.ui.HorizontalPanel.HorizontalPanel', null, null, false);
 	$m['Composite'] = $p['___import___']('pyjamas.ui.Composite.Composite', null, null, false);
+	$m['GWTCanvas'] = $p['___import___']('pyjamas.Canvas.GWTCanvas.GWTCanvas', null, null, false);
 	$m['Game'] = $p['___import___']('game.Game', null, null, false);
 	$m['Widget'] = (function(){
 		var $cls_definition = new Object();
@@ -63,7 +64,7 @@ $pyjs.loaded_modules['widget'] = function (__mod_name__) {
 			$m['HorizontalPanel']['__init__'](self);
 			self.SW = SW;
 			self.SH = SH;
-			self.context = (typeof GWTCanvas == "undefined"?$m.GWTCanvas:GWTCanvas)(SW, SH, SW, SH);
+			self.context = $m['GWTCanvas'](SW, SH, SW, SH);
 			self['context']['addStyleName']('gwt-canvas');
 			self['add']($p['getattr'](self, 'context'));
 			return null;
@@ -97,5 +98,5 @@ $pyjs.loaded_modules['widget'] = function (__mod_name__) {
 
 
 /*
-PYJS_DEPS: ['pyjamas.ui.HorizontalPanel.HorizontalPanel', 'pyjamas', 'pyjamas.ui', 'pyjamas.ui.HorizontalPanel', 'pyjamas.ui.Composite.Composite', 'pyjamas.ui.Composite', 'game.Game', 'game']
+PYJS_DEPS: ['pyjamas.ui.HorizontalPanel.HorizontalPanel', 'pyjamas', 'pyjamas.ui', 'pyjamas.ui.HorizontalPanel', 'pyjamas.ui.Composite.Composite', 'pyjamas.ui.Composite', 'pyjamas.Canvas.GWTCanvas.GWTCanvas', 'pyjamas.Canvas', 'pyjamas.Canvas.GWTCanvas', 'game.Game', 'game']
 */

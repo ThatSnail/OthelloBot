@@ -796,6 +796,154 @@ function $pyjs_default_args_handler($l, args, defaults_count,
 -->
 
 <script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.RadialGradientImplDefault */
+$pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplDefault'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplDefault'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplDefault'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.RadialGradientImplDefault"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.RadialGradientImplDefault>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.RadialGradientImplDefault';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['RadialGradientImplDefault'] = $pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplDefault'];
+
+
+	$m['CanvasGradientImplDefault'] = $p['___import___']('pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault', 'pyjamas.Canvas', null, false);
+	$m['RadialGradientImplDefault'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.RadialGradientImplDefault';
+		$method = $pyjs__bind_method2('__init__', function(x0, y0, r0, x1, y1, r1, c) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				r0 = arguments[3];
+				x1 = arguments[4];
+				y1 = arguments[5];
+				r1 = arguments[6];
+				c = arguments[7];
+			}
+
+			$m['CanvasGradientImplDefault']['__init__'](self);
+			self['createNativeGradientObject'](x0, y0, r0, x1, y1, r1, c);
+			return null;
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['r0'],['x1'],['y1'],['r1'],['c']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('createNativeGradientObject', function(x0, y0, r0, x1, y1, r1, c) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				r0 = arguments[3];
+				x1 = arguments[4];
+				y1 = arguments[5];
+				r1 = arguments[6];
+				c = arguments[7];
+			}
+			var gradient,ctx;
+			ctx = c['getContext']('2d');
+			gradient = ctx['createRadialGradient'](x0, y0, r0, x1, y1, r1);
+			self['setNativeGradient'](gradient);
+			return null;
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['r0'],['x1'],['y1'],['r1'],['c']]);
+		$cls_definition['createNativeGradientObject'] = $method;
+		var $bases = new Array($m['CanvasGradientImplDefault']);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('RadialGradientImplDefault', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.RadialGradientImplDefault */
+
+
+/* end module: pyjamas.Canvas.RadialGradientImplDefault */
+
+
+/*
+PYJS_DEPS: ['pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault', 'pyjamas', 'pyjamas.Canvas', 'pyjamas.Canvas.CanvasGradientImplDefault']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.LinearGradientImplDefault */
+$pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplDefault'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplDefault'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplDefault'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.LinearGradientImplDefault"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.LinearGradientImplDefault>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.LinearGradientImplDefault';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['LinearGradientImplDefault'] = $pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplDefault'];
+
+
+	$m['CanvasGradientImplDefault'] = $p['___import___']('pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault', 'pyjamas.Canvas', null, false);
+	$m['LinearGradientImplDefault'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.LinearGradientImplDefault';
+		$method = $pyjs__bind_method2('__init__', function(x0, y0, x1, y1, c) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				x1 = arguments[3];
+				y1 = arguments[4];
+				c = arguments[5];
+			}
+
+			$m['CanvasGradientImplDefault']['__init__'](self);
+			self['createNativeGradientObject'](x0, y0, x1, y1, c);
+			return null;
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['x1'],['y1'],['c']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('createNativeGradientObject', function(x0, y0, x1, y1, c) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				x1 = arguments[3];
+				y1 = arguments[4];
+				c = arguments[5];
+			}
+			var gradient,ctx;
+			ctx = c['getContext']('2d');
+			gradient = ctx['createLinearGradient'](x0, y0, x1, y1);
+			self['setNativeGradient'](gradient);
+			return null;
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['x1'],['y1'],['c']]);
+		$cls_definition['createNativeGradientObject'] = $method;
+		var $bases = new Array($m['CanvasGradientImplDefault']);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('LinearGradientImplDefault', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.LinearGradientImplDefault */
+
+
+/* end module: pyjamas.Canvas.LinearGradientImplDefault */
+
+
+/*
+PYJS_DEPS: ['pyjamas.Canvas.CanvasGradientImplDefault.CanvasGradientImplDefault', 'pyjamas', 'pyjamas.Canvas', 'pyjamas.Canvas.CanvasGradientImplDefault']
+*/
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: pyjamas.Window */
 $pyjs.loaded_modules['pyjamas.Window'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['pyjamas.Window'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Window'];
@@ -1690,6 +1838,81 @@ PYJS_DEPS: ['random.random', 'random']
 
 --></script>
 <script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.LinearGradientImplIE6 */
+$pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplIE6'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplIE6'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplIE6'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.LinearGradientImplIE6"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.LinearGradientImplIE6>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.LinearGradientImplIE6';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['LinearGradientImplIE6'] = $pyjs.loaded_modules['pyjamas.Canvas.LinearGradientImplIE6'];
+
+
+	$m['CanvasGradientImplIE6'] = $p['___import___']('pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6', 'pyjamas.Canvas', null, false);
+	$m['LinearGradientImplIE6'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.LinearGradientImplIE6';
+		$method = $pyjs__bind_method2('__init__', function(x0, y0, x1, y1) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				x1 = arguments[3];
+				y1 = arguments[4];
+			}
+
+			$m['CanvasGradientImplIE6']['__init__'](self, x0, y0, x1, y1);
+			self.type = 'gradient';
+			return null;
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['x1'],['y1']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('cloneGradient', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $iter1_nextval,$iter1_type,i,cStops,newGrad,$iter1_iter,$iter1_array,$iter1_idx;
+			newGrad = $m['LinearGradientImplIE6']($p['getattr'](self, 'startX'), $p['getattr'](self, 'startY'), $p['getattr'](self, 'endX'), $p['getattr'](self, 'endY'));
+			newGrad.startX = $p['getattr'](self, 'startX');
+			newGrad.startY = $p['getattr'](self, 'startY');
+			newGrad.endX = $p['getattr'](self, 'endX');
+			newGrad.endY = $p['getattr'](self, 'endY');
+			cStops = $p['getattr'](self, 'colorStops');
+			$iter1_iter = $p['range']($p['len'](cStops));
+			$iter1_nextval=$p['__iter_prepare']($iter1_iter,false);
+			while (typeof($p['__wrapped_next']($iter1_nextval).$nextval) != 'undefined') {
+				i = $iter1_nextval.$nextval;
+				newGrad['colorStops']['append'](cStops.__getitem__(i)['cloneColorStop']());
+			}
+			return newGrad;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['cloneGradient'] = $method;
+		var $bases = new Array($m['CanvasGradientImplIE6']);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('LinearGradientImplIE6', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.LinearGradientImplIE6 */
+
+
+/* end module: pyjamas.Canvas.LinearGradientImplIE6 */
+
+
+/*
+PYJS_DEPS: ['pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6', 'pyjamas', 'pyjamas.Canvas', 'pyjamas.Canvas.CanvasGradientImplIE6']
+*/
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: os */
 $pyjs.loaded_modules['os'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['os'].__was_initialized__) return $pyjs.loaded_modules['os'];
@@ -2188,6 +2411,94 @@ $p._print_to_console(content)
 
 --></script>
 <script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.Color */
+$pyjs.loaded_modules['pyjamas.Canvas.Color'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.Color'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.Color'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.Color"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.Color>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.Color';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['Color'] = $pyjs.loaded_modules['pyjamas.Canvas.Color'];
+
+
+	$m['Color'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.Color';
+		$method = $pyjs__bind_method2('__init__', function(r, g, b, a) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				r = arguments[1];
+				g = arguments[2];
+				b = arguments[3];
+				a = arguments[4];
+			}
+			if (typeof g == 'undefined') g=arguments.callee.__args__[4][1];
+			if (typeof b == 'undefined') b=arguments.callee.__args__[5][1];
+			if (typeof a == 'undefined') a=arguments.callee.__args__[6][1];
+			var $and1,$and3,$and2;
+			if ($p['bool'](($p['bool']($and1=(g === null))?($p['bool']($and2=(b === null))?(a === null):$and2):$and1))) {
+				self.colorStr = r;
+			}
+			else if ($p['bool']((a === null))) {
+				self.colorStr = $p['sprintf']('rgb(%d,%d,%d)', $p['tuple']([r, g, b]));
+			}
+			else {
+				self.colorStr = $p['sprintf']('rgba(%d,%d,%d,%f)', $p['tuple']([r, g, b, a]));
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['r'],['g', null],['b', null],['a', null]]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('__str__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, 'colorStr');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['__str__'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('Color', $p['tuple']($bases), $data);
+	})();
+	$m['ALPHA_GREY'] = $m['Color']('rgba(0,0,0,0.3)');
+	$m['ALPHA_RED'] = $m['Color']('rgba(255,0,0,0.3)');
+	$m['BLACK'] = $m['Color']('#000000');
+	$m['BLUE'] = $m['Color']('#318ce0');
+	$m['BLUEVIOLET'] = $m['Color']('#8a2be2');
+	$m['CYAN'] = $m['Color']('#5fa2e0');
+	$m['GREEN'] = $m['Color']('#23ef24');
+	$m['GREY'] = $m['Color']('#a9a9a9');
+	$m['LIGHTGREY'] = $m['Color']('#eeeeee');
+	$m['ORANGE'] = $m['Color']('#f88247');
+	$m['PEACH'] = $m['Color']('#ffd393');
+	$m['PINK'] = $m['Color']('#ff00ff');
+	$m['RED'] = $m['Color']('#ff0000');
+	$m['SKY_BLUE'] = $m['Color']('#c6defa');
+	$m['WHITE'] = $m['Color']('#ffffff');
+	$m['YELLOW'] = $m['Color']('yellow');
+	$m['DARK_ORANGE'] = $m['Color']('#c44607');
+	$m['BRIGHT_ORANGE'] = $m['Color']('#fb5c0c');
+	$m['DARK_BLUE'] = $m['Color']('#0c6ac1');
+	return this;
+}; /* end pyjamas.Canvas.Color */
+
+
+/* end module: pyjamas.Canvas.Color */
+
+
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: widget */
 $pyjs.loaded_modules['widget'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['widget'].__was_initialized__) return $pyjs.loaded_modules['widget'];
@@ -2200,6 +2511,7 @@ $pyjs.loaded_modules['widget'] = function (__mod_name__) {
 
 	$m['HorizontalPanel'] = $p['___import___']('pyjamas.ui.HorizontalPanel.HorizontalPanel', null, null, false);
 	$m['Composite'] = $p['___import___']('pyjamas.ui.Composite.Composite', null, null, false);
+	$m['GWTCanvas'] = $p['___import___']('pyjamas.Canvas.GWTCanvas.GWTCanvas', null, null, false);
 	$m['Game'] = $p['___import___']('game.Game', null, null, false);
 	$m['Widget'] = (function(){
 		var $cls_definition = new Object();
@@ -2253,7 +2565,7 @@ $pyjs.loaded_modules['widget'] = function (__mod_name__) {
 			$m['HorizontalPanel']['__init__'](self);
 			self.SW = SW;
 			self.SH = SH;
-			self.context = (typeof GWTCanvas == "undefined"?$m.GWTCanvas:GWTCanvas)(SW, SH, SW, SH);
+			self.context = $m['GWTCanvas'](SW, SH, SW, SH);
 			self['context']['addStyleName']('gwt-canvas');
 			self['add']($p['getattr'](self, 'context'));
 			return null;
@@ -2287,7 +2599,7 @@ $pyjs.loaded_modules['widget'] = function (__mod_name__) {
 
 
 /*
-PYJS_DEPS: ['pyjamas.ui.HorizontalPanel.HorizontalPanel', 'pyjamas', 'pyjamas.ui', 'pyjamas.ui.HorizontalPanel', 'pyjamas.ui.Composite.Composite', 'pyjamas.ui.Composite', 'game.Game', 'game']
+PYJS_DEPS: ['pyjamas.ui.HorizontalPanel.HorizontalPanel', 'pyjamas', 'pyjamas.ui', 'pyjamas.ui.HorizontalPanel', 'pyjamas.ui.Composite.Composite', 'pyjamas.ui.Composite', 'pyjamas.Canvas.GWTCanvas.GWTCanvas', 'pyjamas.Canvas', 'pyjamas.Canvas.GWTCanvas', 'game.Game', 'game']
 */
 
 --></script>
@@ -2579,6 +2891,354 @@ $pyjs.loaded_modules['pyjamas.ui.DragHandler'] = function (__mod_name__) {
 /*
 PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.ui.Event', 'pyjamas.ui']
 */
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.ui.Focus */
+$pyjs.loaded_modules['pyjamas.ui.Focus'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.ui.Focus'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.Focus'];
+	if(typeof $pyjs.loaded_modules['pyjamas.ui'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) $p['___import___']('pyjamas.ui', null);
+	var $m = $pyjs.loaded_modules["pyjamas.ui.Focus"];
+	$m.__repr__ = function() { return "<module: pyjamas.ui.Focus>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui.Focus';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.ui']['Focus'] = $pyjs.loaded_modules['pyjamas.ui.Focus'];
+
+
+	$m['pyjd'] = $p['___import___']('pyjd', 'pyjamas.ui');
+	$m['DOM'] = $p['___import___']('pyjamas.DOM', 'pyjamas.ui', null, false);
+	if ($p['bool'](!$p['bool']($p['getattr']($m['pyjd'], 'is_desktop')))) {
+
+    var focusHandler = null;
+    
+	}
+	$m['ensureFocusHandler'] = function() {
+
+ 		return null;
+	};
+	$m['ensureFocusHandler'].__name__ = 'ensureFocusHandler';
+
+	$m['ensureFocusHandler'].__bind_type__ = 0;
+	$m['ensureFocusHandler'].__args__ = [null,null];
+	$m['createFocusHandler'] = function() {
+
+ 		return null;
+	};
+	$m['createFocusHandler'].__name__ = 'createFocusHandler';
+
+	$m['createFocusHandler'].__bind_type__ = 0;
+	$m['createFocusHandler'].__args__ = [null,null];
+	$m['createFocusable0'] = function() {
+
+ 		return null;
+	};
+	$m['createFocusable0'].__name__ = 'createFocusable0';
+
+	$m['createFocusable0'].__bind_type__ = 0;
+	$m['createFocusable0'].__args__ = [null,null];
+	$m['blur'] = function(elem) {
+
+		elem['blur']();
+		return null;
+	};
+	$m['blur'].__name__ = 'blur';
+
+	$m['blur'].__bind_type__ = 0;
+	$m['blur'].__args__ = [null,null,['elem']];
+	$m['createFocusable'] = function() {
+		var e;
+		e = $m['DOM']['createDiv']();
+		e.tabIndex = 0;
+		return e;
+	};
+	$m['createFocusable'].__name__ = 'createFocusable';
+
+	$m['createFocusable'].__bind_type__ = 0;
+	$m['createFocusable'].__args__ = [null,null];
+	$m['focus'] = function(elem) {
+
+
+        try {
+            elem.focus();
+        } catch (e) {
+            // Only trap the exception if the attempt was mostly legit
+            if (!elem || !elem.focus) {
+                // Rethrow the probable NPE or invalid type
+                throw e;
+            }
+        }
+    
+	};
+	$m['focus'].__name__ = 'focus';
+
+	$m['focus'].__bind_type__ = 0;
+	$m['focus'].__args__ = [null,null,['elem']];
+	$m['getTabIndex'] = function(elem) {
+
+		return $p['getattr'](elem, 'tabIndex');
+	};
+	$m['getTabIndex'].__name__ = 'getTabIndex';
+
+	$m['getTabIndex'].__bind_type__ = 0;
+	$m['getTabIndex'].__args__ = [null,null,['elem']];
+	$m['setAccessKey'] = function(elem, key) {
+
+		elem.accessKey = key;
+		return null;
+	};
+	$m['setAccessKey'].__name__ = 'setAccessKey';
+
+	$m['setAccessKey'].__bind_type__ = 0;
+	$m['setAccessKey'].__args__ = [null,null,['elem'],['key']];
+	$m['setTabIndex'] = function(elem, index) {
+
+		elem.tabIndex = index;
+		return null;
+	};
+	$m['setTabIndex'].__name__ = 'setTabIndex';
+
+	$m['setTabIndex'].__bind_type__ = 0;
+	$m['setTabIndex'].__args__ = [null,null,['elem'],['index']];
+	$m['FocusMixin'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.ui.Focus';
+		$method = $pyjs__bind_method2('getTabIndex', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $m['getTabIndex'](self['getElement']());
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getTabIndex'] = $method;
+		$method = $pyjs__bind_method2('setAccessKey', function(key) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				key = arguments[1];
+			}
+
+			$m['setAccessKey'](self['getElement'](), key);
+			return null;
+		}
+	, 1, [null,null,['self'],['key']]);
+		$cls_definition['setAccessKey'] = $method;
+		$method = $pyjs__bind_method2('setFocus', function(focused) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				focused = arguments[1];
+			}
+
+			if ($p['bool'](focused)) {
+				$m['focus'](self['getElement']());
+			}
+			else {
+				$m['blur'](self['getElement']());
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['focused']]);
+		$cls_definition['setFocus'] = $method;
+		$method = $pyjs__bind_method2('setTabIndex', function(index) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				index = arguments[1];
+			}
+
+			$m['setTabIndex'](self['getElement'](), index);
+			return null;
+		}
+	, 1, [null,null,['self'],['index']]);
+		$cls_definition['setTabIndex'] = $method;
+		$method = $pyjs__bind_method2('isEnabled', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $pyjs_try_err;
+			try {
+				return !$p['bool']($m['DOM']['getBooleanAttribute'](self['getElement'](), 'disabled'));
+			} catch($pyjs_try_err) {
+				var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+				$pyjs.__last_exception__ = {error: $pyjs_try_err, module: $m};
+				if (($pyjs_try_err_name == $p['TypeError'].__name__)||$p['_isinstance']($pyjs_try_err,$p['TypeError'])) {
+					return true;
+				} else if (($pyjs_try_err_name == $p['AttributeError'].__name__)||$p['_isinstance']($pyjs_try_err,$p['AttributeError'])) {
+					return true;
+				} else { $pyjs.__active_exception_stack__ = $pyjs.__last_exception_stack__; $pyjs.__last_exception_stack__ = null; throw $pyjs_try_err; }
+			}
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['isEnabled'] = $method;
+		$method = $pyjs__bind_method2('setEnabled', function(enabled) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				enabled = arguments[1];
+			}
+
+			$m['DOM']['setBooleanAttribute'](self['getElement'](), 'disabled', !$p['bool'](enabled));
+			return null;
+		}
+	, 1, [null,null,['self'],['enabled']]);
+		$cls_definition['setEnabled'] = $method;
+		$method = $pyjs__bind_method2('isReadonly', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $pyjs_try_err;
+			try {
+				return !$p['bool']($m['DOM']['getBooleanAttribute'](self['getElement'](), 'readOnly'));
+			} catch($pyjs_try_err) {
+				var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+				$pyjs.__last_exception__ = {error: $pyjs_try_err, module: $m};
+				if (($pyjs_try_err_name == $p['TypeError'].__name__)||$p['_isinstance']($pyjs_try_err,$p['TypeError'])) {
+					return true;
+				} else if (($pyjs_try_err_name == $p['AttributeError'].__name__)||$p['_isinstance']($pyjs_try_err,$p['AttributeError'])) {
+					return true;
+				} else { $pyjs.__active_exception_stack__ = $pyjs.__last_exception_stack__; $pyjs.__last_exception_stack__ = null; throw $pyjs_try_err; }
+			}
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['isReadonly'] = $method;
+		$method = $pyjs__bind_method2('setReadonly', function(readonly) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				readonly = arguments[1];
+			}
+
+			$m['DOM']['setBooleanAttribute'](self['getElement'](), 'readOnly', readonly);
+			return null;
+		}
+	, 1, [null,null,['self'],['readonly']]);
+		$cls_definition['setReadonly'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('FocusMixin', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.ui.Focus */
+
+
+/* end module: pyjamas.ui.Focus */
+
+
+/*
+PYJS_DEPS: ['pyjd', 'pyjamas.DOM', 'pyjamas']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.CanvasGradientImplDefault */
+$pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplDefault'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplDefault'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplDefault'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.CanvasGradientImplDefault"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.CanvasGradientImplDefault>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.CanvasGradientImplDefault';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['CanvasGradientImplDefault'] = $pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplDefault'];
+
+
+	$m['CanvasGradientImplDefault'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.CanvasGradientImplDefault';
+		$method = $pyjs__bind_method2('__init__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self.nativeGradient = null;
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('addColorStop', function(offset, color) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				offset = arguments[1];
+				color = arguments[2];
+			}
+
+			self['addNativeColorStop'](offset, $p['str'](color));
+			return null;
+		}
+	, 1, [null,null,['self'],['offset'],['color']]);
+		$cls_definition['addColorStop'] = $method;
+		$method = $pyjs__bind_method2('getObject', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, 'nativeGradient');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getObject'] = $method;
+		$method = $pyjs__bind_method2('addNativeColorStop', function(offset, color) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				offset = arguments[1];
+				color = arguments[2];
+			}
+
+			self['nativeGradient']['addColorStop'](offset, color);
+			return null;
+		}
+	, 1, [null,null,['self'],['offset'],['color']]);
+		$cls_definition['addNativeColorStop'] = $method;
+		$method = $pyjs__bind_method2('setNativeGradient', function(grad) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				grad = arguments[1];
+			}
+
+			self.nativeGradient = grad;
+			return null;
+		}
+	, 1, [null,null,['self'],['grad']]);
+		$cls_definition['setNativeGradient'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('CanvasGradientImplDefault', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.CanvasGradientImplDefault */
+
+
+/* end module: pyjamas.Canvas.CanvasGradientImplDefault */
+
+
 
 --></script>
 <script type="text/javascript"><!--
@@ -6682,6 +7342,874 @@ PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'pyjamas.ui.ComplexPane
 
 --></script>
 <script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.GWTCanvas */
+$pyjs.loaded_modules['pyjamas.Canvas.GWTCanvas'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.GWTCanvas'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvas'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.GWTCanvas"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.GWTCanvas>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.GWTCanvas';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['GWTCanvas'] = $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvas'];
+
+
+	$m['DOM'] = $p['___import___']('pyjamas.DOM', 'pyjamas.Canvas', null, false);
+	$m['FocusWidget'] = $p['___import___']('pyjamas.ui.FocusWidget.FocusWidget', 'pyjamas.Canvas', null, false);
+	$m['Widget'] = $p['___import___']('pyjamas.ui.Widget.Widget', 'pyjamas.Canvas', null, false);
+	$m['Focus'] = $p['___import___']('pyjamas.ui.Focus', 'pyjamas.Canvas', null, false);
+	$m['Color'] = $p['___import___']('pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', null, false);
+	$m['LinearGradientImplDefault'] = $p['___import___']('pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault', 'pyjamas.Canvas', null, false);
+	$m['RadialGradientImplDefault'] = $p['___import___']('pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault', 'pyjamas.Canvas', null, false);
+	$m['GWTCanvasImplDefault'] = $p['___import___']('pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault', 'pyjamas.Canvas', null, false);
+	$m['LinearGradientImplIE6'] = $p['___import___']('pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6', 'pyjamas.Canvas', null, false);
+	$m['RadialGradientImplIE6'] = $p['___import___']('pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6', 'pyjamas.Canvas', null, false);
+	$m['GWTCanvasImplIE6'] = $p['___import___']('pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6', 'pyjamas.Canvas', null, false);
+	$m['GWTCanvas'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.GWTCanvas';
+		$method = $pyjs__bind_method2('__init__', function(coordX, coordY, pixelX, pixelY) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var kwargs = arguments.length >= 5 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					var kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			} else {
+				var self = arguments[0];
+				coordX = arguments[1];
+				coordY = arguments[2];
+				pixelX = arguments[3];
+				pixelY = arguments[4];
+				var kwargs = arguments.length >= 6 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			}
+			if (typeof kwargs == 'undefined') {
+				kwargs = $p['__empty_dict']();
+				if (typeof pixelY != 'undefined') {
+					if (pixelY !== null && typeof pixelY['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = pixelY;
+						pixelY = arguments[5];
+					}
+				} else 				if (typeof pixelX != 'undefined') {
+					if (pixelX !== null && typeof pixelX['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = pixelX;
+						pixelX = arguments[5];
+					}
+				} else 				if (typeof coordY != 'undefined') {
+					if (coordY !== null && typeof coordY['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = coordY;
+						coordY = arguments[5];
+					}
+				} else 				if (typeof coordX != 'undefined') {
+					if (coordX !== null && typeof coordX['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = coordX;
+						coordX = arguments[5];
+					}
+				} else 				if (typeof self != 'undefined') {
+					if (self !== null && typeof self['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = self;
+						self = arguments[5];
+					}
+				} else {
+				}
+			}
+			if (typeof coordX == 'undefined') coordX=arguments.callee.__args__[3][1];
+			if (typeof coordY == 'undefined') coordY=arguments.callee.__args__[4][1];
+			if (typeof pixelX == 'undefined') pixelX=arguments.callee.__args__[5][1];
+			if (typeof pixelY == 'undefined') pixelY=arguments.callee.__args__[6][1];
+			var focusable;
+			self.impl = self['getCanvasImpl']();
+			self.coordHeight = 0;
+			self.coordWidth = 0;
+			focusable = $m['Focus']['createFocusable']();
+			self.canvas = self['impl']['createElement']();
+			$m['DOM']['appendChild'](focusable, $p['getattr'](self, 'canvas'));
+			$pyjs_kwargs_call($m['FocusWidget'], '__init__', null, kwargs, [{}, self, focusable]);
+			self['setPixelWidth'](pixelX);
+			self['setPixelHeight'](pixelY);
+			self['setCoordSize'](coordX, coordY);
+			return null;
+		}
+	, 1, [null,['kwargs'],['self'],['coordX', 300],['coordY', 150],['pixelX', 300],['pixelY', 150]]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('getCanvasElement', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, 'canvas');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getCanvasElement'] = $method;
+		$method = $pyjs__bind_method2('getCanvasImpl', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $m['GWTCanvasImplIE6']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getCanvasImpl'] = $method;
+		$method = $pyjs__bind_method2('setWidth', function(width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+			}
+
+			self['setPixelWidth'](width);
+			return null;
+		}
+	, 1, [null,null,['self'],['width']]);
+		$cls_definition['setWidth'] = $method;
+		$method = $pyjs__bind_method2('setHeight', function(height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				height = arguments[1];
+			}
+
+			self['setPixelHeight'](height);
+			return null;
+		}
+	, 1, [null,null,['self'],['height']]);
+		$cls_definition['setHeight'] = $method;
+		$method = $pyjs__bind_method2('arc', function(x, y, radius, startAngle, endAngle, antiClockwise) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+				radius = arguments[3];
+				startAngle = arguments[4];
+				endAngle = arguments[5];
+				antiClockwise = arguments[6];
+			}
+
+			self['impl']['arc'](x, y, radius, startAngle, endAngle, antiClockwise);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y'],['radius'],['startAngle'],['endAngle'],['antiClockwise']]);
+		$cls_definition['arc'] = $method;
+		$method = $pyjs__bind_method2('beginPath', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['impl']['beginPath']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['beginPath'] = $method;
+		$method = $pyjs__bind_method2('clear', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['impl']['clear']($p['getattr'](self, 'coordWidth'), $p['getattr'](self, 'coordHeight'));
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['clear'] = $method;
+		$method = $pyjs__bind_method2('closePath', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['impl']['closePath']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['closePath'] = $method;
+		$method = $pyjs__bind_method2('createLinearGradient', function(x0, y0, x1, y1) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				x1 = arguments[3];
+				y1 = arguments[4];
+			}
+
+			return $m['LinearGradientImplIE6'](x0, y0, x1, y1);
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['x1'],['y1']]);
+		$cls_definition['createLinearGradient'] = $method;
+		$method = $pyjs__bind_method2('createRadialGradient', function(x0, y0, r0, x1, y1, r1) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				r0 = arguments[3];
+				x1 = arguments[4];
+				y1 = arguments[5];
+				r1 = arguments[6];
+			}
+
+			return $m['RadialGradientImplIE6'](x0, y0, r0, x1, y1, r1);
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['r0'],['x1'],['y1'],['r1']]);
+		$cls_definition['createRadialGradient'] = $method;
+		$method = $pyjs__bind_method2('cubicCurveTo', function(cp1x, cp1y, cp2x, cp2y, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				cp1x = arguments[1];
+				cp1y = arguments[2];
+				cp2x = arguments[3];
+				cp2y = arguments[4];
+				x = arguments[5];
+				y = arguments[6];
+			}
+
+			self['impl']['cubicCurveTo'](cp1x, cp1y, cp2x, cp2y, x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['cp1x'],['cp1y'],['cp2x'],['cp2y'],['x'],['y']]);
+		$cls_definition['cubicCurveTo'] = $method;
+		$method = $pyjs__bind_method2('drawImage', function(img) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var args = $p['tuple']($pyjs_array_slice.call(arguments,1,arguments.length));
+
+			} else {
+				var self = arguments[0];
+				img = arguments[1];
+				var args = $p['tuple']($pyjs_array_slice.call(arguments,2,arguments.length));
+
+			}
+			var destHeight,img_width,img_height,destWidth,destY,destX,sourceX,sourceY,sourceHeight,sourceWidth;
+			if ($p['bool']($p['isinstance'](img, $m['Widget']))) {
+				img_width = img['getWidth']();
+				img_height = img['getHeight']();
+			}
+			else {
+				img_width = $m['DOM']['getIntAttribute'](img, 'offsetWidth');
+				img_height = $m['DOM']['getIntAttribute'](img, 'offsetHeight');
+			}
+			if ($p['bool']($p['op_eq']($p['len'](args), 8))) {
+				self['impl']['drawImage'](img, args.__getitem__(0), args.__getitem__(1), args.__getitem__(2), args.__getitem__(3), args.__getitem__(4), args.__getitem__(5), args.__getitem__(6), args.__getitem__(7));
+			}
+			else if ($p['bool']($p['op_eq']($p['len'](args), 4))) {
+				sourceX = 0;
+				sourceY = 0;
+				sourceWidth = img_width;
+				sourceHeight = img_height;
+				destX = args.__getitem__(0);
+				destY = args.__getitem__(1);
+				destWidth = args.__getitem__(2);
+				destHeight = args.__getitem__(3);
+				self['impl']['drawImage'](img, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
+			}
+			else if ($p['bool']($p['op_eq']($p['len'](args), 2))) {
+				self['impl']['drawImage'](img, args.__getitem__(0), args.__getitem__(1));
+			}
+			return null;
+		}
+	, 1, ['args',null,['self'],['img']]);
+		$cls_definition['drawImage'] = $method;
+		$method = $pyjs__bind_method2('fill', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['impl']['fill']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['fill'] = $method;
+		$method = $pyjs__bind_method2('fillRect', function(startX, startY, width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				startX = arguments[1];
+				startY = arguments[2];
+				width = arguments[3];
+				height = arguments[4];
+			}
+
+			self['impl']['fillRect'](startX, startY, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['startX'],['startY'],['width'],['height']]);
+		$cls_definition['fillRect'] = $method;
+		$method = $pyjs__bind_method2('fillText', function(text, startX, startY, maxWidth) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+				startX = arguments[2];
+				startY = arguments[3];
+				maxWidth = arguments[4];
+			}
+			if (typeof maxWidth == 'undefined') maxWidth=arguments.callee.__args__[6][1];
+
+			self['impl']['fillText'](text, startX, startY, maxWidth);
+			return null;
+		}
+	, 1, [null,null,['self'],['text'],['startX'],['startY'],['maxWidth', null]]);
+		$cls_definition['fillText'] = $method;
+		$method = $pyjs__bind_method2('getCoordHeight', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, 'coordHeight');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getCoordHeight'] = $method;
+		$method = $pyjs__bind_method2('getCoordWidth', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, 'coordWidth');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getCoordWidth'] = $method;
+		$method = $pyjs__bind_method2('getGlobalAlpha', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return self['impl']['getGlobalAlpha']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getGlobalAlpha'] = $method;
+		$method = $pyjs__bind_method2('getGlobalCompositeOperation', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return self['impl']['getGlobalCompositeOperation']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getGlobalCompositeOperation'] = $method;
+		$method = $pyjs__bind_method2('getLineCap', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return self['impl']['getLineCap']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineCap'] = $method;
+		$method = $pyjs__bind_method2('getLineJoin', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return self['impl']['getLineJoin']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineJoin'] = $method;
+		$method = $pyjs__bind_method2('getLineWidth', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return self['impl']['getLineWidth']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineWidth'] = $method;
+		$method = $pyjs__bind_method2('getMiterLimit', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return self['impl']['getMiterLimit']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getMiterLimit'] = $method;
+		$method = $pyjs__bind_method2('lineTo', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['impl']['lineTo'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['lineTo'] = $method;
+		$method = $pyjs__bind_method2('moveTo', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['impl']['moveTo'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['moveTo'] = $method;
+		$method = $pyjs__bind_method2('quadraticCurveTo', function(cpx, cpy, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				cpx = arguments[1];
+				cpy = arguments[2];
+				x = arguments[3];
+				y = arguments[4];
+			}
+
+			self['impl']['quadraticCurveTo'](cpx, cpy, x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['cpx'],['cpy'],['x'],['y']]);
+		$cls_definition['quadraticCurveTo'] = $method;
+		$method = $pyjs__bind_method2('rect', function(startX, startY, width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				startX = arguments[1];
+				startY = arguments[2];
+				width = arguments[3];
+				height = arguments[4];
+			}
+
+			self['impl']['rect'](startX, startY, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['startX'],['startY'],['width'],['height']]);
+		$cls_definition['rect'] = $method;
+		$method = $pyjs__bind_method2('resize', function(width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+				height = arguments[2];
+			}
+
+			self['setCoordSize'](width, height);
+			self['setPixelHeight'](height);
+			self['setPixelWidth'](width);
+			return null;
+		}
+	, 1, [null,null,['self'],['width'],['height']]);
+		$cls_definition['resize'] = $method;
+		$method = $pyjs__bind_method2('restoreContext', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['impl']['restoreContext']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['restoreContext'] = $method;
+		$method = $pyjs__bind_method2('rotate', function(angle) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				angle = arguments[1];
+			}
+
+			self['impl']['rotate'](angle);
+			return null;
+		}
+	, 1, [null,null,['self'],['angle']]);
+		$cls_definition['rotate'] = $method;
+		$method = $pyjs__bind_method2('saveContext', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['impl']['saveContext']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['saveContext'] = $method;
+		$method = $pyjs__bind_method2('scale', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['impl']['scale'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['scale'] = $method;
+		$method = $pyjs__bind_method2('setBackgroundColor', function(color) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				color = arguments[1];
+			}
+
+			self['impl']['setBackgroundColor'](self['getCanvasElement'](), $p['str'](color));
+			return null;
+		}
+	, 1, [null,null,['self'],['color']]);
+		$cls_definition['setBackgroundColor'] = $method;
+		$method = $pyjs__bind_method2('setCoordHeight', function(height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				height = arguments[1];
+			}
+
+			self['impl']['setCoordHeight'](self['getCanvasElement'](), height);
+			self.coordHeight = height;
+			return null;
+		}
+	, 1, [null,null,['self'],['height']]);
+		$cls_definition['setCoordHeight'] = $method;
+		$method = $pyjs__bind_method2('setCoordSize', function(width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+				height = arguments[2];
+			}
+
+			self['setCoordWidth'](width);
+			self['setCoordHeight'](height);
+			return null;
+		}
+	, 1, [null,null,['self'],['width'],['height']]);
+		$cls_definition['setCoordSize'] = $method;
+		$method = $pyjs__bind_method2('setCoordWidth', function(width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+			}
+
+			self['impl']['setCoordWidth'](self['getCanvasElement'](), width);
+			self.coordWidth = width;
+			return null;
+		}
+	, 1, [null,null,['self'],['width']]);
+		$cls_definition['setCoordWidth'] = $method;
+		$method = $pyjs__bind_method2('setFillStyle', function(grad) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				grad = arguments[1];
+			}
+
+			self['impl']['setFillStyle'](grad);
+			return null;
+		}
+	, 1, [null,null,['self'],['grad']]);
+		$cls_definition['setFillStyle'] = $method;
+		$method = $pyjs__bind_method2('setGlobalAlpha', function(alpha) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				alpha = arguments[1];
+			}
+
+			self['impl']['setGlobalAlpha'](alpha);
+			return null;
+		}
+	, 1, [null,null,['self'],['alpha']]);
+		$cls_definition['setGlobalAlpha'] = $method;
+		$method = $pyjs__bind_method2('setFont', function(font) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				font = arguments[1];
+			}
+
+			self['impl']['setFont'](font);
+			return null;
+		}
+	, 1, [null,null,['self'],['font']]);
+		$cls_definition['setFont'] = $method;
+		$method = $pyjs__bind_method2('setGlobalCompositeOperation', function(globalCompositeOperation) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				globalCompositeOperation = arguments[1];
+			}
+
+			self['impl']['setGlobalCompositeOperation'](globalCompositeOperation);
+			return null;
+		}
+	, 1, [null,null,['self'],['globalCompositeOperation']]);
+		$cls_definition['setGlobalCompositeOperation'] = $method;
+		$method = $pyjs__bind_method2('setLineCap', function(lineCap) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				lineCap = arguments[1];
+			}
+
+			self['impl']['setLineCap'](lineCap);
+			return null;
+		}
+	, 1, [null,null,['self'],['lineCap']]);
+		$cls_definition['setLineCap'] = $method;
+		$method = $pyjs__bind_method2('setLineJoin', function(lineJoin) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				lineJoin = arguments[1];
+			}
+
+			self['impl']['setLineJoin'](lineJoin);
+			return null;
+		}
+	, 1, [null,null,['self'],['lineJoin']]);
+		$cls_definition['setLineJoin'] = $method;
+		$method = $pyjs__bind_method2('setLineWidth', function(width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+			}
+
+			self['impl']['setLineWidth'](width);
+			return null;
+		}
+	, 1, [null,null,['self'],['width']]);
+		$cls_definition['setLineWidth'] = $method;
+		$method = $pyjs__bind_method2('setMiterLimit', function(miterLimit) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				miterLimit = arguments[1];
+			}
+
+			self['impl']['setMiterLimit'](miterLimit);
+			return null;
+		}
+	, 1, [null,null,['self'],['miterLimit']]);
+		$cls_definition['setMiterLimit'] = $method;
+		$method = $pyjs__bind_method2('setPixelHeight', function(height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				height = arguments[1];
+			}
+			var $add2,$add1;
+			$m['FocusWidget']['setHeight'](self, $p['__op_add']($add1=$p['str'](height),$add2='px'));
+			self['impl']['setPixelHeight'](self['getCanvasElement'](), height);
+			return null;
+		}
+	, 1, [null,null,['self'],['height']]);
+		$cls_definition['setPixelHeight'] = $method;
+		$method = $pyjs__bind_method2('setPixelWidth', function(width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+			}
+			var $add4,$add3;
+			$m['FocusWidget']['setWidth'](self, $p['__op_add']($add3=$p['str'](width),$add4='px'));
+			self['impl']['setPixelWidth'](self['getCanvasElement'](), width);
+			return null;
+		}
+	, 1, [null,null,['self'],['width']]);
+		$cls_definition['setPixelWidth'] = $method;
+		$method = $pyjs__bind_method2('setStrokeStyle', function(grad) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				grad = arguments[1];
+			}
+
+			self['impl']['setStrokeStyle'](grad);
+			return null;
+		}
+	, 1, [null,null,['self'],['grad']]);
+		$cls_definition['setStrokeStyle'] = $method;
+		$method = $pyjs__bind_method2('stroke', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['impl']['stroke']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['stroke'] = $method;
+		$method = $pyjs__bind_method2('strokeRect', function(startX, startY, width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				startX = arguments[1];
+				startY = arguments[2];
+				width = arguments[3];
+				height = arguments[4];
+			}
+
+			self['impl']['strokeRect'](startX, startY, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['startX'],['startY'],['width'],['height']]);
+		$cls_definition['strokeRect'] = $method;
+		$method = $pyjs__bind_method2('transform', function(m11, m12, m21, m22, dx, dy) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				m11 = arguments[1];
+				m12 = arguments[2];
+				m21 = arguments[3];
+				m22 = arguments[4];
+				dx = arguments[5];
+				dy = arguments[6];
+			}
+
+			self['impl']['transform'](m11, m12, m21, m22, dx, dy);
+			return null;
+		}
+	, 1, [null,null,['self'],['m11'],['m12'],['m21'],['m22'],['dx'],['dy']]);
+		$cls_definition['transform'] = $method;
+		$method = $pyjs__bind_method2('translate', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['impl']['translate'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['translate'] = $method;
+		var $bases = new Array($m['FocusWidget']);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('GWTCanvas', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.GWTCanvas */
+
+
+/* end module: pyjamas.Canvas.GWTCanvas */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.ui.FocusWidget.FocusWidget', 'pyjamas.ui', 'pyjamas.ui.FocusWidget', 'pyjamas.ui.Widget.Widget', 'pyjamas.ui.Widget', 'pyjamas.ui.Focus', 'pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', 'pyjamas.Canvas.Color', 'pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault', 'pyjamas.Canvas.LinearGradientImplDefault', 'pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault', 'pyjamas.Canvas.RadialGradientImplDefault', 'pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault', 'pyjamas.Canvas.GWTCanvasImplDefault', 'pyjamas.Canvas.LinearGradientImplIE6.LinearGradientImplIE6', 'pyjamas.Canvas.LinearGradientImplIE6', 'pyjamas.Canvas.RadialGradientImplIE6.RadialGradientImplIE6', 'pyjamas.Canvas.RadialGradientImplIE6', 'pyjamas.Canvas.GWTCanvasImplIE6.GWTCanvasImplIE6', 'pyjamas.Canvas.GWTCanvasImplIE6']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.GWTCanvasConsts */
+$pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasConsts'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasConsts'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasConsts'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.GWTCanvasConsts"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.GWTCanvasConsts>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.GWTCanvasConsts';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['GWTCanvasConsts'] = $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasConsts'];
+
+
+	$m['Widget'] = $p['___import___']('pyjamas.ui.Widget.Widget', 'pyjamas.Canvas', null, false);
+	$m['Color'] = $p['___import___']('pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', null, false);
+	$m['LinearGradientImplDefault'] = $p['___import___']('pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault', 'pyjamas.Canvas', null, false);
+	$m['RadialGradientImplDefault'] = $p['___import___']('pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault', 'pyjamas.Canvas', null, false);
+	$m['GWTCanvasImplDefault'] = $p['___import___']('pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault', 'pyjamas.Canvas', null, false);
+	$m['BEVEL'] = 'bevel';
+	$m['BUTT'] = 'butt';
+	$m['DESTINATION_OVER'] = 'destination-over';
+	$m['MITER'] = 'miter';
+	$m['ROUND'] = 'round';
+	$m['SOURCE_OVER'] = 'source-over';
+	$m['SQUARE'] = 'square';
+	$m['TRANSPARENT'] = $m['Color']('');
+	return this;
+}; /* end pyjamas.Canvas.GWTCanvasConsts */
+
+
+/* end module: pyjamas.Canvas.GWTCanvasConsts */
+
+
+/*
+PYJS_DEPS: ['pyjamas.ui.Widget.Widget', 'pyjamas', 'pyjamas.ui', 'pyjamas.ui.Widget', 'pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', 'pyjamas.Canvas.Color', 'pyjamas.Canvas.LinearGradientImplDefault.LinearGradientImplDefault', 'pyjamas.Canvas.LinearGradientImplDefault', 'pyjamas.Canvas.RadialGradientImplDefault.RadialGradientImplDefault', 'pyjamas.Canvas.RadialGradientImplDefault', 'pyjamas.Canvas.GWTCanvasImplDefault.GWTCanvasImplDefault', 'pyjamas.Canvas.GWTCanvasImplDefault']
+*/
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: pyjamas.ui.FocusListener */
 $pyjs.loaded_modules['pyjamas.ui.FocusListener'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['pyjamas.ui.FocusListener'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.FocusListener'];
@@ -7264,6 +8792,110 @@ $pyjs.loaded_modules['pyjamas.ui.ComplexPanel'] = function (__mod_name__) {
 
 /*
 PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'pyjamas.ui.Panel.Panel', 'pyjamas.ui', 'pyjamas.ui.Panel']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.VMLContext */
+$pyjs.loaded_modules['pyjamas.Canvas.VMLContext'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.VMLContext'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.VMLContext'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.VMLContext"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.VMLContext>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.VMLContext';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['VMLContext'] = $pyjs.loaded_modules['pyjamas.Canvas.VMLContext'];
+
+
+	$m['GWTCanvasConsts'] = $p['___import___']('pyjamas.Canvas.GWTCanvasConsts', 'pyjamas.Canvas', null, false);
+	$m['GWTCanvasImplIEConsts'] = $p['___import___']('pyjamas.Canvas.GWTCanvasImplIEConsts', 'pyjamas.Canvas', null, false);
+	$m['VMLStyle'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.VMLContext';
+		$method = $pyjs__bind_method2('__init__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self.type = 'Color';
+			self.alpha = 1;
+			self.color = '#000';
+			self.gradient = null;
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['__init__'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('VMLStyle', $p['tuple']($bases), $data);
+	})();
+	$m['VMLContext'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.VMLContext';
+		$method = $pyjs__bind_method2('__init__', function(ctx) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				ctx = arguments[1];
+			}
+			if (typeof ctx == 'undefined') ctx=arguments.callee.__args__[3][1];
+			var $iter1_nextval,$iter1_type,i,$iter1_iter,$iter1_array,$iter1_idx;
+			if ($p['bool']((ctx === null))) {
+				self.matrix = $p['list']([1, 0, 0, 0, 1, 0, 0, 0, 1]);
+				self.arcScaleX = 1;
+				self.arcScaleY = 1;
+				self.globalAlpha = 1;
+				self.miterLimit = 10;
+				self.lineWidth = 1;
+				self.lineCap = $p['getattr']($m['GWTCanvasImplIEConsts'], 'BUTT');
+				self.lineJoin = $p['getattr']($m['GWTCanvasConsts'], 'MITER');
+				self.strokeStyle = $m['VMLStyle']();
+				self.fillStyle = $m['VMLStyle']();
+				self.globalCompositeOperation = $p['getattr']($m['GWTCanvasImplIEConsts'], 'SOURCE_OVER');
+				return null;
+			}
+			self.matrix = $p['list']([]);
+			$iter1_iter = $p['range'](9);
+			$iter1_nextval=$p['__iter_prepare']($iter1_iter,false);
+			while (typeof($p['__wrapped_next']($iter1_nextval).$nextval) != 'undefined') {
+				i = $iter1_nextval.$nextval;
+				self['matrix']['append']($p['getattr'](ctx, 'matrix').__getitem__(i));
+			}
+			self.arcScaleX = $p['getattr'](ctx, 'arcScaleX');
+			self.arcScaleY = $p['getattr'](ctx, 'arcScaleY');
+			self.globalAlpha = $p['getattr'](ctx, 'globalAlpha');
+			self.miterLimit = $p['getattr'](ctx, 'miterLimit');
+			self.lineWidth = $p['getattr'](ctx, 'lineWidth');
+			self.lineCap = $p['getattr'](ctx, 'lineCap');
+			self.lineJoin = $p['getattr'](ctx, 'lineJoin');
+			self.strokeStyle = $p['getattr'](ctx, 'strokeStyle');
+			self.fillStyle = $p['getattr'](ctx, 'fillStyle');
+			self.globalCompositeOperation = $p['getattr'](ctx, 'globalCompositeOperation');
+			return null;
+		}
+	, 1, [null,null,['self'],['ctx', null]]);
+		$cls_definition['__init__'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('VMLContext', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.VMLContext */
+
+
+/* end module: pyjamas.Canvas.VMLContext */
+
+
+/*
+PYJS_DEPS: ['pyjamas.Canvas.GWTCanvasConsts', 'pyjamas', 'pyjamas.Canvas', 'pyjamas.Canvas.GWTCanvasImplIEConsts']
 */
 
 --></script>
@@ -9758,6 +11390,31 @@ $pyjs.loaded_modules['pyjamas.ui'] = function (__mod_name__) {
 
 --></script>
 <script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.GWTCanvasImplIEConsts */
+$pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIEConsts'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIEConsts'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIEConsts'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.GWTCanvasImplIEConsts"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.GWTCanvasImplIEConsts>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.GWTCanvasImplIEConsts';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['GWTCanvasImplIEConsts'] = $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIEConsts'];
+
+
+	$m['BUTT'] = 'flat';
+	$m['DESTINATION_OVER'] = 'afterBegin';
+	$m['SOURCE_OVER'] = 'beforeEnd';
+	return this;
+}; /* end pyjamas.Canvas.GWTCanvasImplIEConsts */
+
+
+/* end module: pyjamas.Canvas.GWTCanvasImplIEConsts */
+
+
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: human_player */
 $pyjs.loaded_modules['human_player'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['human_player'].__was_initialized__) return $pyjs.loaded_modules['human_player'];
@@ -9808,6 +11465,117 @@ $pyjs.loaded_modules['human_player'] = function (__mod_name__) {
 
 /*
 PYJS_DEPS: ['player.Player', 'player', 'game.Game', 'game']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.PathElement */
+$pyjs.loaded_modules['pyjamas.Canvas.PathElement'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.PathElement'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.PathElement'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.PathElement"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.PathElement>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.PathElement';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['PathElement'] = $pyjs.loaded_modules['pyjamas.Canvas.PathElement'];
+
+
+	$m['math'] = $p['___import___']('math', 'pyjamas.Canvas');
+	$m['ARC'] = ' ar';
+	$m['CLOSE'] = ' x';
+	$m['END'] = ' e';
+	$m['LINETO'] = ' l';
+	$m['MOVETO'] = ' m';
+	$m['CUBIC'] = ' c';
+	$m['arc'] = function(x, y, radius, startAngle, endAngle, antiClockwise, canvas) {
+		var $and1,$and2,matrix,startX,startY,$sub12,$sub11,$sub10,realEndAngle,$add50,$add51,$add52,$mul14,$mul13,$mul12,$mul11,$mul10,endY,endX,context,cy,cx,$add49,$add48,$add47,$add46,$add45,$add44,$add43,$add42,$add41,$add40,$mul9,$mul8,$mul7,$mul6,$mul5,$mul4,$mul3,$mul2,$mul1,$add38,$add39,$add32,$add33,$add30,$add31,$add36,$add37,$add34,$add35,$add2,$add3,$add1,$add6,$add7,$add4,$add5,$add8,$add9,ar,$add29,$add28,$add21,$add20,$add23,$add22,$add25,$add24,$add27,$add26,$sub9,$sub8,$sub3,$sub2,$sub1,$sub7,$sub6,$sub5,$sub4,realStartAngle,$add14,$add15,$add16,$add17,$add10,$add11,$add12,$add13,$add18,$add19,arcX,arcY;
+		matrix = $p['getattr'](canvas, 'matrix');
+		context = $p['getattr'](canvas, 'context');
+		if ($p['bool'](!$p['bool'](antiClockwise))) {
+			realStartAngle = endAngle;
+			realEndAngle = startAngle;
+		}
+		else {
+			realStartAngle = startAngle;
+			realEndAngle = endAngle;
+		}
+		ar = (typeof ($mul1=radius)==typeof ($mul2=10) && typeof $mul1=='number'?
+			$mul1*$mul2:
+			$p['op_mul']($mul1,$mul2));
+		startX = $p['__op_sub']($sub1=$p['__op_add']($add1=x,$add2=(typeof ($mul3=$m['math']['cos'](realStartAngle))==typeof ($mul4=ar) && typeof $mul3=='number'?
+			$mul3*$mul4:
+			$p['op_mul']($mul3,$mul4))),$sub2=5);
+		startY = $p['__op_sub']($sub3=$p['__op_add']($add3=y,$add4=(typeof ($mul5=$m['math']['sin'](realStartAngle))==typeof ($mul6=ar) && typeof $mul5=='number'?
+			$mul5*$mul6:
+			$p['op_mul']($mul5,$mul6))),$sub4=5);
+		endX = $p['__op_sub']($sub5=$p['__op_add']($add5=x,$add6=(typeof ($mul7=$m['math']['cos'](realEndAngle))==typeof ($mul8=ar) && typeof $mul7=='number'?
+			$mul7*$mul8:
+			$p['op_mul']($mul7,$mul8))),$sub6=5);
+		endY = $p['__op_sub']($sub7=$p['__op_add']($add7=y,$add8=(typeof ($mul9=$m['math']['sin'](realEndAngle))==typeof ($mul10=ar) && typeof $mul9=='number'?
+			$mul9*$mul10:
+			$p['op_mul']($mul9,$mul10))),$sub8=5);
+		if ($p['bool'](($p['bool']($and1=$p['op_eq'](startX, endX))?!$p['bool'](antiClockwise):$and1))) {
+			startX = $p['__op_add']($add9=startX,$add10=0.125);
+		}
+		cx = canvas['getCoordX'](matrix, x, y);
+		cy = canvas['getCoordY'](matrix, x, y);
+		arcX = (typeof ($mul11=$p['getattr'](context, 'arcScaleX'))==typeof ($mul12=ar) && typeof $mul11=='number'?
+			$mul11*$mul12:
+			$p['op_mul']($mul11,$mul12));
+		arcY = (typeof ($mul13=$p['getattr'](context, 'arcScaleY'))==typeof ($mul14=ar) && typeof $mul13=='number'?
+			$mul13*$mul14:
+			$p['op_mul']($mul13,$mul14));
+		return $p['__op_add']($add51=$p['__op_add']($add49=$p['__op_add']($add47=$p['__op_add']($add45=$p['__op_add']($add43=$p['__op_add']($add41=$p['__op_add']($add39=$p['__op_add']($add37=$p['__op_add']($add35=$p['__op_add']($add31=$p['__op_add']($add29=$p['__op_add']($add23=$p['__op_add']($add21=$p['__op_add']($add15=$p['__op_add']($add13=$m['ARC'],$add14=$p['str']($p['float_int']($m['math']['floor']($p['__op_add']($add11=$p['__op_sub']($sub9=cx,$sub10=arcX),$add12=0.5))))),$add16=','),$add22=$p['str']($p['float_int']($m['math']['floor']($p['__op_add']($add19=$p['__op_add']($add17=cy,$add18=arcY),$add20=0.5))))),$add24=' '),$add30=$p['str']($p['float_int']($m['math']['floor']($p['__op_add']($add27=$p['__op_add']($add25=cx,$add26=arcX),$add28=0.5))))),$add32=','),$add36=$p['str']($p['float_int']($m['math']['floor']($p['__op_add']($add33=$p['__op_sub']($sub11=cy,$sub12=arcY),$add34=0.5))))),$add38=' '),$add40=$p['str'](canvas['getCoordX'](matrix, startX, startY))),$add42=','),$add44=$p['str'](canvas['getCoordY'](matrix, startX, startY))),$add46=' '),$add48=$p['str'](canvas['getCoordX'](matrix, endX, endY))),$add50=','),$add52=$p['str'](canvas['getCoordY'](matrix, endX, endY)));
+	};
+	$m['arc'].__name__ = 'arc';
+
+	$m['arc'].__bind_type__ = 0;
+	$m['arc'].__args__ = [null,null,['x'],['y'],['radius'],['startAngle'],['endAngle'],['antiClockwise'],['canvas']];
+	$m['bezierCurveTo'] = function(c1x, c1y, c2x, c2y, x, y, canvas) {
+		var $add65,$add64,$add66,$add61,$add60,$add63,$add62,$add69,$add68,$add73,$add67,$add72,matrix,$add70,$add74,$add53,$add54,$add55,$add56,$add57,$add58,$add59,$add71;
+		matrix = $p['getattr'](canvas, 'matrix');
+		return $p['__op_add']($add73=$p['__op_add']($add71=$p['__op_add']($add69=$p['__op_add']($add67=$p['__op_add']($add65=$p['__op_add']($add63=$p['__op_add']($add61=$p['__op_add']($add59=$p['__op_add']($add57=$p['__op_add']($add55=$p['__op_add']($add53=$m['CUBIC'],$add54=$p['str'](canvas['getCoordX'](matrix, c1x, c1y))),$add56=','),$add58=$p['str'](canvas['getCoordY'](matrix, c1x, c1y))),$add60=','),$add62=$p['str'](canvas['getCoordX'](matrix, c2x, c2y))),$add64=','),$add66=$p['str'](canvas['getCoordY'](matrix, c2x, c2y))),$add68=','),$add70=$p['str'](canvas['getCoordX'](matrix, x, y))),$add72=','),$add74=$p['str'](canvas['getCoordY'](matrix, x, y)));
+	};
+	$m['bezierCurveTo'].__name__ = 'bezierCurveTo';
+
+	$m['bezierCurveTo'].__bind_type__ = 0;
+	$m['bezierCurveTo'].__args__ = [null,null,['c1x'],['c1y'],['c2x'],['c2y'],['x'],['y'],['canvas']];
+	$m['closePath'] = function() {
+
+		return $m['CLOSE'];
+	};
+	$m['closePath'].__name__ = 'closePath';
+
+	$m['closePath'].__bind_type__ = 0;
+	$m['closePath'].__args__ = [null,null];
+	$m['lineTo'] = function(x, y, canvas) {
+		var $add76,$add77,$add75,matrix,$add80,$add78,$add79;
+		matrix = $p['getattr'](canvas, 'matrix');
+		return $p['__op_add']($add79=$p['__op_add']($add77=$p['__op_add']($add75=$m['LINETO'],$add76=$p['str'](canvas['getCoordX'](matrix, x, y))),$add78=','),$add80=$p['str'](canvas['getCoordY'](matrix, x, y)));
+	};
+	$m['lineTo'].__name__ = 'lineTo';
+
+	$m['lineTo'].__bind_type__ = 0;
+	$m['lineTo'].__args__ = [null,null,['x'],['y'],['canvas']];
+	$m['moveTo'] = function(x, y, canvas) {
+		var matrix,$add83,$add82,$add81,$add86,$add85,$add84;
+		matrix = $p['getattr'](canvas, 'matrix');
+		return $p['__op_add']($add85=$p['__op_add']($add83=$p['__op_add']($add81=$m['MOVETO'],$add82=$p['str'](canvas['getCoordX'](matrix, x, y))),$add84=','),$add86=$p['str'](canvas['getCoordY'](matrix, x, y)));
+	};
+	$m['moveTo'].__name__ = 'moveTo';
+
+	$m['moveTo'].__bind_type__ = 0;
+	$m['moveTo'].__args__ = [null,null,['x'],['y'],['canvas']];
+	return this;
+}; /* end pyjamas.Canvas.PathElement */
+
+
+/* end module: pyjamas.Canvas.PathElement */
+
+
+/*
+PYJS_DEPS: ['math']
 */
 
 --></script>
@@ -21937,6 +23705,180 @@ PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'pyjamas.ui.UIObject.UI
 
 --></script>
 <script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.CanvasGradientImplIE6 */
+$pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplIE6'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplIE6'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplIE6'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.CanvasGradientImplIE6"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.CanvasGradientImplIE6>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.CanvasGradientImplIE6';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['CanvasGradientImplIE6'] = $pyjs.loaded_modules['pyjamas.Canvas.CanvasGradientImplIE6'];
+
+
+	$m['math'] = $p['___import___']('math', 'pyjamas.Canvas');
+	$m['ColorStop'] = $p['___import___']('pyjamas.Canvas.ColorStop.ColorStop', 'pyjamas.Canvas', null, false);
+	$m['CanvasGradientImplIE6'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.CanvasGradientImplIE6';
+		$method = $pyjs__bind_method2('__init__', function(x0, y0, x1, y1) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				x1 = arguments[3];
+				y1 = arguments[4];
+			}
+			var $mul6,$div1,$mul1,$sub3,$sub2,$sub1,$sub4,$div2,$div3,$mul5,$mul4,$mul3,$mul2,$div4,$add2,$add3,$add1,$add4;
+			self.startX = x0;
+			self.startY = y0;
+			self.endX = x1;
+			self.endY = y1;
+			self.startRad = 0;
+			self.endRad = 0;
+			self.dx = $p['__op_sub']($sub1=x1,$sub2=x0);
+			self.dy = $p['__op_sub']($sub3=y1,$sub4=y0);
+			self.length = $m['math']['sqrt']($p['__op_add']($add1=(typeof ($mul1=$p['getattr'](self, 'dx'))==typeof ($mul2=$p['getattr'](self, 'dx')) && typeof $mul1=='number'?
+				$mul1*$mul2:
+				$p['op_mul']($mul1,$mul2)),$add2=(typeof ($mul3=$p['getattr'](self, 'dy'))==typeof ($mul4=$p['getattr'](self, 'dy')) && typeof $mul3=='number'?
+				$mul3*$mul4:
+				$p['op_mul']($mul3,$mul4))));
+			if ($p['bool']($p['op_eq']($p['getattr'](self, 'dy'), 0))) {
+				self.angle = 90;
+			}
+			else {
+				self.angle = $p['__op_add']($add3=$p['float_int']((typeof ($div3=(typeof ($mul5=$m['math']['atan']((typeof ($div1=$p['getattr'](self, 'dx'))==typeof ($div2=$p['getattr'](self, 'dy')) && typeof $div1=='number' && $div2 !== 0?
+					$div1/$div2:
+					$p['op_div']($div1,$div2))))==typeof ($mul6=180) && typeof $mul5=='number'?
+					$mul5*$mul6:
+					$p['op_mul']($mul5,$mul6)))==typeof ($div4=$p['getattr']($m['math'], 'pi')) && typeof $div3=='number' && $div4 !== 0?
+					$div3/$div4:
+					$p['op_div']($div3,$div4))),$add4=180);
+			}
+			self.colorStops = $p['list']([]);
+			return null;
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['x1'],['y1']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('addColorStop', function(offset, color) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				offset = arguments[1];
+				color = arguments[2];
+			}
+			var $iter1_nextval,$iter1_type,newColorStop,$iter1_iter,i,$iter1_array,cs,$iter1_idx;
+			newColorStop = $m['ColorStop'](offset, color);
+			$iter1_iter = $p['range']($p['len']($p['getattr'](self, 'colorStops')));
+			$iter1_nextval=$p['__iter_prepare']($iter1_iter,false);
+			while (typeof($p['__wrapped_next']($iter1_nextval).$nextval) != 'undefined') {
+				i = $iter1_nextval.$nextval;
+				cs = $p['getattr'](self, 'colorStops').__getitem__(i);
+				if ($p['bool'](($p['cmp'](offset, $p['getattr'](cs, 'offset')) == -1))) {
+					self['colorStops']['append'](i, newColorStop);
+					return null;
+				}
+			}
+			self['colorStops']['append'](newColorStop);
+			return null;
+		}
+	, 1, [null,null,['self'],['offset'],['color']]);
+		$cls_definition['addColorStop'] = $method;
+		$method = $pyjs__bind_method2('cloneGradient', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+ 			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['cloneGradient'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('CanvasGradientImplIE6', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.CanvasGradientImplIE6 */
+
+
+/* end module: pyjamas.Canvas.CanvasGradientImplIE6 */
+
+
+/*
+PYJS_DEPS: ['math', 'pyjamas.Canvas.ColorStop.ColorStop', 'pyjamas', 'pyjamas.Canvas', 'pyjamas.Canvas.ColorStop']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.ColorStop */
+$pyjs.loaded_modules['pyjamas.Canvas.ColorStop'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.ColorStop'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.ColorStop'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.ColorStop"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.ColorStop>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.ColorStop';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['ColorStop'] = $pyjs.loaded_modules['pyjamas.Canvas.ColorStop'];
+
+
+	$m['Color'] = $p['___import___']('pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', null, false);
+	$m['ColorStop'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.ColorStop';
+		$method = $pyjs__bind_method2('__init__', function(myOffset, myColor) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				myOffset = arguments[1];
+				myColor = arguments[2];
+			}
+
+			self.offset = myOffset;
+			self.color = myColor;
+			return null;
+		}
+	, 1, [null,null,['self'],['myOffset'],['myColor']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('cloneColorStop', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $m['ColorStop']($p['getattr'](self, 'offset'), $m['Color']($p['str'](self['color']())));
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['cloneColorStop'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('ColorStop', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.ColorStop */
+
+
+/* end module: pyjamas.Canvas.ColorStop */
+
+
+/*
+PYJS_DEPS: ['pyjamas.Canvas.Color.Color', 'pyjamas', 'pyjamas.Canvas', 'pyjamas.Canvas.Color']
+*/
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: pyjspath */
 $pyjs.loaded_modules['pyjspath'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['pyjspath'].__was_initialized__) return $pyjs.loaded_modules['pyjspath'];
@@ -23603,6 +25545,2353 @@ PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'pyjamas.Window', 'pyja
 
 --></script>
 <script type="text/javascript"><!--
+/* start module: pyjamas.ui.FocusWidget */
+$pyjs.loaded_modules['pyjamas.ui.FocusWidget'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.ui.FocusWidget'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.FocusWidget'];
+	if(typeof $pyjs.loaded_modules['pyjamas.ui'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.ui'].__was_initialized__) $p['___import___']('pyjamas.ui', null);
+	var $m = $pyjs.loaded_modules["pyjamas.ui.FocusWidget"];
+	$m.__repr__ = function() { return "<module: pyjamas.ui.FocusWidget>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.ui.FocusWidget';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.ui']['FocusWidget'] = $pyjs.loaded_modules['pyjamas.ui.FocusWidget'];
+
+
+	$m['DOM'] = $p['___import___']('pyjamas.DOM', 'pyjamas.ui', null, false);
+	$m['Factory'] = $p['___import___']('pyjamas.Factory', 'pyjamas.ui', null, false);
+	$m['Widget'] = $p['___import___']('pyjamas.ui.Widget.Widget', 'pyjamas.ui', null, false);
+	$m['FocusMixin'] = $p['___import___']('pyjamas.ui.Focus.FocusMixin', 'pyjamas.ui', null, false);
+	$m['ClickHandler'] = $p['___import___']('pyjamas.ui.ClickListener.ClickHandler', 'pyjamas.ui', null, false);
+	$m['KeyboardHandler'] = $p['___import___']('pyjamas.ui.KeyboardListener.KeyboardHandler', 'pyjamas.ui', null, false);
+	$m['FocusHandler'] = $p['___import___']('pyjamas.ui.FocusListener.FocusHandler', 'pyjamas.ui', null, false);
+	$m['MouseHandler'] = $p['___import___']('pyjamas.ui.MouseListener.MouseHandler', 'pyjamas.ui', null, false);
+	$m['FocusWidget'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.ui.FocusWidget';
+		$method = $pyjs__bind_method2('__init__', function(element) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var kwargs = arguments.length >= 2 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					var kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			} else {
+				var self = arguments[0];
+				element = arguments[1];
+				var kwargs = arguments.length >= 3 ? arguments[arguments.length-1] : arguments[arguments.length];
+				if (typeof kwargs != 'object' || kwargs.__name__ != 'dict' || typeof kwargs.$pyjs_is_kwarg == 'undefined') {
+					kwargs = arguments[arguments.length+1];
+				} else {
+					delete kwargs['$pyjs_is_kwarg'];
+				}
+			}
+			if (typeof kwargs == 'undefined') {
+				kwargs = $p['__empty_dict']();
+				if (typeof element != 'undefined') {
+					if (element !== null && typeof element['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = element;
+						element = arguments[2];
+					}
+				} else 				if (typeof self != 'undefined') {
+					if (self !== null && typeof self['$pyjs_is_kwarg'] != 'undefined') {
+						kwargs = self;
+						self = arguments[2];
+					}
+				} else {
+				}
+			}
+
+			self['setElement'](element);
+			$pyjs_kwargs_call($m['Widget'], '__init__', null, kwargs, [{}, self]);
+			$m['FocusHandler']['__init__'](self);
+			$m['KeyboardHandler']['__init__'](self);
+			$m['ClickHandler']['__init__'](self);
+			$m['MouseHandler']['__init__'](self);
+			return null;
+		}
+	, 1, [null,['kwargs'],['self'],['element']]);
+		$cls_definition['__init__'] = $method;
+		var $bases = new Array($m['Widget'],$m['FocusHandler'],$m['KeyboardHandler'],$m['MouseHandler'],$m['ClickHandler'],$m['FocusMixin']);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('FocusWidget', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.ui.FocusWidget */
+
+
+/* end module: pyjamas.ui.FocusWidget */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.Factory', 'pyjamas.ui.Widget.Widget', 'pyjamas.ui', 'pyjamas.ui.Widget', 'pyjamas.ui.Focus.FocusMixin', 'pyjamas.ui.Focus', 'pyjamas.ui.ClickListener.ClickHandler', 'pyjamas.ui.ClickListener', 'pyjamas.ui.KeyboardListener.KeyboardHandler', 'pyjamas.ui.KeyboardListener', 'pyjamas.ui.FocusListener.FocusHandler', 'pyjamas.ui.FocusListener', 'pyjamas.ui.MouseListener.MouseHandler', 'pyjamas.ui.MouseListener']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.GWTCanvasImplIE6 */
+$pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIE6'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIE6'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIE6'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.GWTCanvasImplIE6"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.GWTCanvasImplIE6>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.GWTCanvasImplIE6';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['GWTCanvasImplIE6'] = $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplIE6'];
+
+
+	$m['math'] = $p['___import___']('math', 'pyjamas.Canvas');
+	$m['DOM'] = $p['___import___']('pyjamas.DOM', 'pyjamas.Canvas', null, false);
+	$m['Widget'] = $p['___import___']('pyjamas.ui.Widget.Widget', 'pyjamas.Canvas', null, false);
+	$m['Window'] = $p['___import___']('pyjamas.Window', 'pyjamas.Canvas', null, false);
+	$m['BUTT'] = $p['___import___']('pyjamas.Canvas.GWTCanvasImplIEConsts.BUTT', 'pyjamas.Canvas', null, false);
+	$m['DESTINATION_OVER'] = $p['___import___']('pyjamas.Canvas.GWTCanvasImplIEConsts.DESTINATION_OVER', 'pyjamas.Canvas', null, false);
+	$m['SOURCE_OVER'] = $p['___import___']('pyjamas.Canvas.GWTCanvasImplIEConsts.SOURCE_OVER', 'pyjamas.Canvas', null, false);
+	$m['GWTCanvasConsts'] = $p['___import___']('pyjamas.Canvas.GWTCanvasConsts', 'pyjamas.Canvas', null, false);
+	$m['JSOStack'] = $p['___import___']('pyjamas.Canvas.JSOStack.JSOStack', 'pyjamas.Canvas', null, false);
+	$m['PathElement'] = $p['___import___']('pyjamas.Canvas.PathElement', 'pyjamas.Canvas', null, false);
+	$m['VMLContext'] = $p['___import___']('pyjamas.Canvas.VMLContext.VMLContext', 'pyjamas.Canvas', null, false);
+	$m['VMLStyle'] = $p['___import___']('pyjamas.Canvas.VMLContext.VMLStyle', 'pyjamas.Canvas', null, false);
+	$m['Color'] = $p['___import___']('pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', null, false);
+	$m['CanvasGradientImplIE6'] = $p['___import___']('pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6', 'pyjamas.Canvas', null, false);
+	$m['addNamespace'] = function() {
+
+
+    if (!$doc.namespaces["v"]) {
+        $doc.namespaces.add("v", "urn:schemas-microsoft-com:vml");
+        $doc.createStyleSheet().cssText = "v\:*{behavior:url(#default#VML);}";
+    }
+    
+	};
+	$m['addNamespace'].__name__ = 'addNamespace';
+
+	$m['addNamespace'].__bind_type__ = 0;
+	$m['addNamespace'].__args__ = [null,null];
+	$m['GWTCanvasImplIE6'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.GWTCanvasImplIE6';
+		$method = $pyjs__bind_method2('__init__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var ns,$pyjs_try_err;
+			try {
+				ns = $doc['namespaces']['item']('v');
+			} catch($pyjs_try_err) {
+				var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+				$pyjs.__last_exception__ = {error: $pyjs_try_err, module: $m};
+				if (true) {
+					$doc['namespaces']['add']('v', 'urn:schemas-microsoft-com:vml');
+					$doc['createStyleSheet']().cssText = 'v\\:*{behavior:url(#default#VML);}';
+				}
+			}
+			self.pathStr = $m['JSOStack']();
+			self.contextStack = $p['list']([]);
+			self.currentX = 0;
+			self.currentY = 0;
+			self.parentElement = null;
+			self.parentHeight = 0;
+			self.parentWidth = 0;
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('arc', function(x, y, radius, startAngle, endAngle, anticlockwise) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+				radius = arguments[3];
+				startAngle = arguments[4];
+				endAngle = arguments[5];
+				anticlockwise = arguments[6];
+			}
+
+			self['pathStr']['append']($m['PathElement']['arc'](x, y, radius, startAngle, endAngle, anticlockwise, self));
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y'],['radius'],['startAngle'],['endAngle'],['anticlockwise']]);
+		$cls_definition['arc'] = $method;
+		$method = $pyjs__bind_method2('beginPath', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['pathStr']['clear']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['beginPath'] = $method;
+		$method = $pyjs__bind_method2('clear', function(width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+				height = arguments[2];
+			}
+			if (typeof width == 'undefined') width=arguments.callee.__args__[3][1];
+			if (typeof height == 'undefined') height=arguments.callee.__args__[4][1];
+
+			self['pathStr']['clear']();
+			$m['DOM']['setInnerHTML']($p['getattr'](self, 'parentElement'), '');
+			return null;
+		}
+	, 1, [null,null,['self'],['width', 0],['height', 0]]);
+		$cls_definition['clear'] = $method;
+		$method = $pyjs__bind_method2('closePath', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['pathStr']['append']($m['PathElement']['closePath']());
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['closePath'] = $method;
+		$method = $pyjs__bind_method2('createElement', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self.context = $m['VMLContext']();
+			self.matrix = $p['getattr']($p['getattr'](self, 'context'), 'matrix');
+			return self['createParentElement']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['createElement'] = $method;
+		$method = $pyjs__bind_method2('createParentElement', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self.parentElement = $m['DOM']['createElement']('div');
+			$m['DOM']['setStyleAttribute']($p['getattr'](self, 'parentElement'), 'overflow', 'hidden');
+			return $p['getattr'](self, 'parentElement');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['createParentElement'] = $method;
+		$method = $pyjs__bind_method2('setFont', function(font) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				font = arguments[1];
+			}
+
+ 			return null;
+		}
+	, 1, [null,null,['self'],['font']]);
+		$cls_definition['setFont'] = $method;
+		$method = $pyjs__bind_method2('cubicCurveTo', function(cp1x, cp1y, cp2x, cp2y, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				cp1x = arguments[1];
+				cp1y = arguments[2];
+				cp2x = arguments[3];
+				cp2y = arguments[4];
+				x = arguments[5];
+				y = arguments[6];
+			}
+
+			self['pathStr']['append']($m['PathElement']['bezierCurveTo'](cp1x, cp1y, cp2x, cp2y, x, y, self));
+			self.currentX = x;
+			self.currentY = y;
+			return null;
+		}
+	, 1, [null,null,['self'],['cp1x'],['cp1y'],['cp2x'],['cp2y'],['x'],['y']]);
+		$cls_definition['cubicCurveTo'] = $method;
+		$method = $pyjs__bind_method2('drawImage', function(img) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+				var args = $p['tuple']($pyjs_array_slice.call(arguments,1,arguments.length));
+
+			} else {
+				var self = arguments[0];
+				img = arguments[1];
+				var args = $p['tuple']($pyjs_array_slice.call(arguments,2,arguments.length));
+
+			}
+			var $add5,destWidth,sourceHeight,$div13,$sub8,sourceWidth,$mul4,$div14,$mul3,$div10,$div11,$div12,$mul2,$sub3,$mul1,vmlStr,destX,sourceX,sourceY,$sub7,$sub6,$sub5,$sub4,$or1,dX,$or2,fullHeight,dY,fullWidth,destY,$div8,$div9,$sub2,$div2,$div3,$div1,$div6,$div7,$div4,$div5,$div16,$sub1,$add2,$add3,$add1,$add6,$add7,$add4,destHeight,$add8,$div15;
+			if ($p['bool']($p['isinstance'](img, $m['Widget']))) {
+				img = img['getElement']();
+			}
+			fullWidth = $p['getattr'](img, 'width');
+			fullHeight = $p['getattr'](img, 'height');
+			if ($p['bool']($p['op_eq']($p['len'](args), 8))) {
+				sourceX = args.__getitem__(0);
+				sourceY = args.__getitem__(1);
+				sourceWidth = args.__getitem__(2);
+				sourceHeight = args.__getitem__(3);
+				destX = args.__getitem__(4);
+				destY = args.__getitem__(5);
+				destWidth = args.__getitem__(6);
+				destHeight = args.__getitem__(7);
+			}
+			else if ($p['bool']($p['op_eq']($p['len'](args), 4))) {
+				sourceX = 0;
+				sourceY = 0;
+				sourceWidth = fullWidth;
+				sourceHeight = fullHeight;
+				destX = args.__getitem__(0);
+				destY = args.__getitem__(1);
+				destWidth = args.__getitem__(2);
+				destHeight = args.__getitem__(3);
+			}
+			else if ($p['bool']($p['op_eq']($p['len'](args), 2))) {
+				sourceX = 0;
+				sourceY = 0;
+				sourceWidth = fullWidth;
+				sourceHeight = fullHeight;
+				destX = args.__getitem__(0);
+				destY = args.__getitem__(1);
+				destWidth = fullWidth;
+				destHeight = fullHeight;
+			}
+			vmlStr = $p['list']([]);
+			vmlStr['append']('<v:group style="position:absolute;width:10;height:10;');
+			dX = self['getCoordX']($p['getattr'](self, 'matrix'), destX, destY);
+			dY = self['getCoordY']($p['getattr'](self, 'matrix'), destX, destY);
+			if ($p['bool'](($p['bool']($or1=!$p['op_eq']($p['getattr']($p['getattr'](self, 'context'), 'matrix').__getitem__(0), 1))?$or1:!$p['op_eq']($p['getattr']($p['getattr'](self, 'context'), 'matrix').__getitem__(1), 0)))) {
+				vmlStr['append']('padding-right:');
+				vmlStr['append']($p['__op_add']($add1=$p['str']($p['getattr'](self, 'parentWidth')),$add2='px;'));
+				vmlStr['append']('padding-bottom:');
+				vmlStr['append']($p['__op_add']($add3=$p['str']($p['getattr'](self, 'parentHeight')),$add4='px;'));
+				vmlStr['append']("filter:progid:DXImageTransform.Microsoft.Matrix(M11='");
+				vmlStr['append']($p['__op_add']($add5='',$add6=$p['str']($p['getattr'](self, 'matrix').__getitem__(0))));
+				vmlStr['append']("',");
+				vmlStr['append']("M12='");
+				vmlStr['append']($p['__op_add']($add7='',$add8=$p['str']($p['getattr'](self, 'matrix').__getitem__(1))));
+				vmlStr['append']("',");
+				vmlStr['append']("M21='");
+				vmlStr['append']($p['str']($p['getattr'](self, 'matrix').__getitem__(3)));
+				vmlStr['append']("',");
+				vmlStr['append']("M22='");
+				vmlStr['append']($p['str']($p['getattr'](self, 'matrix').__getitem__(4)));
+				vmlStr['append']("',");
+				vmlStr['append']("Dx='");
+				vmlStr['append']($p['str']($m['math']['floor']((typeof ($div1=dX)==typeof ($div2=10) && typeof $div1=='number' && $div2 !== 0?
+					$div1/$div2:
+					$p['op_div']($div1,$div2)))));
+				vmlStr['append']("',");
+				vmlStr['append']("Dy='");
+				vmlStr['append']($p['str']($m['math']['floor']((typeof ($div3=dY)==typeof ($div4=10) && typeof $div3=='number' && $div4 !== 0?
+					$div3/$div4:
+					$p['op_div']($div3,$div4)))));
+				vmlStr['append']("', SizingMethod='clip');");
+			}
+			else {
+				vmlStr['append']('left:');
+				vmlStr['append']($p['sprintf']('%dpx;', $p['float_int']((typeof ($div5=dX)==typeof ($div6=10) && typeof $div5=='number' && $div6 !== 0?
+					$div5/$div6:
+					$p['op_div']($div5,$div6)))));
+				vmlStr['append']('top:');
+				vmlStr['append']($p['sprintf']('%dpx', $p['float_int']((typeof ($div7=dY)==typeof ($div8=10) && typeof $div7=='number' && $div8 !== 0?
+					$div7/$div8:
+					$p['op_div']($div7,$div8)))));
+			}
+			vmlStr['append']('" coordsize="100,100" coordorigin="0,0"><v:image src="');
+			vmlStr['append']($m['DOM']['getAttribute'](img, 'src'));
+			vmlStr['append']('" style="');
+			vmlStr['append']('width:');
+			vmlStr['append']($p['str']($p['float_int']((typeof ($mul1=destWidth)==typeof ($mul2=10) && typeof $mul1=='number'?
+				$mul1*$mul2:
+				$p['op_mul']($mul1,$mul2)))));
+			vmlStr['append'](';height:');
+			vmlStr['append']($p['str']($p['float_int']((typeof ($mul3=destHeight)==typeof ($mul4=10) && typeof $mul3=='number'?
+				$mul3*$mul4:
+				$p['op_mul']($mul3,$mul4)))));
+			vmlStr['append'](';" cropleft="');
+			vmlStr['append']($p['str']((typeof ($div9=sourceX)==typeof ($div10=fullWidth) && typeof $div9=='number' && $div10 !== 0?
+				$div9/$div10:
+				$p['op_div']($div9,$div10))));
+			vmlStr['append']('" croptop="');
+			vmlStr['append']($p['str']((typeof ($div11=sourceY)==typeof ($div12=fullHeight) && typeof $div11=='number' && $div12 !== 0?
+				$div11/$div12:
+				$p['op_div']($div11,$div12))));
+			vmlStr['append']('" cropright="');
+			vmlStr['append']($p['str']((typeof ($div13=$p['__op_sub']($sub3=$p['__op_sub']($sub1=fullWidth,$sub2=sourceX),$sub4=sourceWidth))==typeof ($div14=fullWidth) && typeof $div13=='number' && $div14 !== 0?
+				$div13/$div14:
+				$p['op_div']($div13,$div14))));
+			vmlStr['append']('" cropbottom="');
+			vmlStr['append']($p['str']((typeof ($div15=$p['__op_sub']($sub7=$p['__op_sub']($sub5=fullHeight,$sub6=sourceY),$sub8=sourceHeight))==typeof ($div16=fullHeight) && typeof $div15=='number' && $div16 !== 0?
+				$div15/$div16:
+				$p['op_div']($div15,$div16))));
+			vmlStr['append']('"/></v:group>');
+			self['insert']('BeforeEnd', ''['join'](vmlStr));
+			return null;
+		}
+	, 1, ['args',null,['self'],['img']]);
+		$cls_definition['drawImage'] = $method;
+		$method = $pyjs__bind_method2('appendGradient', function(style, shapeStr) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				style = arguments[1];
+				shapeStr = arguments[2];
+			}
+			var maxX,maxY,dx,dy,$iter1_iter,colors,cs,$iter2_type,$mul9,colorStops,$add21,$add20,$add22,minX,minY,$sub9,$iter1_array,$mul8,$iter1_nextval,focusX,focusY,$sub13,$sub12,$sub11,$sub10,$sub14,$add14,$add15,$add16,$add17,$add10,$add11,$add12,$add13,$mul7,$mul6,$mul5,$add18,$add19,$mul12,$iter2_nextval,stopPosn,$iter1_type,$mul11,$mul10,i,fillLength,$iter2_idx,$iter2_iter,length,$iter1_idx,$add9,$iter2_array;
+			colorStops = $p['getattr']($p['getattr'](style, 'gradient'), 'colorStops');
+			length = $p['len'](colorStops);
+			shapeStr['append']('" color="');
+			shapeStr['append']($p['str']($p['getattr'](colorStops.__getitem__(0), 'color')));
+			shapeStr['append']('" color2="');
+			shapeStr['append']($p['str']($p['getattr'](colorStops.__getitem__($p['__op_sub']($sub9=length,$sub10=1)), 'color')));
+			shapeStr['append']('" type="');
+			shapeStr['append']($p['getattr']($p['getattr'](style, 'gradient'), 'type'));
+			if ($p['bool']($p['op_eq']($p['getattr']($p['getattr'](style, 'gradient'), 'type'), 'gradient'))) {
+				colors = '';
+				$iter1_iter = $p['range'](1, $p['len'](colorStops));
+				$iter1_nextval=$p['__iter_prepare']($iter1_iter,false);
+				while (typeof($p['__wrapped_next']($iter1_nextval).$nextval) != 'undefined') {
+					i = $iter1_nextval.$nextval;
+					cs = colorStops.__getitem__(i);
+					stopPosn = $p['getattr'](cs, 'offset');
+					colors = $p['__op_add']($add9=colors,$add10=$p['sprintf']('%d%%', $p['float_int']((typeof ($mul5=stopPosn)==typeof ($mul6=100) && typeof $mul5=='number'?
+						$mul5*$mul6:
+						$p['op_mul']($mul5,$mul6)))));
+					colors = $p['__op_add']($add13=colors,$add14=$p['__op_add']($add11=$p['str']($p['getattr'](cs, 'color')),$add12=','));
+				}
+				shapeStr['append']('" colors="');
+				shapeStr['append'](colors);
+			}
+			else {
+				minX = self['pathStr']['getMinCoordX']();
+				maxX = self['pathStr']['getMaxCoordX']();
+				minY = self['pathStr']['getMinCoordY']();
+				maxY = self['pathStr']['getMaxCoordY']();
+				dx = $p['__op_sub']($sub11=maxX,$sub12=minX);
+				dy = $p['__op_sub']($sub13=maxY,$sub14=minY);
+				fillLength = $m['math']['sqrt']($p['__op_add']($add15=(typeof ($mul7=dx)==typeof ($mul8=dx) && typeof $mul7=='number'?
+					$mul7*$mul8:
+					$p['op_mul']($mul7,$mul8)),$add16=(typeof ($mul9=dy)==typeof ($mul10=dy) && typeof $mul9=='number'?
+					$mul9*$mul10:
+					$p['op_mul']($mul9,$mul10))));
+				focusX = 50;
+				focusY = 50;
+				colors = '';
+				$iter2_iter = $p['range'](1, $p['len'](colorStops));
+				$iter2_nextval=$p['__iter_prepare']($iter2_iter,false);
+				while (typeof($p['__wrapped_next']($iter2_nextval).$nextval) != 'undefined') {
+					i = $iter2_nextval.$nextval;
+					cs = colorStops.__getitem__(i);
+					stopPosn = $p['getattr'](cs, 'offset');
+					colors = $p['__op_add']($add17=colors,$add18=$p['sprintf']('%d%%', $p['float_int']((typeof ($mul11=stopPosn)==typeof ($mul12=100) && typeof $mul11=='number'?
+						$mul11*$mul12:
+						$p['op_mul']($mul11,$mul12)))));
+					colors = $p['__op_add']($add21=colors,$add22=$p['__op_add']($add19=$p['str']($p['getattr'](cs, 'color')),$add20=','));
+				}
+				shapeStr['append']('" colors="');
+				shapeStr['append'](colors);
+				shapeStr['append']('" focusposition="');
+				shapeStr['append']($p['str'](focusX));
+				shapeStr['append']('%,');
+				shapeStr['append']($p['str'](focusY));
+				shapeStr['append']('%,');
+			}
+			shapeStr['append']('" angle="');
+			shapeStr['append']($p['str']($p['getattr']($p['getattr'](style, 'gradient'), 'angle')));
+			return null;
+		}
+	, 1, [null,null,['self'],['style'],['shapeStr']]);
+		$cls_definition['appendGradient'] = $method;
+		$method = $pyjs__bind_method2('appendStroke', function(shapeStr) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				shapeStr = arguments[1];
+			}
+			var $mul14,$mul13;
+			shapeStr['append']('<v:stroke opacity="');
+			shapeStr['append']($p['str']((typeof ($mul13=$p['getattr']($p['getattr'](self, 'context'), 'globalAlpha'))==typeof ($mul14=$p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'strokeStyle'), 'alpha')) && typeof $mul13=='number'?
+				$mul13*$mul14:
+				$p['op_mul']($mul13,$mul14))));
+			shapeStr['append']('"');
+			if ($p['bool']($p['op_eq']($p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'strokeStyle'), 'type'), 'Gradient'))) {
+				if ($p['bool'](($p['cmp']($p['len']($p['getattr']($p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'strokeStyle'), 'gradient'), 'colorStops')), 0) == 1))) {
+					self['appendGradient']($p['getattr']($p['getattr'](self, 'context'), 'strokeStyle'), shapeStr);
+				}
+			}
+			else {
+				shapeStr['append'](' color="');
+				shapeStr['append']($p['str']($p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'strokeStyle'), 'color')));
+			}
+			shapeStr['append']('" miterlimit="');
+			shapeStr['append']($p['str']($p['getattr']($p['getattr'](self, 'context'), 'miterLimit')));
+			shapeStr['append']('" joinstyle="');
+			shapeStr['append']($p['getattr']($p['getattr'](self, 'context'), 'lineJoin'));
+			shapeStr['append']('" endcap="');
+			shapeStr['append']($p['getattr']($p['getattr'](self, 'context'), 'lineCap'));
+			shapeStr['append']('"></v:stroke>');
+			return null;
+		}
+	, 1, [null,null,['self'],['shapeStr']]);
+		$cls_definition['appendStroke'] = $method;
+		$method = $pyjs__bind_method2('appendFill', function(shapeStr) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				shapeStr = arguments[1];
+			}
+			var $mul16,$mul15;
+			shapeStr['append']('<v:fill opacity="');
+			shapeStr['append']($p['str']((typeof ($mul15=$p['getattr']($p['getattr'](self, 'context'), 'globalAlpha'))==typeof ($mul16=$p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'fillStyle'), 'alpha')) && typeof $mul15=='number'?
+				$mul15*$mul16:
+				$p['op_mul']($mul15,$mul16))));
+			shapeStr['append']('"');
+			if ($p['bool']($p['op_eq']($p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'fillStyle'), 'type'), 'Gradient'))) {
+				if ($p['bool'](($p['cmp']($p['len']($p['getattr']($p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'fillStyle'), 'gradient'), 'colorStops')), 0) == 1))) {
+					self['appendGradient']($p['getattr']($p['getattr'](self, 'context'), 'fillStyle'), shapeStr);
+				}
+			}
+			else {
+				shapeStr['append'](' color="');
+				shapeStr['append']($p['str']($p['getattr']($p['getattr']($p['getattr'](self, 'context'), 'fillStyle'), 'color')));
+			}
+			shapeStr['append']('"></v:fill>');
+			return null;
+		}
+	, 1, [null,null,['self'],['shapeStr']]);
+		$cls_definition['appendFill'] = $method;
+		$method = $pyjs__bind_method2('fill', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var shapeStr,daStr;
+			if ($p['bool']($p['op_eq']($p['len']($p['getattr'](self, 'pathStr')), 0))) {
+				return null;
+			}
+			shapeStr = $p['list']([]);
+			shapeStr['append']('<v:shape style="position:absolute;width:10;height:10;" coordsize="100,100');
+			shapeStr['append']('" stroked="f" path="');
+			shapeStr['append'](self['pathStr']['join']());
+			shapeStr['append'](' e">');
+			self['appendFill'](shapeStr);
+			shapeStr['append']('</v:shape>');
+			daStr = ''['join'](shapeStr);
+			self['insert']($p['getattr']($p['getattr'](self, 'context'), 'globalCompositeOperation'), daStr);
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['fill'] = $method;
+		$method = $pyjs__bind_method2('stroke', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var shapeStr,daStr;
+			if ($p['bool']($p['op_eq']($p['len']($p['getattr'](self, 'pathStr')), 0))) {
+				return null;
+			}
+			shapeStr = $p['list']([]);
+			shapeStr['append']('<v:shape style="position:absolute;');
+			shapeStr['append']('width:10; height:10;');
+			shapeStr['append']('" coordsize="100,100');
+			shapeStr['append']('" filled="f');
+			shapeStr['append']('" stroked="t');
+			shapeStr['append']('" strokeweight="');
+			shapeStr['append']($p['str']($p['getattr']($p['getattr'](self, 'context'), 'lineWidth')));
+			shapeStr['append']('px" path="');
+			shapeStr['append'](self['pathStr']['join']());
+			shapeStr['append'](' e">');
+			self['appendStroke'](shapeStr);
+			shapeStr['append']('<v:shape>');
+			daStr = ''['join'](shapeStr);
+			self['insert']($p['getattr']($p['getattr'](self, 'context'), 'globalCompositeOperation'), daStr);
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['stroke'] = $method;
+		$method = $pyjs__bind_method2('fillRect', function(x, y, w, h) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+				w = arguments[3];
+				h = arguments[4];
+			}
+			var $add25,$add24,$add26,$add23;
+			w = $p['__op_add']($add23=w,$add24=x);
+			h = $p['__op_add']($add25=h,$add26=y);
+			self['beginPath']();
+			self['moveTo'](x, y);
+			self['lineTo'](x, h);
+			self['lineTo'](w, h);
+			self['lineTo'](w, y);
+			self['closePath']();
+			self['fill']();
+			self['pathStr']['clear']();
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y'],['w'],['h']]);
+		$cls_definition['fillRect'] = $method;
+		$method = $pyjs__bind_method2('getContext', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, 'context');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getContext'] = $method;
+		$method = $pyjs__bind_method2('getCoordX', function(matrix, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				matrix = arguments[1];
+				x = arguments[2];
+				y = arguments[3];
+			}
+			var $mul17,$add28,$div18,$div17,$sub16,$mul19,$mul18,$sub15,$add29,$add27,coordX,$mul22,$add30,$mul20,$mul21;
+			coordX = $p['float_int']($m['math']['floor']($m['math']['floor']($p['__op_sub']($sub15=(typeof ($mul21=10)==typeof ($mul22=$p['__op_add']($add29=$p['__op_add']($add27=(typeof ($mul17=matrix.__getitem__(0))==typeof ($mul18=x) && typeof $mul17=='number'?
+				$mul17*$mul18:
+				$p['op_mul']($mul17,$mul18)),$add28=(typeof ($mul19=matrix.__getitem__(1))==typeof ($mul20=y) && typeof $mul19=='number'?
+				$mul19*$mul20:
+				$p['op_mul']($mul19,$mul20))),$add30=matrix.__getitem__(2))) && typeof $mul21=='number'?
+				$mul21*$mul22:
+				$p['op_mul']($mul21,$mul22)),$sub16=4.5))));
+			self['pathStr']['logCoordX']((typeof ($div17=coordX)==typeof ($div18=10) && typeof $div17=='number' && $div18 !== 0?
+				$div17/$div18:
+				$p['op_div']($div17,$div18)));
+			return coordX;
+		}
+	, 1, [null,null,['self'],['matrix'],['x'],['y']]);
+		$cls_definition['getCoordX'] = $method;
+		$method = $pyjs__bind_method2('getCoordY', function(matrix, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				matrix = arguments[1];
+				x = arguments[2];
+				y = arguments[3];
+			}
+			var $div20,$sub18,$add32,$add33,$add31,$sub17,$add34,$mul26,$mul28,$mul27,$mul24,$mul25,$mul23,coordY,$div19;
+			coordY = $p['float_int']($m['math']['floor']($m['math']['floor']($p['__op_sub']($sub17=(typeof ($mul27=10)==typeof ($mul28=$p['__op_add']($add33=$p['__op_add']($add31=(typeof ($mul23=matrix.__getitem__(3))==typeof ($mul24=x) && typeof $mul23=='number'?
+				$mul23*$mul24:
+				$p['op_mul']($mul23,$mul24)),$add32=(typeof ($mul25=matrix.__getitem__(4))==typeof ($mul26=y) && typeof $mul25=='number'?
+				$mul25*$mul26:
+				$p['op_mul']($mul25,$mul26))),$add34=matrix.__getitem__(5))) && typeof $mul27=='number'?
+				$mul27*$mul28:
+				$p['op_mul']($mul27,$mul28)),$sub18=4.5))));
+			self['pathStr']['logCoordY']((typeof ($div19=coordY)==typeof ($div20=10) && typeof $div19=='number' && $div20 !== 0?
+				$div19/$div20:
+				$p['op_div']($div19,$div20)));
+			return coordY;
+		}
+	, 1, [null,null,['self'],['matrix'],['x'],['y']]);
+		$cls_definition['getCoordY'] = $method;
+		$method = $pyjs__bind_method2('getFillStyle', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'context'), 'fillStyle');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getFillStyle'] = $method;
+		$method = $pyjs__bind_method2('getGlobalAlpha', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'context'), 'globalAlpha');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getGlobalAlpha'] = $method;
+		$method = $pyjs__bind_method2('getGlobalCompositeOperation', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			if ($p['bool']($p['op_eq']($p['getattr']($p['getattr'](self, 'context'), 'globalCompositeOperation'), $m['DESTINATION_OVER']))) {
+				return $p['getattr']($m['GWTCanvasConsts'], 'DESTINATION_OVER');
+			}
+			else {
+				return $p['getattr']($m['GWTCanvasConsts'], 'SOURCE_OVER');
+			}
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getGlobalCompositeOperation'] = $method;
+		$method = $pyjs__bind_method2('getLineCap', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			if ($p['bool']($p['op_eq']($p['getattr']($p['getattr'](self, 'context'), 'lineCap'), $m['BUTT']))) {
+				return $p['getattr']($m['GWTCanvasConsts'], 'BUTT');
+			}
+			return $p['getattr']($p['getattr'](self, 'context'), 'lineCap');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineCap'] = $method;
+		$method = $pyjs__bind_method2('getLineJoin', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'context'), 'lineJoin');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineJoin'] = $method;
+		$method = $pyjs__bind_method2('getLineWidth', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'context'), 'lineWidth');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineWidth'] = $method;
+		$method = $pyjs__bind_method2('getMiterLimit', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'context'), 'miterLimit');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getMiterLimit'] = $method;
+		$method = $pyjs__bind_method2('getStrokeStyle', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'context'), 'strokeStyle');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getStrokeStyle'] = $method;
+		$method = $pyjs__bind_method2('lineTo', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['pathStr']['append']($m['PathElement']['lineTo'](x, y, self));
+			self.currentX = x;
+			self.currentY = y;
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['lineTo'] = $method;
+		$method = $pyjs__bind_method2('moveTo', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['pathStr']['append']($m['PathElement']['moveTo'](x, y, self));
+			self.currentX = x;
+			self.currentY = y;
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['moveTo'] = $method;
+		$method = $pyjs__bind_method2('quadraticCurveTo', function(cpx, cpy, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				cpx = arguments[1];
+				cpy = arguments[2];
+				x = arguments[3];
+				y = arguments[4];
+			}
+			var $sub22,$sub23,$sub20,$sub21,$sub26,$sub24,$sub25,cp2y,cp2x,$add42,$add41,$add40,$mul29,$add39,$sub19,$add38,cp1x,cp1y,$div21,$div23,$div22,$div25,$div24,$div27,$div26,$div28,$add36,$add37,$add35,$mul31,$mul30,$mul32;
+			cp1x = $p['__op_add']($add35=$p['getattr'](self, 'currentX'),$add36=(typeof ($mul29=(typeof ($div21=2.0)==typeof ($div22=3.0) && typeof $div21=='number' && $div22 !== 0?
+				$div21/$div22:
+				$p['op_div']($div21,$div22)))==typeof ($mul30=$p['__op_sub']($sub19=cpx,$sub20=$p['getattr'](self, 'currentX'))) && typeof $mul29=='number'?
+				$mul29*$mul30:
+				$p['op_mul']($mul29,$mul30)));
+			cp1y = $p['__op_add']($add37=$p['getattr'](self, 'currentY'),$add38=(typeof ($mul31=(typeof ($div23=2.0)==typeof ($div24=3.0) && typeof $div23=='number' && $div24 !== 0?
+				$div23/$div24:
+				$p['op_div']($div23,$div24)))==typeof ($mul32=$p['__op_sub']($sub21=cpy,$sub22=$p['getattr'](self, 'currentY'))) && typeof $mul31=='number'?
+				$mul31*$mul32:
+				$p['op_mul']($mul31,$mul32)));
+			cp2x = $p['__op_add']($add39=cp1x,$add40=(typeof ($div25=$p['__op_sub']($sub23=x,$sub24=$p['getattr'](self, 'currentX')))==typeof ($div26=3.0) && typeof $div25=='number' && $div26 !== 0?
+				$div25/$div26:
+				$p['op_div']($div25,$div26)));
+			cp2y = $p['__op_add']($add41=cp1y,$add42=(typeof ($div27=$p['__op_sub']($sub25=y,$sub26=$p['getattr'](self, 'currentY')))==typeof ($div28=3.0) && typeof $div27=='number' && $div28 !== 0?
+				$div27/$div28:
+				$p['op_div']($div27,$div28)));
+			self['pathStr']['append']($m['PathElement']['bezierCurveTo'](cp1x, cp1y, cp2x, cp2y, x, y, self));
+			self.currentX = x;
+			self.currentY = y;
+			return null;
+		}
+	, 1, [null,null,['self'],['cpx'],['cpy'],['x'],['y']]);
+		$cls_definition['quadraticCurveTo'] = $method;
+		$method = $pyjs__bind_method2('rect', function(x, y, w, h) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+				w = arguments[3];
+				h = arguments[4];
+			}
+			var $add50,$add51,$add52,$add49,$add48,$add47,$add44,$add43,$add46,$add45;
+			self['pathStr']['append']($m['PathElement']['moveTo'](x, y, self));
+			self['pathStr']['append']($m['PathElement']['lineTo']($p['__op_add']($add43=x,$add44=w), y, self));
+			self['pathStr']['append']($m['PathElement']['lineTo']($p['__op_add']($add45=x,$add46=w), $p['__op_add']($add47=y,$add48=h), self));
+			self['pathStr']['append']($m['PathElement']['lineTo'](x, $p['__op_add']($add49=y,$add50=h), self));
+			self['pathStr']['append']($m['PathElement']['closePath']());
+			self.currentX = x;
+			self.currentY = $p['__op_add']($add51=y,$add52=h);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y'],['w'],['h']]);
+		$cls_definition['rect'] = $method;
+		$method = $pyjs__bind_method2('restoreContext', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			if ($p['bool'](($p['cmp']($p['len']($p['getattr'](self, 'contextStack')), 0) == 1))) {
+				self.context = self['contextStack']['pop']();
+				self.matrix = $p['getattr']($p['getattr'](self, 'context'), 'matrix');
+			}
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['restoreContext'] = $method;
+		$method = $pyjs__bind_method2('rotate', function(angle) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				angle = arguments[1];
+			}
+			var $sub27,$sub28,$sub29,$mul44,$mul45,$mul47,$mul40,$mul41,$mul42,$mul43,m1,m2,$sub30,$add53,$mul48,a,c,b,$add54,$add55,$add56,s,$mul39,$mul38,$mul35,$mul34,$mul37,$mul36,$mul46,$mul33;
+			s = $m['math']['sin']((typeof ($usub1=angle)=='number'?
+				-$usub1:
+				$p['op_usub']($usub1)));
+			c = $m['math']['cos']((typeof ($usub2=angle)=='number'?
+				-$usub2:
+				$p['op_usub']($usub2)));
+			a = $p['getattr'](self, 'matrix').__getitem__(0);
+			b = $p['getattr'](self, 'matrix').__getitem__(1);
+			m1 = (typeof ($mul33=a)==typeof ($mul34=c) && typeof $mul33=='number'?
+				$mul33*$mul34:
+				$p['op_mul']($mul33,$mul34));
+			m2 = (typeof ($mul35=b)==typeof ($mul36=s) && typeof $mul35=='number'?
+				$mul35*$mul36:
+				$p['op_mul']($mul35,$mul36));
+			$p['getattr'](self, 'matrix').__setitem__(0, $p['__op_sub']($sub27=m1,$sub28=m2));
+			m1 = (typeof ($mul37=a)==typeof ($mul38=s) && typeof $mul37=='number'?
+				$mul37*$mul38:
+				$p['op_mul']($mul37,$mul38));
+			m2 = (typeof ($mul39=b)==typeof ($mul40=c) && typeof $mul39=='number'?
+				$mul39*$mul40:
+				$p['op_mul']($mul39,$mul40));
+			$p['getattr'](self, 'matrix').__setitem__(1, $p['__op_add']($add53=m1,$add54=m2));
+			a = $p['getattr'](self, 'matrix').__getitem__(3);
+			b = $p['getattr'](self, 'matrix').__getitem__(4);
+			m1 = (typeof ($mul41=a)==typeof ($mul42=c) && typeof $mul41=='number'?
+				$mul41*$mul42:
+				$p['op_mul']($mul41,$mul42));
+			m2 = (typeof ($mul43=b)==typeof ($mul44=s) && typeof $mul43=='number'?
+				$mul43*$mul44:
+				$p['op_mul']($mul43,$mul44));
+			$p['getattr'](self, 'matrix').__setitem__(3, $p['__op_sub']($sub29=m1,$sub30=m2));
+			m1 = (typeof ($mul45=a)==typeof ($mul46=s) && typeof $mul45=='number'?
+				$mul45*$mul46:
+				$p['op_mul']($mul45,$mul46));
+			m2 = (typeof ($mul47=b)==typeof ($mul48=c) && typeof $mul47=='number'?
+				$mul47*$mul48:
+				$p['op_mul']($mul47,$mul48));
+			$p['getattr'](self, 'matrix').__setitem__(4, $p['__op_add']($add55=m1,$add56=m2));
+			return null;
+		}
+	, 1, [null,null,['self'],['angle']]);
+		$cls_definition['rotate'] = $method;
+		$method = $pyjs__bind_method2('saveContext', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['contextStack']['append']($p['getattr'](self, 'context'));
+			self.context = $m['VMLContext']($p['getattr'](self, 'context'));
+			self.matrix = $p['getattr']($p['getattr'](self, 'context'), 'matrix');
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['saveContext'] = $method;
+		$method = $pyjs__bind_method2('scale', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+			var $mul60,$mul49,$augexpr1,$augexpr3,$augexpr2,$augexpr4,$augsub4,$augsub3,$augsub2,$augsub1,$mul59,$mul58,$mul53,$mul52,$mul51,$mul50,$mul57,$mul56,$mul55,$mul54;
+			$p['getattr'](self, 'context').arcScaleX = (typeof ($mul49=$p['getattr']($p['getattr'](self, 'context'), 'arcScaleX'))==typeof ($mul50=x) && typeof $mul49=='number'?
+				$mul49*$mul50:
+				$p['op_mul']($mul49,$mul50));
+			$p['getattr'](self, 'context').arcScaleY = (typeof ($mul51=$p['getattr']($p['getattr'](self, 'context'), 'arcScaleY'))==typeof ($mul52=y) && typeof $mul51=='number'?
+				$mul51*$mul52:
+				$p['op_mul']($mul51,$mul52));
+			var $augsub1 = 0;
+			var $augexpr1 = $p['getattr'](self, 'matrix');
+			$augexpr1.__setitem__($augsub1, (typeof ($mul53=$augexpr1.__getitem__($augsub1))==typeof ($mul54=x) && typeof $mul53=='number'?
+				$mul53*$mul54:
+				$p['op_mul']($mul53,$mul54)));
+			var $augsub2 = 1;
+			var $augexpr2 = $p['getattr'](self, 'matrix');
+			$augexpr2.__setitem__($augsub2, (typeof ($mul55=$augexpr2.__getitem__($augsub2))==typeof ($mul56=y) && typeof $mul55=='number'?
+				$mul55*$mul56:
+				$p['op_mul']($mul55,$mul56)));
+			var $augsub3 = 3;
+			var $augexpr3 = $p['getattr'](self, 'matrix');
+			$augexpr3.__setitem__($augsub3, (typeof ($mul57=$augexpr3.__getitem__($augsub3))==typeof ($mul58=x) && typeof $mul57=='number'?
+				$mul57*$mul58:
+				$p['op_mul']($mul57,$mul58)));
+			var $augsub4 = 4;
+			var $augexpr4 = $p['getattr'](self, 'matrix');
+			$augexpr4.__setitem__($augsub4, (typeof ($mul59=$augexpr4.__getitem__($augsub4))==typeof ($mul60=y) && typeof $mul59=='number'?
+				$mul59*$mul60:
+				$p['op_mul']($mul59,$mul60)));
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['scale'] = $method;
+		$method = $pyjs__bind_method2('setBackgroundColor', function(element, color) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				element = arguments[1];
+				color = arguments[2];
+			}
+
+			$m['DOM']['setStyleAttribute'](element, 'backgroundColor', color);
+			return null;
+		}
+	, 1, [null,null,['self'],['element'],['color']]);
+		$cls_definition['setBackgroundColor'] = $method;
+		$method = $pyjs__bind_method2('setCoordHeight', function(elem, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				height = arguments[2];
+			}
+
+			$m['DOM']['setElemAttribute'](elem, 'width', $p['float_int'](height));
+			self['clear'](0, 0);
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['height']]);
+		$cls_definition['setCoordHeight'] = $method;
+		$method = $pyjs__bind_method2('setCoordWidth', function(elem, width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				width = arguments[2];
+			}
+
+			$m['DOM']['setElemAttribute'](elem, 'width', $p['float_int'](width));
+			self['clear'](0, 0);
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['width']]);
+		$cls_definition['setCoordWidth'] = $method;
+		$method = $pyjs__bind_method2('setCurrentX', function(currentX) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				currentX = arguments[1];
+			}
+
+			self.currentX = currentX;
+			return null;
+		}
+	, 1, [null,null,['self'],['currentX']]);
+		$cls_definition['setCurrentX'] = $method;
+		$method = $pyjs__bind_method2('setCurrentY', function(currentY) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				currentY = arguments[1];
+			}
+
+			self.currentY = currentY;
+			return null;
+		}
+	, 1, [null,null,['self'],['currentY']]);
+		$cls_definition['setCurrentY'] = $method;
+		$method = $pyjs__bind_method2('setFillStyle', function(fillStyle) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				fillStyle = arguments[1];
+			}
+			var $add65,$add64,$add67,$add66,end,$add60,$add63,$add57,$add58,$add59,guts,$add68,$add61,$add62;
+			$p['getattr'](self, 'context').fillStyle = $m['VMLStyle']();
+			if ($p['bool']($p['isinstance'](fillStyle, $m['CanvasGradientImplIE6']))) {
+				$p['getattr']($p['getattr'](self, 'context'), 'fillStyle').type = 'Gradient';
+				$p['getattr']($p['getattr'](self, 'context'), 'fillStyle').gradient = fillStyle;
+			}
+			else {
+				fillStyle = $p['str'](fillStyle)['strip']();
+				if ($p['bool'](fillStyle['startswith']('rgba('))) {
+					end = fillStyle['find'](')', 12);
+					if ($p['bool'](($p['cmp'](end, (typeof ($usub3=1)=='number'?
+						-$usub3:
+						$p['op_usub']($usub3))) == 1))) {
+						guts = $p['__getslice'](fillStyle, 5, end)['$$split'](',');
+						if ($p['bool']($p['op_eq']($p['len'](guts), 4))) {
+							$p['getattr']($p['getattr'](self, 'context'), 'fillStyle').alpha = $p['float'](guts.__getitem__(3));
+							$p['getattr']($p['getattr'](self, 'context'), 'fillStyle').color = $p['__op_add']($add67=$p['__op_add']($add65=$p['__op_add']($add63=$p['__op_add']($add61=$p['__op_add']($add59=$p['__op_add']($add57='rgb(',$add58=guts.__getitem__(0)),$add60=','),$add62=guts.__getitem__(1)),$add64=','),$add66=guts.__getitem__(2)),$add68=')');
+						}
+					}
+				}
+				else {
+					$p['getattr']($p['getattr'](self, 'context'), 'fillStyle').color = fillStyle;
+				}
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['fillStyle']]);
+		$cls_definition['setFillStyle'] = $method;
+		$method = $pyjs__bind_method2('setStrokeStyle', function(strokeStyle) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				strokeStyle = arguments[1];
+			}
+			var $add76,$add74,$add75,end,$add73,$add70,$add71,guts,$add69,$add78,$add79,$add80,$add77,$add72;
+			$p['getattr'](self, 'context').strokeStyle = $m['VMLStyle']();
+			if ($p['bool']($p['isinstance'](strokeStyle, $m['CanvasGradientImplIE6']))) {
+				$p['getattr']($p['getattr'](self, 'context'), 'strokeStyle').type = 'Gradient';
+				$p['getattr']($p['getattr'](self, 'context'), 'strokeStyle').gradient = strokeStyle;
+			}
+			else {
+				strokeStyle = $p['str'](strokeStyle)['strip']();
+				if ($p['bool'](strokeStyle['startswith']('rgba('))) {
+					end = strokeStyle['find'](')', 12);
+					if ($p['bool'](($p['cmp'](end, (typeof ($usub4=1)=='number'?
+						-$usub4:
+						$p['op_usub']($usub4))) == 1))) {
+						guts = $p['__getslice'](strokeStyle, 5, end)['$$split'](',');
+						if ($p['bool']($p['op_eq']($p['len'](guts), 4))) {
+							$p['getattr']($p['getattr'](self, 'context'), 'stokeStyle').alpha = $p['float'](guts.__getitem__(3));
+							$p['getattr']($p['getattr'](self, 'context'), 'strokeStyle').color = $p['__op_add']($add79=$p['__op_add']($add77=$p['__op_add']($add75=$p['__op_add']($add73=$p['__op_add']($add71=$p['__op_add']($add69='rgb(',$add70=guts.__getitem__(0)),$add72=','),$add74=guts.__getitem__(1)),$add76=','),$add78=guts.__getitem__(2)),$add80=')');
+						}
+					}
+				}
+				else {
+					$p['getattr']($p['getattr'](self, 'context'), 'strokeStyle').color = strokeStyle;
+				}
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['strokeStyle']]);
+		$cls_definition['setStrokeStyle'] = $method;
+		$method = $pyjs__bind_method2('setGlobalAlpha', function(globalAlpha) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				globalAlpha = arguments[1];
+			}
+
+			$p['getattr'](self, 'context').globalAlpha = globalAlpha;
+			return null;
+		}
+	, 1, [null,null,['self'],['globalAlpha']]);
+		$cls_definition['setGlobalAlpha'] = $method;
+		$method = $pyjs__bind_method2('setGlobalCompositeOperation', function(gco) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				gco = arguments[1];
+			}
+
+			gco = gco['strip']();
+			if ($p['bool']($p['op_eq']($p['getattr'](gco, 'lower'), $p['getattr']($m['GWTCanvasConsts'], 'SOURCE_OVER')))) {
+				$p['getattr'](self, 'context').globalCompositeOperation = $m['SOURCE_OVER'];
+			}
+			else if ($p['bool']($p['op_eq']($p['getattr'](gco, 'lower'), $p['getattr']($m['GWTCanvasConsts'], 'DESTINATION_OVER')))) {
+				$p['getattr'](self, 'context').globalCompositeOperation = $m['DESTINATION_OVER'];
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['gco']]);
+		$cls_definition['setGlobalCompositeOperation'] = $method;
+		$method = $pyjs__bind_method2('setLineCap', function(lineCap) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				lineCap = arguments[1];
+			}
+
+			if ($p['bool']($p['op_eq']($p['getattr'](lineCap['strip'](), 'lower'), $p['getattr']($m['GWTCanvasConsts'], 'BUTT')))) {
+				$p['getattr'](self, 'context').lineCap = $m['BUTT'];
+			}
+			else {
+				$p['getattr'](self, 'context').lineCap = lineCap;
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['lineCap']]);
+		$cls_definition['setLineCap'] = $method;
+		$method = $pyjs__bind_method2('setLineJoin', function(lineJoin) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				lineJoin = arguments[1];
+			}
+
+			$p['getattr'](self, 'context').lineJoin = lineJoin;
+			return null;
+		}
+	, 1, [null,null,['self'],['lineJoin']]);
+		$cls_definition['setLineJoin'] = $method;
+		$method = $pyjs__bind_method2('setLineWidth', function(lineWidth) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				lineWidth = arguments[1];
+			}
+
+			$p['getattr'](self, 'context').lineWidth = lineWidth;
+			return null;
+		}
+	, 1, [null,null,['self'],['lineWidth']]);
+		$cls_definition['setLineWidth'] = $method;
+		$method = $pyjs__bind_method2('setMiterLimit', function(miterLimit) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				miterLimit = arguments[1];
+			}
+
+			$p['getattr'](self, 'context').miterLimit = miterLimit;
+			return null;
+		}
+	, 1, [null,null,['self'],['miterLimit']]);
+		$cls_definition['setMiterLimit'] = $method;
+		$method = $pyjs__bind_method2('setParentElement', function(g) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				g = arguments[1];
+			}
+
+			self.parentElement = g;
+			return null;
+		}
+	, 1, [null,null,['self'],['g']]);
+		$cls_definition['setParentElement'] = $method;
+		$method = $pyjs__bind_method2('setPixelHeight', function(elem, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				height = arguments[2];
+			}
+			var $add82,$add81;
+			$m['DOM']['setStyleAttribute'](elem, 'height', $p['__op_add']($add81=$p['str'](height),$add82='px'));
+			self.parentHeight = height;
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['height']]);
+		$cls_definition['setPixelHeight'] = $method;
+		$method = $pyjs__bind_method2('setPixelWidth', function(elem, width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				width = arguments[2];
+			}
+			var $add83,$add84;
+			$m['DOM']['setStyleAttribute'](elem, 'width', $p['__op_add']($add83=$p['str'](width),$add84='px'));
+			self.parentWidth = width;
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['width']]);
+		$cls_definition['setPixelWidth'] = $method;
+		$method = $pyjs__bind_method2('strokeRect', function(x, y, w, h) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+				w = arguments[3];
+				h = arguments[4];
+			}
+			var $add88,$add87,$add86,$add85;
+			w = $p['__op_add']($add85=w,$add86=x);
+			h = $p['__op_add']($add87=h,$add88=y);
+			self['beginPath']();
+			self['moveTo'](x, y);
+			self['lineTo'](x, h);
+			self['lineTo'](w, h);
+			self['lineTo'](w, y);
+			self['closePath']();
+			self['stroke']();
+			self['pathStr']['clear']();
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y'],['w'],['h']]);
+		$cls_definition['strokeRect'] = $method;
+		$method = $pyjs__bind_method2('transform', function(m12, m21, m22, dx, dy) {
+			if (this.__is_instance__ === true) {
+				var m11 = this;
+			} else {
+				var m11 = arguments[0];
+				m12 = arguments[1];
+				m21 = arguments[2];
+				m22 = arguments[3];
+				dx = arguments[4];
+				dy = arguments[5];
+			}
+			var $add101,$add89,$mul81,$add100,$add103,$add98,$add104,$mul62,$mul63,$mul61,$mul66,$mul67,$mul64,$mul65,$mul68,$mul69,$augsub6,$add96,$mul80,$mul71,$mul82,$mul83,$augexpr5,$add99,$augexpr6,$add94,$add95,$augsub5,$add97,$add90,$add91,$add92,$add93,$mul72,$mul84,$add102,a,$mul70,$mul73,b,$mul75,$mul74,$mul77,$mul76,$mul79,$mul78;
+			a = $p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__getitem__(0);
+			b = $p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__getitem__(1);
+			$p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__setitem__(0, $p['__op_add']($add89=(typeof ($mul61=a)==typeof ($mul62=m11) && typeof $mul61=='number'?
+				$mul61*$mul62:
+				$p['op_mul']($mul61,$mul62)),$add90=(typeof ($mul63=b)==typeof ($mul64=m21) && typeof $mul63=='number'?
+				$mul63*$mul64:
+				$p['op_mul']($mul63,$mul64))));
+			$p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__setitem__(1, $p['__op_add']($add91=(typeof ($mul65=a)==typeof ($mul66=m12) && typeof $mul65=='number'?
+				$mul65*$mul66:
+				$p['op_mul']($mul65,$mul66)),$add92=(typeof ($mul67=b)==typeof ($mul68=m22) && typeof $mul67=='number'?
+				$mul67*$mul68:
+				$p['op_mul']($mul67,$mul68))));
+			var $augsub5 = 2;
+			var $augexpr5 = $p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix');
+			$augexpr5.__setitem__($augsub5, $p['__op_add']($add95=$augexpr5.__getitem__($augsub5),$add96=$p['__op_add']($add93=(typeof ($mul69=a)==typeof ($mul70=dx) && typeof $mul69=='number'?
+				$mul69*$mul70:
+				$p['op_mul']($mul69,$mul70)),$add94=(typeof ($mul71=b)==typeof ($mul72=dy) && typeof $mul71=='number'?
+				$mul71*$mul72:
+				$p['op_mul']($mul71,$mul72)))));
+			a = $p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__getitem__(3);
+			b = $p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__getitem__(4);
+			$p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__setitem__(3, $p['__op_add']($add97=(typeof ($mul73=a)==typeof ($mul74=m11) && typeof $mul73=='number'?
+				$mul73*$mul74:
+				$p['op_mul']($mul73,$mul74)),$add98=(typeof ($mul75=b)==typeof ($mul76=m21) && typeof $mul75=='number'?
+				$mul75*$mul76:
+				$p['op_mul']($mul75,$mul76))));
+			$p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix').__setitem__(4, $p['__op_add']($add99=(typeof ($mul77=a)==typeof ($mul78=m12) && typeof $mul77=='number'?
+				$mul77*$mul78:
+				$p['op_mul']($mul77,$mul78)),$add100=(typeof ($mul79=b)==typeof ($mul80=m22) && typeof $mul79=='number'?
+				$mul79*$mul80:
+				$p['op_mul']($mul79,$mul80))));
+			var $augsub6 = 5;
+			var $augexpr6 = $p['getattr']((typeof self == "undefined"?$m.self:self), 'matrix');
+			$augexpr6.__setitem__($augsub6, $p['__op_add']($add103=$augexpr6.__getitem__($augsub6),$add104=$p['__op_add']($add101=(typeof ($mul81=a)==typeof ($mul82=dx) && typeof $mul81=='number'?
+				$mul81*$mul82:
+				$p['op_mul']($mul81,$mul82)),$add102=(typeof ($mul83=b)==typeof ($mul84=dy) && typeof $mul83=='number'?
+				$mul83*$mul84:
+				$p['op_mul']($mul83,$mul84)))));
+			return null;
+		}
+	, 1, [null,null,['m11'],['m12'],['m21'],['m22'],['dx'],['dy']]);
+		$cls_definition['transform'] = $method;
+		$method = $pyjs__bind_method2('translate', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+			var $add112,$mul92,$mul91,$mul90,$mul86,$add106,$mul88,$mul89,$add107,$add105,$mul85,$augexpr7,$mul87,$augsub7,$add108,$add110,$add111,$augexpr8,$add109,$augsub8;
+			var $augsub7 = 2;
+			var $augexpr7 = $p['getattr'](self, 'matrix');
+			$augexpr7.__setitem__($augsub7, $p['__op_add']($add107=$augexpr7.__getitem__($augsub7),$add108=$p['__op_add']($add105=(typeof ($mul85=$p['getattr'](self, 'matrix').__getitem__(0))==typeof ($mul86=x) && typeof $mul85=='number'?
+				$mul85*$mul86:
+				$p['op_mul']($mul85,$mul86)),$add106=(typeof ($mul87=$p['getattr'](self, 'matrix').__getitem__(1))==typeof ($mul88=y) && typeof $mul87=='number'?
+				$mul87*$mul88:
+				$p['op_mul']($mul87,$mul88)))));
+			var $augsub8 = 5;
+			var $augexpr8 = $p['getattr'](self, 'matrix');
+			$augexpr8.__setitem__($augsub8, $p['__op_add']($add111=$augexpr8.__getitem__($augsub8),$add112=$p['__op_add']($add109=(typeof ($mul89=$p['getattr'](self, 'matrix').__getitem__(3))==typeof ($mul90=x) && typeof $mul89=='number'?
+				$mul89*$mul90:
+				$p['op_mul']($mul89,$mul90)),$add110=(typeof ($mul91=$p['getattr'](self, 'matrix').__getitem__(4))==typeof ($mul92=y) && typeof $mul91=='number'?
+				$mul91*$mul92:
+				$p['op_mul']($mul91,$mul92)))));
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['translate'] = $method;
+		$method = $pyjs__bind_method2('insert', function(gco, html) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				gco = arguments[1];
+				html = arguments[2];
+			}
+
+			self['parentElement']['insertAdjacentHTML'](gco, html);
+			return null;
+		}
+	, 1, [null,null,['self'],['gco'],['html']]);
+		$cls_definition['insert'] = $method;
+		$method = $pyjs__bind_method2('buildStyleString', function(style) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				style = arguments[1];
+			}
+			var $add127,$add126,$add124,$add123,$add121,$add118,$add119,$add116,$add117,$add114,$add115,$add113,$add128,$add120,$add125,$add122;
+			return $p['__op_add']($add127=$p['__op_add']($add125=$p['__op_add']($add123=$p['__op_add']($add121=$p['__op_add']($add119=$p['__op_add']($add117=$p['__op_add']($add115=$p['__op_add']($add113=style.__getitem__('style'),$add114=' '),$add116=style.__getitem__('variant')),$add118=' '),$add120=style.__getitem__('weight')),$add122=' '),$add124=$p['str'](style.__getitem__('size'))),$add126='px '),$add128=style.__getitem__('family'));
+		}
+	, 1, [null,null,['self'],['style']]);
+		$cls_definition['buildStyleString'] = $method;
+		$method = $pyjs__bind_method2('encodeHtmlAttribute', function(s) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				s = arguments[1];
+			}
+			var e;
+			e = s['$$replace']('&', '&amp;');
+			return e['$$replace']('"', '&quot;');
+		}
+	, 1, [null,null,['self'],['s']]);
+		$cls_definition['encodeHtmlAttribute'] = $method;
+		$method = $pyjs__bind_method2('drawText_', function(text, x, y, maxWidth, stroke) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+				x = arguments[2];
+				y = arguments[3];
+				maxWidth = arguments[4];
+				stroke = arguments[5];
+			}
+			var $add134,$add135,$add136,right,$add130,$add131,$add133,$add138,$add139,daStr,$add137,$div32,$div30,$div31,$add132,$add145,$add144,$add147,$add146,DEFAULT_STYLE,$add140,$add143,$add142,$add141,$add149,$add148,skewM,$add154,$add129,lineStr,delta,textAlign,skewOffset,$div29,fontStyleString,offsetX,offsetY,$add152,$add153,$add150,$add151,dX,dY,left;
+			delta = 1000;
+			left = 0;
+			right = delta;
+			offsetX = 0;
+			offsetY = 0;
+			DEFAULT_STYLE = $p['dict']([['style', 'normal'], ['variant', 'normal'], ['weight', 'normal'], ['size', 10], ['family', 'sans-serif']]);
+			fontStyleString = self['buildStyleString'](DEFAULT_STYLE);
+			textAlign = 'left';
+			dX = self['getCoordX']($p['getattr'](self, 'matrix'), $p['__op_add']($add129=x,$add130=offsetX), $p['__op_add']($add131=y,$add132=offsetY));
+			dY = self['getCoordY']($p['getattr'](self, 'matrix'), $p['__op_add']($add133=x,$add134=offsetX), $p['__op_add']($add135=y,$add136=offsetY));
+			lineStr = $p['list']([]);
+			lineStr['append']('<v:line from="');
+			lineStr['append']($p['str']((typeof ($usub5=left)=='number'?
+				-$usub5:
+				$p['op_usub']($usub5))));
+			lineStr['append'](' 0" to="');
+			lineStr['append']($p['str'](right));
+			lineStr['append'](' 0" ');
+			lineStr['append'](' coordsize="100 100" coordorigin="0 0"');
+			lineStr['append']('" style="position:absolute;width:1px;height:1px"');
+			if ($p['bool'](stroke)) {
+				lineStr['append'](' filled="f" stroked="t">');
+				self['appendStroke'](lineStr);
+			}
+			else {
+				lineStr['append'](' filled="t" stroked="f">');
+				self['appendFill'](lineStr);
+			}
+			skewM = $p['__op_add']($add149=$p['__op_add']($add147=$p['__op_add']($add145=$p['__op_add']($add143=$p['__op_add']($add141=$p['__op_add']($add139=$p['__op_add']($add137=$p['str']($p['getattr'](self, 'matrix').__getitem__(0)),$add138=','),$add140=$p['str']($p['getattr'](self, 'matrix').__getitem__(1))),$add142=','),$add144=$p['str']($p['getattr'](self, 'matrix').__getitem__(3))),$add146=','),$add148=$p['str']($p['getattr'](self, 'matrix').__getitem__(4))),$add150=',0,0');
+			skewOffset = $p['__op_add']($add153=$p['__op_add']($add151=$p['str']($m['math']['floor']((typeof ($div29=dX)==typeof ($div30=10) && typeof $div29=='number' && $div30 !== 0?
+				$div29/$div30:
+				$p['op_div']($div29,$div30)))),$add152=','),$add154=$p['str']($m['math']['floor']((typeof ($div31=dY)==typeof ($div32=10) && typeof $div31=='number' && $div32 !== 0?
+				$div31/$div32:
+				$p['op_div']($div31,$div32)))));
+			lineStr['append']('<v:skew on="t" matrix="');
+			lineStr['append'](skewM);
+			lineStr['append']('" ');
+			lineStr['append'](' offset="');
+			lineStr['append'](skewOffset);
+			lineStr['append']('" origin="');
+			lineStr['append']($p['str'](left));
+			lineStr['append'](' 0" />');
+			lineStr['append']('<v:path textpathok="true" />');
+			lineStr['append']('<v:textpath on="true" string="');
+			lineStr['append'](self['encodeHtmlAttribute'](text));
+			lineStr['append']('" style="v-text-align:');
+			lineStr['append'](textAlign);
+			lineStr['append'](';font:');
+			lineStr['append'](self['encodeHtmlAttribute'](fontStyleString));
+			lineStr['append']('" /></v:line>');
+			daStr = ''['join'](lineStr);
+			self['insert']($p['getattr']($p['getattr'](self, 'context'), 'globalCompositeOperation'), daStr);
+			return null;
+		}
+	, 1, [null,null,['self'],['text'],['x'],['y'],['maxWidth'],['stroke']]);
+		$cls_definition['drawText_'] = $method;
+		$method = $pyjs__bind_method2('fillText', function(text, x, y, maxWidth) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+				x = arguments[2];
+				y = arguments[3];
+				maxWidth = arguments[4];
+			}
+			if (typeof maxWidth == 'undefined') maxWidth=arguments.callee.__args__[6][1];
+
+			self['drawText_'](text, x, y, maxWidth, false);
+			return null;
+		}
+	, 1, [null,null,['self'],['text'],['x'],['y'],['maxWidth', null]]);
+		$cls_definition['fillText'] = $method;
+		$method = $pyjs__bind_method2('strokeText', function(text, x, y, maxWidth) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+				x = arguments[2];
+				y = arguments[3];
+				maxWidth = arguments[4];
+			}
+			if (typeof maxWidth == 'undefined') maxWidth=arguments.callee.__args__[6][1];
+
+			self['drawText_'](text, x, y, maxWidth, true);
+			return null;
+		}
+	, 1, [null,null,['self'],['text'],['x'],['y'],['maxWidth', null]]);
+		$cls_definition['strokeText'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('GWTCanvasImplIE6', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.GWTCanvasImplIE6 */
+
+
+/* end module: pyjamas.Canvas.GWTCanvasImplIE6 */
+
+
+/*
+PYJS_DEPS: ['math', 'pyjamas.DOM', 'pyjamas', 'pyjamas.ui.Widget.Widget', 'pyjamas.ui', 'pyjamas.ui.Widget', 'pyjamas.Window', 'pyjamas.Canvas.GWTCanvasImplIEConsts.BUTT', 'pyjamas.Canvas', 'pyjamas.Canvas.GWTCanvasImplIEConsts', 'pyjamas.Canvas.GWTCanvasImplIEConsts.DESTINATION_OVER', 'pyjamas.Canvas.GWTCanvasImplIEConsts.SOURCE_OVER', 'pyjamas.Canvas.GWTCanvasConsts', 'pyjamas.Canvas.JSOStack.JSOStack', 'pyjamas.Canvas.JSOStack', 'pyjamas.Canvas.PathElement', 'pyjamas.Canvas.VMLContext.VMLContext', 'pyjamas.Canvas.VMLContext', 'pyjamas.Canvas.VMLContext.VMLStyle', 'pyjamas.Canvas.Color.Color', 'pyjamas.Canvas.Color', 'pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6', 'pyjamas.Canvas.CanvasGradientImplIE6']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.GWTCanvasImplDefault */
+$pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplDefault'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplDefault'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplDefault'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.GWTCanvasImplDefault"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.GWTCanvasImplDefault>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.GWTCanvasImplDefault';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['GWTCanvasImplDefault'] = $pyjs.loaded_modules['pyjamas.Canvas.GWTCanvasImplDefault'];
+
+
+	$m['DOM'] = $p['___import___']('pyjamas.DOM', 'pyjamas.Canvas', null, false);
+	$m['Widget'] = $p['___import___']('pyjamas.ui.Widget.Widget', 'pyjamas.Canvas', null, false);
+	$m['Color'] = $p['___import___']('pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', null, false);
+	$m['cvt'] = function(s) {
+
+		return s;
+	};
+	$m['cvt'].__name__ = 'cvt';
+
+	$m['cvt'].__bind_type__ = 0;
+	$m['cvt'].__args__ = [null,null,['s']];
+	$m['GWTCanvasImplDefault'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.GWTCanvasImplDefault';
+		$method = $pyjs__bind_method2('__init__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self.canvasContext = null;
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('arc', function(x, y, radius, startAngle, endAngle, antiClockwise) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+				radius = arguments[3];
+				startAngle = arguments[4];
+				endAngle = arguments[5];
+				antiClockwise = arguments[6];
+			}
+
+			self['canvasContext']['arc'](x, y, radius, startAngle, endAngle, antiClockwise);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y'],['radius'],['startAngle'],['endAngle'],['antiClockwise']]);
+		$cls_definition['arc'] = $method;
+		$method = $pyjs__bind_method2('beginPath', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['canvasContext']['beginPath']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['beginPath'] = $method;
+		$method = $pyjs__bind_method2('clear', function(width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+				height = arguments[2];
+			}
+
+			self['clearRect'](0, 0, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['width'],['height']]);
+		$cls_definition['clear'] = $method;
+		$method = $pyjs__bind_method2('closePath', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['canvasContext']['closePath']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['closePath'] = $method;
+		$method = $pyjs__bind_method2('createElement', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var e;
+			e = $m['DOM']['createElement']('CANVAS');
+			self['setCanvasContext'](e['getContext']('2d'));
+			return e;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['createElement'] = $method;
+		$method = $pyjs__bind_method2('cubicCurveTo', function(cp1x, cp1y, cp2x, cp2y, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				cp1x = arguments[1];
+				cp1y = arguments[2];
+				cp2x = arguments[3];
+				cp2y = arguments[4];
+				x = arguments[5];
+				y = arguments[6];
+			}
+
+			self['canvasContext']['bezierCurveTo'](cp1x, cp1y, cp2x, cp2y, x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['cp1x'],['cp1y'],['cp2x'],['cp2y'],['x'],['y']]);
+		$cls_definition['cubicCurveTo'] = $method;
+		$method = $pyjs__bind_method2('setFont', function(font) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				font = arguments[1];
+			}
+
+			$p['getattr'](self, 'canvasContext').font = font;
+			return null;
+		}
+	, 1, [null,null,['self'],['font']]);
+		$cls_definition['setFont'] = $method;
+		$method = $pyjs__bind_method2('fillText', function(text, sourceX, sourceY, maxWidth) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				text = arguments[1];
+				sourceX = arguments[2];
+				sourceY = arguments[3];
+				maxWidth = arguments[4];
+			}
+			if (typeof maxWidth == 'undefined') maxWidth=arguments.callee.__args__[6][1];
+			var $pyjs_try_err;
+			try {
+				if ($p['bool']((maxWidth === null))) {
+					self['canvasContext']['fillText'](text, sourceX, sourceY);
+				}
+				else {
+					self['canvasContext']['fillText'](text, sourceX, sourceY, maxWidth);
+				}
+			} catch($pyjs_try_err) {
+				var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+				$pyjs.__last_exception__ = {error: $pyjs_try_err, module: $m};
+				if (true) {
+					self['saveContext']();
+					self['translate'](sourceX, sourceY);
+					try {
+						text = (typeof unicode == "undefined"?$m.unicode:unicode)(text);
+						self['canvasContext']['mozDrawText'](text);
+					} catch($pyjs_try_err) {
+						var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
+						$pyjs.__last_exception__ = {error: $pyjs_try_err, module: $m};
+						if (true) {
+							self['canvasContext']['drawText'](text);
+						}
+					}
+					self['restoreContext']();
+				}
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['text'],['sourceX'],['sourceY'],['maxWidth', null]]);
+		$cls_definition['fillText'] = $method;
+		$method = $pyjs__bind_method2('drawImage', function(img, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				img = arguments[1];
+				sourceX = arguments[2];
+				sourceY = arguments[3];
+				sourceWidth = arguments[4];
+				sourceHeight = arguments[5];
+				destX = arguments[6];
+				destY = arguments[7];
+				destWidth = arguments[8];
+				destHeight = arguments[9];
+			}
+			if (typeof sourceWidth == 'undefined') sourceWidth=arguments.callee.__args__[6][1];
+			if (typeof sourceHeight == 'undefined') sourceHeight=arguments.callee.__args__[7][1];
+			if (typeof destX == 'undefined') destX=arguments.callee.__args__[8][1];
+			if (typeof destY == 'undefined') destY=arguments.callee.__args__[9][1];
+			if (typeof destWidth == 'undefined') destWidth=arguments.callee.__args__[10][1];
+			if (typeof destHeight == 'undefined') destHeight=arguments.callee.__args__[11][1];
+
+			if ($p['bool']($p['isinstance'](img, $m['Widget']))) {
+				img = img['getElement']();
+			}
+			if ($p['bool']((sourceWidth === null))) {
+				self['canvasContext']['drawImage'](img, sourceX, sourceY);
+			}
+			else {
+				self['canvasContext']['drawImage'](img, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['img'],['sourceX'],['sourceY'],['sourceWidth', null],['sourceHeight', null],['destX', null],['destY', null],['destWidth', null],['destHeight', null]]);
+		$cls_definition['drawImage'] = $method;
+		$method = $pyjs__bind_method2('fill', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['canvasContext']['fill']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['fill'] = $method;
+		$method = $pyjs__bind_method2('fillRect', function(startX, startY, width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				startX = arguments[1];
+				startY = arguments[2];
+				width = arguments[3];
+				height = arguments[4];
+			}
+
+			self['canvasContext']['fillRect'](startX, startY, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['startX'],['startY'],['width'],['height']]);
+		$cls_definition['fillRect'] = $method;
+		$method = $pyjs__bind_method2('getGlobalAlpha', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'canvasContext'), 'globalAlpha');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getGlobalAlpha'] = $method;
+		$method = $pyjs__bind_method2('getGlobalCompositeOperation', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'canvasContext'), 'globalCompositeOperation');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getGlobalCompositeOperation'] = $method;
+		$method = $pyjs__bind_method2('getHeight', function(elem) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+			}
+
+			return $m['DOM']['getElementPropertyInt'](elem, 'height');
+		}
+	, 1, [null,null,['self'],['elem']]);
+		$cls_definition['getHeight'] = $method;
+		$method = $pyjs__bind_method2('getLineCap', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'canvasContext'), 'lineCap');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineCap'] = $method;
+		$method = $pyjs__bind_method2('getLineJoin', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'canvasContext'), 'lineJoin');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineJoin'] = $method;
+		$method = $pyjs__bind_method2('getLineWidth', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'canvasContext'), 'lineWidth');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getLineWidth'] = $method;
+		$method = $pyjs__bind_method2('getMiterLimit', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'canvasContext'), 'miterLimit');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getMiterLimit'] = $method;
+		$method = $pyjs__bind_method2('getWidth', function(elem) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+			}
+
+			return $m['DOM']['getElementPropertyInt'](elem, 'width');
+		}
+	, 1, [null,null,['self'],['elem']]);
+		$cls_definition['getWidth'] = $method;
+		$method = $pyjs__bind_method2('lineTo', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['canvasContext']['lineTo'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['lineTo'] = $method;
+		$method = $pyjs__bind_method2('moveTo', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['canvasContext']['moveTo'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['moveTo'] = $method;
+		$method = $pyjs__bind_method2('quadraticCurveTo', function(cpx, cpy, x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				cpx = arguments[1];
+				cpy = arguments[2];
+				x = arguments[3];
+				y = arguments[4];
+			}
+
+			self['canvasContext']['quadraticCurveTo'](cpx, cpy, x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['cpx'],['cpy'],['x'],['y']]);
+		$cls_definition['quadraticCurveTo'] = $method;
+		$method = $pyjs__bind_method2('rect', function(x, y, width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+				width = arguments[3];
+				height = arguments[4];
+			}
+
+			self['canvasContext']['rect'](x, y, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y'],['width'],['height']]);
+		$cls_definition['rect'] = $method;
+		$method = $pyjs__bind_method2('restoreContext', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['canvasContext']['restore']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['restoreContext'] = $method;
+		$method = $pyjs__bind_method2('rotate', function(angle) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				angle = arguments[1];
+			}
+
+			self['canvasContext']['rotate'](angle);
+			return null;
+		}
+	, 1, [null,null,['self'],['angle']]);
+		$cls_definition['rotate'] = $method;
+		$method = $pyjs__bind_method2('saveContext', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['canvasContext']['save']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['saveContext'] = $method;
+		$method = $pyjs__bind_method2('scale', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['canvasContext']['scale'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['scale'] = $method;
+		$method = $pyjs__bind_method2('setBackgroundColor', function(element, color) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				element = arguments[1];
+				color = arguments[2];
+			}
+
+			$m['DOM']['setStyleAttribute'](element, 'backgroundColor', color);
+			return null;
+		}
+	, 1, [null,null,['self'],['element'],['color']]);
+		$cls_definition['setBackgroundColor'] = $method;
+		$method = $pyjs__bind_method2('setCoordHeight', function(elem, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				height = arguments[2];
+			}
+
+			$m['DOM']['setElemAttribute'](elem, 'height', $p['str'](height));
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['height']]);
+		$cls_definition['setCoordHeight'] = $method;
+		$method = $pyjs__bind_method2('setCoordWidth', function(elem, width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				width = arguments[2];
+			}
+
+			$m['DOM']['setElemAttribute'](elem, 'width', $p['str'](width));
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['width']]);
+		$cls_definition['setCoordWidth'] = $method;
+		$method = $pyjs__bind_method2('setStrokeStyle', function(gradient) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				gradient = arguments[1];
+			}
+
+			if ($p['bool']($p['isinstance'](gradient, $m['Color']))) {
+				gradient = $p['str'](gradient);
+			}
+			else if ($p['bool'](!$p['bool']($p['isinstance'](gradient, $p['basestring'])))) {
+				gradient = gradient['getObject']();
+			}
+			$p['getattr'](self, 'canvasContext').strokeStyle = $m['cvt'](gradient);
+			return null;
+		}
+	, 1, [null,null,['self'],['gradient']]);
+		$cls_definition['setStrokeStyle'] = $method;
+		$method = $pyjs__bind_method2('setFillStyle', function(gradient) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				gradient = arguments[1];
+			}
+
+			if ($p['bool']($p['isinstance'](gradient, $m['Color']))) {
+				gradient = $p['str'](gradient);
+			}
+			else if ($p['bool'](!$p['bool']($p['isinstance'](gradient, $p['basestring'])))) {
+				gradient = gradient['getObject']();
+			}
+			$p['getattr'](self, 'canvasContext').fillStyle = $m['cvt'](gradient);
+			return null;
+		}
+	, 1, [null,null,['self'],['gradient']]);
+		$cls_definition['setFillStyle'] = $method;
+		$method = $pyjs__bind_method2('setGlobalAlpha', function(alpha) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				alpha = arguments[1];
+			}
+
+			$p['getattr'](self, 'canvasContext').globalAlpha = alpha;
+			return null;
+		}
+	, 1, [null,null,['self'],['alpha']]);
+		$cls_definition['setGlobalAlpha'] = $method;
+		$method = $pyjs__bind_method2('setGlobalCompositeOperation', function(globalCompositeOperation) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				globalCompositeOperation = arguments[1];
+			}
+
+			$p['getattr'](self, 'canvasContext').globalCompositeOperation = $m['cvt'](globalCompositeOperation);
+			return null;
+		}
+	, 1, [null,null,['self'],['globalCompositeOperation']]);
+		$cls_definition['setGlobalCompositeOperation'] = $method;
+		$method = $pyjs__bind_method2('setLineCap', function(lineCap) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				lineCap = arguments[1];
+			}
+
+			$p['getattr'](self, 'canvasContext').lineCap = $m['cvt'](lineCap);
+			return null;
+		}
+	, 1, [null,null,['self'],['lineCap']]);
+		$cls_definition['setLineCap'] = $method;
+		$method = $pyjs__bind_method2('setLineJoin', function(lineJoin) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				lineJoin = arguments[1];
+			}
+
+			$p['getattr'](self, 'canvasContext').lineJoin = $m['cvt'](lineJoin);
+			return null;
+		}
+	, 1, [null,null,['self'],['lineJoin']]);
+		$cls_definition['setLineJoin'] = $method;
+		$method = $pyjs__bind_method2('setLineWidth', function(width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				width = arguments[1];
+			}
+
+			$p['getattr'](self, 'canvasContext').lineWidth = width;
+			return null;
+		}
+	, 1, [null,null,['self'],['width']]);
+		$cls_definition['setLineWidth'] = $method;
+		$method = $pyjs__bind_method2('setMiterLimit', function(miterLimit) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				miterLimit = arguments[1];
+			}
+
+			$p['getattr'](self, 'canvasContext').miterLimit = miterLimit;
+			return null;
+		}
+	, 1, [null,null,['self'],['miterLimit']]);
+		$cls_definition['setMiterLimit'] = $method;
+		$method = $pyjs__bind_method2('setPixelHeight', function(elem, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				height = arguments[2];
+			}
+
+			$m['DOM']['setStyleAttribute'](elem, 'height', $p['sprintf']('%dpx', height));
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['height']]);
+		$cls_definition['setPixelHeight'] = $method;
+		$method = $pyjs__bind_method2('setPixelWidth', function(elem, width) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				elem = arguments[1];
+				width = arguments[2];
+			}
+
+			$m['DOM']['setStyleAttribute'](elem, 'width', $p['sprintf']('%dpx', width));
+			return null;
+		}
+	, 1, [null,null,['self'],['elem'],['width']]);
+		$cls_definition['setPixelWidth'] = $method;
+		$method = $pyjs__bind_method2('stroke', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['canvasContext']['stroke']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['stroke'] = $method;
+		$method = $pyjs__bind_method2('strokeRect', function(startX, startY, width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				startX = arguments[1];
+				startY = arguments[2];
+				width = arguments[3];
+				height = arguments[4];
+			}
+
+			self['canvasContext']['strokeRect'](startX, startY, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['startX'],['startY'],['width'],['height']]);
+		$cls_definition['strokeRect'] = $method;
+		$method = $pyjs__bind_method2('transform', function(m11, m12, m21, m22, dx, dy) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				m11 = arguments[1];
+				m12 = arguments[2];
+				m21 = arguments[3];
+				m22 = arguments[4];
+				dx = arguments[5];
+				dy = arguments[6];
+			}
+
+			self['canvasContext']['transform'](m11, m12, m21, m22, dx, dy);
+			return null;
+		}
+	, 1, [null,null,['self'],['m11'],['m12'],['m21'],['m22'],['dx'],['dy']]);
+		$cls_definition['transform'] = $method;
+		$method = $pyjs__bind_method2('translate', function(x, y) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x = arguments[1];
+				y = arguments[2];
+			}
+
+			self['canvasContext']['translate'](x, y);
+			return null;
+		}
+	, 1, [null,null,['self'],['x'],['y']]);
+		$cls_definition['translate'] = $method;
+		$method = $pyjs__bind_method2('clearRect', function(startX, startY, width, height) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				startX = arguments[1];
+				startY = arguments[2];
+				width = arguments[3];
+				height = arguments[4];
+			}
+
+			self['canvasContext']['clearRect'](startX, startY, width, height);
+			return null;
+		}
+	, 1, [null,null,['self'],['startX'],['startY'],['width'],['height']]);
+		$cls_definition['clearRect'] = $method;
+		$method = $pyjs__bind_method2('setCanvasContext', function(ctx) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				ctx = arguments[1];
+			}
+
+			self.canvasContext = ctx;
+			return null;
+		}
+	, 1, [null,null,['self'],['ctx']]);
+		$cls_definition['setCanvasContext'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('GWTCanvasImplDefault', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.GWTCanvasImplDefault */
+
+
+/* end module: pyjamas.Canvas.GWTCanvasImplDefault */
+
+
+/*
+PYJS_DEPS: ['pyjamas.DOM', 'pyjamas', 'pyjamas.ui.Widget.Widget', 'pyjamas.ui', 'pyjamas.ui.Widget', 'pyjamas.Canvas.Color.Color', 'pyjamas.Canvas', 'pyjamas.Canvas.Color']
+*/
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas */
+$pyjs.loaded_modules['pyjamas.Canvas'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas'];
+	if(typeof $pyjs.loaded_modules['pyjamas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas'].__was_initialized__) $p['___import___']('pyjamas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas']['Canvas'] = $pyjs.loaded_modules['pyjamas.Canvas'];
+
+
+ 	return this;
+}; /* end pyjamas.Canvas */
+
+
+/* end module: pyjamas.Canvas */
+
+
+
+--></script>
+<script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.RadialGradientImplIE6 */
+$pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplIE6'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplIE6'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplIE6'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.RadialGradientImplIE6"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.RadialGradientImplIE6>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.RadialGradientImplIE6';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['RadialGradientImplIE6'] = $pyjs.loaded_modules['pyjamas.Canvas.RadialGradientImplIE6'];
+
+
+	$m['CanvasGradientImplIE6'] = $p['___import___']('pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6', 'pyjamas.Canvas', null, false);
+	$m['RadialGradientImplIE6'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.RadialGradientImplIE6';
+		$method = $pyjs__bind_method2('__init__', function(x0, y0, r0, x1, y1, r1) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				x0 = arguments[1];
+				y0 = arguments[2];
+				r0 = arguments[3];
+				x1 = arguments[4];
+				y1 = arguments[5];
+				r1 = arguments[6];
+			}
+
+			$m['CanvasGradientImplIE6']['__init__'](self, x0, y0, x1, y1);
+			self.startRad = r0;
+			self.endRad = r1;
+			self.type = 'gradientradial';
+			return null;
+		}
+	, 1, [null,null,['self'],['x0'],['y0'],['r0'],['x1'],['y1'],['r1']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('cloneGradient', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+			var $iter1_nextval,$iter1_type,i,cStops,newGrad,$iter1_iter,$iter1_array,$iter1_idx;
+			newGrad = $m['RadialGradientImplIE6']($p['getattr'](self, 'startX'), $p['getattr'](self, 'startY'), $p['getattr'](self, 'startRad'), $p['getattr'](self, 'endX'), $p['getattr'](self, 'endY'), $p['getattr'](self, 'endRad'));
+			newGrad.startX = $p['getattr'](self, 'startX');
+			newGrad.startY = $p['getattr'](self, 'startY');
+			newGrad.startRad = $p['getattr'](self, 'startRad');
+			newGrad.endX = $p['getattr'](self, 'endX');
+			newGrad.endY = $p['getattr'](self, 'endY');
+			newGrad.endRad = $p['getattr'](self, 'endRad');
+			cStops = $p['getattr'](self, 'colorStops');
+			$iter1_iter = $p['range']($p['len'](cStops));
+			$iter1_nextval=$p['__iter_prepare']($iter1_iter,false);
+			while (typeof($p['__wrapped_next']($iter1_nextval).$nextval) != 'undefined') {
+				i = $iter1_nextval.$nextval;
+				newGrad['colorStops']['append'](cStops.__getitem__(i)['cloneColorStop']());
+			}
+			return newGrad;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['cloneGradient'] = $method;
+		var $bases = new Array($m['CanvasGradientImplIE6']);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('RadialGradientImplIE6', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.RadialGradientImplIE6 */
+
+
+/* end module: pyjamas.Canvas.RadialGradientImplIE6 */
+
+
+/*
+PYJS_DEPS: ['pyjamas.Canvas.CanvasGradientImplIE6.CanvasGradientImplIE6', 'pyjamas', 'pyjamas.Canvas', 'pyjamas.Canvas.CanvasGradientImplIE6']
+*/
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: random */
 $pyjs.loaded_modules['random'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['random'].__was_initialized__) return $pyjs.loaded_modules['random'];
@@ -25145,6 +29434,207 @@ PYJS_DEPS: ['math.log', 'math', 'math.exp', 'math.pi', 'math.e', 'math.ceil', 'm
 
 --></script>
 <script type="text/javascript"><!--
+/* start module: pyjamas.Canvas.JSOStack */
+$pyjs.loaded_modules['pyjamas.Canvas.JSOStack'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['pyjamas.Canvas.JSOStack'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.Canvas.JSOStack'];
+	if(typeof $pyjs.loaded_modules['pyjamas.Canvas'] == 'undefined' || !$pyjs.loaded_modules['pyjamas.Canvas'].__was_initialized__) $p['___import___']('pyjamas.Canvas', null);
+	var $m = $pyjs.loaded_modules["pyjamas.Canvas.JSOStack"];
+	$m.__repr__ = function() { return "<module: pyjamas.Canvas.JSOStack>"; };
+	$m.__was_initialized__ = true;
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'pyjamas.Canvas.JSOStack';
+	$m.__name__ = __mod_name__;
+	$pyjs.loaded_modules['pyjamas.Canvas']['JSOStack'] = $pyjs.loaded_modules['pyjamas.Canvas.JSOStack'];
+
+
+	$m['JSOStack'] = (function(){
+		var $cls_definition = new Object();
+		var $method;
+		$cls_definition.__module__ = 'pyjamas.Canvas.JSOStack';
+		$method = $pyjs__bind_method2('__init__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self['clear']();
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('clear', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			self.scratch = $p['list']([]);
+			self._minX = null;
+			self._minY = null;
+			self._maxX = null;
+			self._maxY = null;
+			return null;
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['clear'] = $method;
+		$method = $pyjs__bind_method2('getMaxCoordX', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, '_maxX');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getMaxCoordX'] = $method;
+		$method = $pyjs__bind_method2('getMaxCoordY', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, '_maxY');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getMaxCoordY'] = $method;
+		$method = $pyjs__bind_method2('getMinCoordX', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, '_minX');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getMinCoordX'] = $method;
+		$method = $pyjs__bind_method2('getMinCoordY', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr'](self, '_minY');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['getMinCoordY'] = $method;
+		$method = $pyjs__bind_method2('join', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return ''['join']($p['getattr'](self, 'scratch'));
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['join'] = $method;
+		$method = $pyjs__bind_method2('logCoordX', function(coordX) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				coordX = arguments[1];
+			}
+
+			if ($p['bool'](($p['getattr'](self, '_minX') === null))) {
+				self._minX = coordX;
+				self._maxX = coordX;
+			}
+			else {
+				if ($p['bool'](($p['cmp']($p['getattr'](self, '_minX'), coordX) == 1))) {
+					self._minX = coordX;
+				}
+				else {
+					if ($p['bool'](($p['cmp']($p['getattr'](self, '_maxX'), coordX) == -1))) {
+						self._maxX = coordX;
+					}
+				}
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['coordX']]);
+		$cls_definition['logCoordX'] = $method;
+		$method = $pyjs__bind_method2('logCoordY', function(coordY) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				coordY = arguments[1];
+			}
+
+			if ($p['bool'](($p['getattr'](self, '_minY') === null))) {
+				self._minY = coordY;
+				self._maxY = coordY;
+			}
+			else {
+				if ($p['bool'](($p['cmp']($p['getattr'](self, '_minY'), coordY) == 1))) {
+					self._minY = coordY;
+				}
+				else {
+					if ($p['bool'](($p['cmp']($p['getattr'](self, '_maxY'), coordY) == -1))) {
+						self._maxY = coordY;
+					}
+				}
+			}
+			return null;
+		}
+	, 1, [null,null,['self'],['coordY']]);
+		$cls_definition['logCoordY'] = $method;
+		$method = $pyjs__bind_method2('pop', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return self['scratch']['pop']();
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['pop'] = $method;
+		$method = $pyjs__bind_method2('append', function(pathStr) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				pathStr = arguments[1];
+			}
+
+			self['scratch']['append'](pathStr);
+			return null;
+		}
+	, 1, [null,null,['self'],['pathStr']]);
+		$cls_definition['append'] = $method;
+		$method = $pyjs__bind_method2('__len__', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['len']($p['getattr'](self, 'scratch'));
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['__len__'] = $method;
+		var $bases = new Array(pyjslib.object);
+		var $data = $p['dict']();
+		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
+		return $p['_create_class']('JSOStack', $p['tuple']($bases), $data);
+	})();
+	return this;
+}; /* end pyjamas.Canvas.JSOStack */
+
+
+/* end module: pyjamas.Canvas.JSOStack */
+
+
+
+--></script>
+<script type="text/javascript"><!--
 /* start module: pyjamas.ui.KeyboardListener */
 $pyjs.loaded_modules['pyjamas.ui.KeyboardListener'] = function (__mod_name__) {
 	if($pyjs.loaded_modules['pyjamas.ui.KeyboardListener'].__was_initialized__) return $pyjs.loaded_modules['pyjamas.ui.KeyboardListener'];
@@ -25431,7 +29921,7 @@ function prepare_app() {
         };
         wait();
     }
-    wait_for_loading_modules(app_imported, ['pyjamas.ui','_random','random','dynamic','stat','pyjamas.ui.ClickListener','player','pyjamas.Location','sys','pyjspath','pyjamas.ui.ChangeListener','strategy_random','computer_player','pyjamas','human_player','pyjamas.ui.HorizontalPanel','binascii','pyjamas.ui.CellPanel','strategy','pyjamas.ui.MouseListener','main','pyjamas.ui.KeyboardListener','math','pyjamas.ui.Event','genericpath','widget','pyjamas.ui.DropHandler','pyjamas.Window','pyjamas.ui.Widget','pyjamas.ui.Panel','pyjamas.ui.ComplexPanel','game','pyjd','os.path','pyjamas.Factory','pyjslib','pyjamas.ui.InputListener','pyjamas.ui.Composite','pyjamas.DOM','pyjamas.EventController','time','pyjamas.ui.DragHandler','os','pyjamas.ui.UIObject','pyjamas.ui.FocusListener']);
+    wait_for_loading_modules(app_imported, ['pyjamas.ui','pyjamas.ui.FocusWidget','_random','random','pyjamas.ui.Widget','stat','pyjamas.ui.ClickListener','player','pyjamas.Location','sys','pyjspath','pyjamas.Canvas.RadialGradientImplDefault','pyjamas.ui.ChangeListener','pyjamas.Canvas.RadialGradientImplIE6','pyjamas.Canvas.LinearGradientImplIE6','computer_player','pyjamas.Canvas.GWTCanvasConsts','pyjamas.Canvas.GWTCanvas','pyjamas','human_player','pyjamas.ui.HorizontalPanel','pyjamas.ui.Focus','binascii','pyjamas.ui.CellPanel','strategy','pyjamas.Canvas.GWTCanvasImplIE6','pyjamas.Canvas.Color','pyjamas.ui.MouseListener','main','pyjamas.ui.KeyboardListener','math','pyjamas.ui.Event','genericpath','widget','pyjamas.ui.DropHandler','pyjamas.Window','dynamic','pyjamas.ui.Panel','pyjamas.ui.ComplexPanel','pyjamas.Canvas.LinearGradientImplDefault','game','pyjd','pyjamas.Canvas.JSOStack','pyjamas.Canvas.GWTCanvasImplIEConsts','os.path','pyjamas.Factory','pyjslib','pyjamas.Canvas.CanvasGradientImplDefault','pyjamas.Canvas','strategy_random','pyjamas.Canvas.GWTCanvasImplDefault','pyjamas.ui.InputListener','pyjamas.ui.Composite','pyjamas.Canvas.PathElement','pyjamas.Canvas.VMLContext','pyjamas.DOM','pyjamas.Canvas.CanvasGradientImplIE6','pyjamas.Canvas.ColorStop','pyjamas.EventController','time','pyjamas.ui.DragHandler','os','pyjamas.ui.UIObject','pyjamas.ui.FocusListener']);
 }
 
 function pygwtOnLoad(onLoadError, name) {
