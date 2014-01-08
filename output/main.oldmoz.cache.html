@@ -6924,13 +6924,13 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m.__name__ = __mod_name__;
 	var $floordiv2,$floordiv1;
 
+	$m['pyjd'] = $p['___import___']('pyjd', null);
 	$m['sys'] = $p['___import___']('sys', null);
 	$m['time'] = $p['___import___']('time', null);
 	$m['Game'] = $p['___import___']('game.Game', null, null, false);
 	$m['floor'] = $p['___import___']('math.floor', null, null, false);
 	$m['HumanPlayer'] = $p['___import___']('human_player.HumanPlayer', null, null, false);
 	$m['ComputerPlayer'] = $p['___import___']('computer_player.ComputerPlayer', null, null, false);
-	$m['pyjs'] = $p['___import___']('pyjs', null);
 	$m['Widget'] = $p['___import___']('widget.Widget', null, null, false);
 	$m['USING_PYGAME'] = false;
 	$m['widget'] = null;
@@ -7133,10 +7133,10 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['draw'].__bind_type__ = 0;
 	$m['draw'].__args__ = [null,null];
 	if ($p['bool']($p['op_eq']((typeof __name__ == "undefined"?$m.__name__:__name__), '__main__'))) {
-		$m.pyjd['setup']('main.html');
+		$m['pyjd']['setup']('main.html');
 		$m['widget'] = $m['Widget']($m['SW'], $m['SH']);
 		$m.RootPanel()['add']($m['widget']);
-		$m.pyjd['run']();
+		$m['pyjd']['run']();
 		$m['main']();
 	}
 	return this;
@@ -7147,7 +7147,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 
 
 /*
-PYJS_DEPS: ['sys', 'time', 'game.Game', 'game', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'pyjs', 'widget.Widget', 'widget']
+PYJS_DEPS: ['pyjd', 'sys', 'time', 'game.Game', 'game', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'widget.Widget', 'widget']
 */
 
 --></script>

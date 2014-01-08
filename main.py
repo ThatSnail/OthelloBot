@@ -1,3 +1,4 @@
+import pyjd
 import sys
 import time
 from game import Game
@@ -5,7 +6,6 @@ from math import floor
 from human_player import HumanPlayer
 from computer_player import ComputerPlayer
 #import pygame
-import pyjs
 from widget import Widget
 
 USING_PYGAME = False
