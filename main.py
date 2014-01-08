@@ -1,7 +1,7 @@
 import pyjd
 import sys
 import time
-from game import Game
+from game import Game, InvalidMoveException
 from math import floor
 from human_player import HumanPlayer
 from computer_player import ComputerPlayer

@@ -12,6 +12,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['sys'] = $p['___import___']('sys', null);
 	$m['time'] = $p['___import___']('time', null);
 	$m['Game'] = $p['___import___']('game.Game', null, null, false);
+	$m['InvalidMoveException'] = $p['___import___']('game.InvalidMoveException', null, null, false);
 	$m['floor'] = $p['___import___']('math.floor', null, null, false);
 	$m['HumanPlayer'] = $p['___import___']('human_player.HumanPlayer', null, null, false);
 	$m['ComputerPlayer'] = $p['___import___']('computer_player.ComputerPlayer', null, null, false);
@@ -115,7 +116,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 				} catch($pyjs_try_err) {
 					var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
 					$pyjs.__last_exception__ = {error: $pyjs_try_err, module: $m};
-					if (($pyjs_try_err_name == (typeof InvalidMoveException == "undefined"?$m.InvalidMoveException:InvalidMoveException).__name__)||$p['_isinstance']($pyjs_try_err,(typeof InvalidMoveException == "undefined"?$m.InvalidMoveException:InvalidMoveException))) {
+					if (($pyjs_try_err_name == $m['InvalidMoveException'].__name__)||$p['_isinstance']($pyjs_try_err,$m['InvalidMoveException'])) {
 						return null;
 					} else { $pyjs.__active_exception_stack__ = $pyjs.__last_exception_stack__; $pyjs.__last_exception_stack__ = null; throw $pyjs_try_err; }
 				}
@@ -270,5 +271,5 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 
 
 /*
-PYJS_DEPS: ['pyjd', 'sys', 'time', 'game.Game', 'game', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'main_widget.MainWidget', 'main_widget', 'pyjamas.ui.FocusPanel.FocusPanel', 'pyjamas', 'pyjamas.ui', 'pyjamas.ui.FocusPanel', 'pyjamas.ui.RootPanel.RootPanel', 'pyjamas.ui.RootPanel']
+PYJS_DEPS: ['pyjd', 'sys', 'time', 'game.Game', 'game', 'game.InvalidMoveException', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'main_widget.MainWidget', 'main_widget', 'pyjamas.ui.FocusPanel.FocusPanel', 'pyjamas', 'pyjamas.ui', 'pyjamas.ui.FocusPanel', 'pyjamas.ui.RootPanel.RootPanel', 'pyjamas.ui.RootPanel']
 */
