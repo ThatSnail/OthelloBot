@@ -8907,7 +8907,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m.__was_initialized__ = true;
 	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'main';
 	$m.__name__ = __mod_name__;
-	var $floordiv2,$floordiv1;
+	var $lambda4,$floordiv2,$floordiv1;
 
 	$m['pyjd'] = $p['___import___']('pyjd', null);
 	$m['sys'] = $p['___import___']('sys', null);
@@ -9199,9 +9199,18 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 		$m['pyjd']['setup']('output/main.html');
 		$m['main_widget'] = $m['MainWidget']($m['SW'], $m['SH']);
 		$m['panel'] = $pyjs_kwargs_call(null, $m['FocusPanel'], null, null, [{Widget:$p['getattr']($m['main_widget'], 'context')}]);
-		$m['RootPanel']()['add']($m['panel']);
-		$m['panel']['addKeyboardListener']($p['getattr']($m['main_widget'], 'context'));
+		var 		$lambda4 = function() {
+
+			return (typeof burg == "undefined"?$m.burg:burg)();
+		};
+		$lambda4.__name__ = '$lambda4';
+
+		$lambda4.__bind_type__ = 0;
+		$lambda4.__args__ = [null,null];
+		$p['setattr']($m['panel'], 'onClick', $lambda4);
+		$m['panel']['addClickListener']($p['getattr']($m['main_widget'], 'context'));
 		$m['panel']['setFocus'](true);
+		$m['RootPanel']()['add']($m['panel']);
 		$m['RootPanel']()['add']($m['main_widget']);
 		$m['pyjd']['run']();
 		$m['main']();
