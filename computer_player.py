@@ -11,6 +11,7 @@ class ComputerPlayer(Player):
         # Calculate move
         liberties = self.game.liberties(self.player, self.state)
         heuristic = RandomStrategy.apply(self.player, self.state, liberties)
+        heuristic = CornerStrategy.apply(self.player, self.state, liberties, heuristic)
         x, y = Strategy.run(heuristic)
         self.game.move(x, y)
         #sleep(0.05)
