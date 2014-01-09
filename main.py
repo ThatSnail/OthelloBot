@@ -1,14 +1,8 @@
-import pyjd
 import sys
-import time
-from game import Game
+from game import Game, InvalidMoveException
 from math import floor
 from human_player import HumanPlayer
 from computer_player import ComputerPlayer
-#import pygame
-from main_widget import MainWidget
-from pyjamas.ui.FocusPanel import FocusPanel
-from pyjamas.ui.RootPanel import RootPanel
 
 USING_PYGAME = False
 
@@ -26,6 +20,8 @@ color_green = (0, 128, 0)
 def main():
     # Init
     if USING_PYGAME:
+        from time import sleep
+        import pygame
         pygame.init()
         global screen
         screen = pygame.display.set_mode((SW, SH))
@@ -37,13 +33,15 @@ def main():
     players.append(HumanPlayer(game, Game.BLACK))
     players.append(ComputerPlayer(game, Game.WHITE))
 
-    #while True:
-    update()
-        #time.sleep(0.01)
+    if USING_PYGAME:
+        while True:
+            update()
+            sleep(0.01)
+    else:
+        update()
 
 def update():
     event()
-    draw()
     if game.is_running:
         # Tell bots to do stuff
         for player in players:
@@ -52,10 +50,22 @@ def update():
                     game.pass_move()
                 else:
                     player.make_move()
+                draw()
                 break
+    draw()
+
+def delay(ms):
+    if USING_PYGAME:
+        from time import sleep
+        sleep(ms)
+    else:
+        from pyjamas.Timer import Timer
+        timer = Timer(notify=update)
+        timer.schedule(ms * 1000)
 
 def event():
     if USING_PYGAME:
+        import pygame
         # Make player move
         ev = pygame.event.get()
         for event in ev:
@@ -69,13 +79,15 @@ def handle_click(x, y):
         if game.current_player == player.player:
             try:
                 player.make_move(x, y)
+                draw()
+                delay(0.5)
             except InvalidMoveException:
                 return
             break
-    update()
 
 def draw():
     if USING_PYGAME:
+        import pygame
         global screen
 
         # Draw screen
@@ -103,12 +115,22 @@ def draw():
         main_widget.draw(game)
 
 if __name__ == "__main__":
-    pyjd.setup("output/main.html")
-    main_widget = MainWidget(SW, SH)
-    panel = FocusPanel(Widget=main_widget.context)
-    panel.addMouseListener(main_widget.context)
-    setattr(main_widget.context, "onMouseUp", lambda sender, x, y: handle_click(x, y))
-    RootPanel().add(panel)
-    RootPanel().add(main_widget)
-    pyjd.run()
+    # Check if run manually
+    if len(sys.argv) >= 2:
+        if sys.argv[1] == 'pygame':
+            USING_PYGAME = True
+
+    if not USING_PYGAME:
+        import pyjd
+        from main_widget import MainWidget
+        from pyjamas.ui.FocusPanel import FocusPanel
+        from pyjamas.ui.RootPanel import RootPanel
+        pyjd.setup("output/main.html")
+        main_widget = MainWidget(SW, SH)
+        panel = FocusPanel(Widget=main_widget.context)
+        panel.addMouseListener(main_widget.context)
+        setattr(main_widget.context, "onMouseUp", lambda sender, x, y: handle_click(x, y))
+        RootPanel().add(panel)
+        RootPanel().add(main_widget)
+        pyjd.run()
     main()
