@@ -3416,6 +3416,7 @@ $pyjs.loaded_modules['computer_player'] = function (__mod_name__) {
 			$m['Player']['make_move'](self, x, y);
 			liberties = self['game']['liberties']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'));
 			heuristic = $m['RandomStrategy']['$$apply']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'), liberties);
+			heuristic = $m['CornerStrategy']['$$apply']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'), liberties, heuristic);
 			var $tupleassign1 = $p['__ass_unpack']($m['Strategy']['run'](heuristic), 2, null);
 			x = $tupleassign1[0];
 			y = $tupleassign1[1];
