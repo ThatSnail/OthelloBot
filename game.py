@@ -29,7 +29,6 @@ class Game(object):
     def move(self, x, y, player=None, preserve_state=False):
         if player == None:
             player = self.current_player
-            self.current_player = Game.other(self.current_player)
         if self.state[x][y] == Game.NONE:
             flipped_stone = False
             for d in [(x, y) for x in range(-1, 2) for y in range(-1, 2)]:
@@ -52,6 +51,7 @@ class Game(object):
                         break
             if flipped_stone:
                 if not preserve_state:
+                    self.current_player = Game.other(self.current_player)
                     self.state[x][y] = player
                     # Check if game is over
                     if self.liberties(Game.BLACK) == 0 and self.liberties(Game.WHITE) == 0:
