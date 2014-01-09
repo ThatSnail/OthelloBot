@@ -45,7 +45,7 @@ $pyjs.loaded_modules['main_widget'] = function (__mod_name__) {
 			}
 			if (typeof game == 'undefined') game=arguments.callee.__args__[3][1];
 			var $floordiv9,$iter6_array,$iter6_type,$iter3_type,$iter1_iter,$iter2_type,$iter6_iter,$iter6_nextval,$floordiv7,$iter3_idx,$iter1_array,$iter2_iter,$add3,$add1,$iter3_iter,$add7,$add6,$floordiv2,$mul8,$iter1_nextval,$add4,$iter6_idx,$floordiv12,$floordiv11,$floordiv10,$iter2_idx,$mul9,$iter3_array,$mul7,$mul6,$mul5,$mul4,$mul3,$mul2,$mul1,$mul12,$iter2_nextval,$iter1_type,$mul11,$mul10,SP,$add2,$floordiv6,$floordiv5,$floordiv4,$floordiv3,$iter1_idx,$floordiv1,$add5,y,x,$add8,$iter3_nextval,$iter2_array,$floordiv8;
-			self['context']['setFillStyle']($m['Color']['Color']('rgb(0, 128, 0)'));
+			self['context']['setFillStyle']($m['Color']['Color']('#00AA00'));
 			self['context']['fillRect'](0, 0, $p['getattr'](self, 'SW'), $p['getattr'](self, 'SH'));
 			SP = (typeof ($floordiv1=$p['getattr'](self, 'SW'))==typeof ($floordiv2=8) && typeof $floordiv1=='number' && $floordiv2 !== 0?
 				Math.floor($floordiv1/$floordiv2):

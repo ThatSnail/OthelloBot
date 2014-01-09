@@ -1,4 +1,3 @@
-#from time import sleep
 from player import Player
 from game import Game
 from strategy import Strategy
@@ -13,4 +12,3 @@ class ComputerPlayer(Player):
         heuristic = RandomStrategy.apply(self.player, self.state, liberties)
         x, y = Strategy.run(heuristic)
         self.game.move(x, y)
-        #sleep(0.05)
