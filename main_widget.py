@@ -14,7 +14,7 @@ class MainWidget(HorizontalPanel):
         self.add(self.context)
 
     def draw(self, game=None):
-        self.context.setFillStyle(Color.Color("rgb(0, 128, 0)"))
+        self.context.setFillStyle(Color.Color("#00AA00"))
         self.context.fillRect(0, 0, self.SW, self.SH)
 
         SP = self.SW // 8
