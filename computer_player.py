@@ -13,7 +13,7 @@ class ComputerPlayer(Player):
         liberties = Game.liberties(self.player, self.state)
         def apply_strat(strategy, mult=1, heuristic=None):
             return strategy.apply(self.player, self.state, liberties, mult, heuristic=heuristic)
-        strats = [(RandomStrategy, 1), (CornerStrategy, 1), (LibminStrategy, 1)]
+        strats = [(RandomStrategy, 0), (CornerStrategy, 0), (LibminStrategy, 100)]
         heuristic = None
         for strat, mult in strats: 
             heuristic = apply_strat(strat, mult, heuristic)
