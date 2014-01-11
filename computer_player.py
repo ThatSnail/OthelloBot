@@ -1,3 +1,4 @@
+from functools import reduce
 from player import Player
 from game import Game
 from strategy import Strategy
@@ -11,10 +12,10 @@ class ComputerPlayer(Player):
         # Calculate move
         liberties = Game.liberties(self.player, self.state)
         def apply_strat(strategy, mult=1, heuristic=None):
-            return strategy.apply(self.player, self.state, mult, heuristic=heuristic)
+            return strategy.apply(self.player, self.state, liberties, mult, heuristic=heuristic)
+        strats = [(RandomStrategy, 1), (CornerStrategy, 1), (LibminStrategy, 1)]
         heuristic = None
-        heuristic = apply_strat(RandomStrategy, 1, heuristic)
-        heuristic = apply_strat(CornerStrategy, 1, heuristic)
-        heuristic = apply_strat(LibminStrategy, 1, heuristic)
+        for strat, mult in strats: 
+            heuristic = apply_strat(strat, mult, heuristic)
         x, y = Strategy.run(heuristic)
         self.game.move(x, y)
