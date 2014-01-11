@@ -67,7 +67,7 @@ class Game(object):
         self.current_player = Game.other(self.current_player)
 
         # Check if game is over
-        if Game.liberties(Game.BLACK, self.state) == 0 and Game.liberties(Game.WHITE, self.state) == 0:
+        if len(Game.liberties(Game.BLACK, self.state)) == 0 and len(Game.liberties(Game.WHITE, self.state)) == 0:
             black, white = self.stones(Game.BLACK), self.stones(Game.WHITE)
             if black > white:
                 self.result = Game.BLACK
@@ -75,6 +75,15 @@ class Game(object):
                 self.result = Game.WHITE
             else:
                 self.result = Game.DRAW
+
+    def restart(self):
+        self.state = [[Game.NONE for x in range(8)] for y in range(8)]
+        self.state[3][3] = Game.BLACK
+        self.state[4][4] = Game.BLACK
+        self.state[3][4] = Game.WHITE
+        self.state[4][3] = Game.WHITE
+        self.current_player = Game.BLACK
+        self.result = Game.NONE
 
     def is_valid_move(x, y, player, state):
         # Simulate move
