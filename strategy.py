@@ -1,7 +1,7 @@
 from random import random
 
 class Strategy(object):
-    def apply(player, state, liberties, heuristic=None):
+    def apply(player, state, liberties, mult=1, heuristic=None):
         pass
 
     def run(heuristic):
