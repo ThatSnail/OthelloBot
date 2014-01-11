@@ -67,7 +67,7 @@ class Game(object):
         self.current_player = Game.other(self.current_player)
 
         # Check if game is over
-        if self.liberties(Game.BLACK) == 0 and self.liberties(Game.WHITE) == 0:
+        if Game.liberties(Game.BLACK, self.state) == 0 and Game.liberties(Game.WHITE, self.state) == 0:
             black, white = self.stones(Game.BLACK), self.stones(Game.WHITE)
             if black > white:
                 self.result = Game.BLACK
@@ -76,26 +76,19 @@ class Game(object):
             else:
                 self.result = Game.DRAW
 
-    def is_valid_move(self, x, y, player=None):
-        if player == None:
-            player = self.current_player
-        
+    def is_valid_move(x, y, player, state):
         # Simulate move
-        valid = True
         try:
-            Game.simulate_move(x, y, player, self.state)
+            Game.simulate_move(x, y, player, state)
         except InvalidMoveException:
-            valid = False
-        return valid
+            return False
+        else:
+            return True
 
-    def liberties(self, player=None, state=None):
-        if player == None:
-            player = self.current_player
-        if state == None:
-            state = self.state
+    def liberties(player, state):
         liberties = []
         for (x, y) in [(x, y) for x in range(8) for y in range(8)]:
-            if self.is_valid_move(x, y, player):
+            if Game.is_valid_move(x, y, player, state):
                 liberties.append((x, y))
         return liberties
 

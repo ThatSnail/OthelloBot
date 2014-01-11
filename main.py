@@ -46,7 +46,7 @@ def update():
         # Tell bots to do stuff
         for player in players:
             if game.current_player == player.player:
-                if len(game.liberties()) == 0:
+                if len(Game.liberties(player.player, game.state)) == 0:
                     game.pass_move()
                 else:
                     player.make_move()
@@ -106,7 +106,7 @@ def draw():
             }[game.state[x][y]]()
     
         # Draw liberties
-        for (x, y) in game.liberties():
+        for (x, y) in Game.liberties(game.current_player, game.state):
             pygame.draw.circle(screen, color_white, (x * SP + SP // 2, y * SP + SP // 2), 4)
 
         # Update
