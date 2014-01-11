@@ -10,5 +10,5 @@ class LibminStrategy(Strategy):
             x, y = pos
             newstate = Game.simulate_move(x, y, player, state)
             lib = len(Game.liberties(Game.other(player), newstate))
-            heuristic[i] = (pos, heur * (1 / lib) ** mult)
+            heuristic[i] = (pos, heur * (1 / (lib + 1)) ** mult)
         return heuristic
