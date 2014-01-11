@@ -39,8 +39,8 @@ def main():
     global game, players
     game = Game()
     players = []
-    #players.append(HumanPlayer(game, Game.BLACK))
-    players.append(ComputerPlayer(game, Game.BLACK))
+    players.append(HumanPlayer(game, Game.BLACK))
+    #players.append(ComputerPlayer(game, Game.BLACK))
     players.append(ComputerPlayer(game, Game.WHITE))
 
     if USING_PYGAME or STATMODE:

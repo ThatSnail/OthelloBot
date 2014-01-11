@@ -10,7 +10,7 @@ class ComputerPlayer(Player):
     def __init__(self, game, player, strats=None):
         Player.__init__(self, game, player)
         if strats == None:
-            strats = [(RandomStrategy, 1), (CornerStrategy, 10), (LibminStrategy, 1)] # crap default strat
+            strats = [(RandomStrategy, 1), (CornerStrategy, 100), (LibminStrategy, 10)] # crap default strat
         self.strats = strats
 
     def make_move(self, x=None, y=None):
