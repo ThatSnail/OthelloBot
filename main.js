@@ -6,7 +6,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m.__was_initialized__ = true;
 	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'main';
 	$m.__name__ = __mod_name__;
-	var $lambda4,$floordiv2,$floordiv1;
+	var $iter10_nextval,$lambda4,$iter10_iter,$iter10_idx,$and6,$and5,$iter10_array,$floordiv2,$floordiv1,$iter10_type;
 
 	$m['sys'] = $p['___import___']('sys', null);
 	$m['Game'] = $p['___import___']('game.Game', null, null, false);
@@ -15,6 +15,11 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['HumanPlayer'] = $p['___import___']('human_player.HumanPlayer', null, null, false);
 	$m['ComputerPlayer'] = $p['___import___']('computer_player.ComputerPlayer', null, null, false);
 	$m['USING_PYGAME'] = false;
+	$m['STATMODE'] = false;
+	$m['STATMODE_BOT1'] = null;
+	$m['STATMODE_BOT2'] = null;
+	$m['STATMODE_ROUNDS'] = 1;
+	$m['results'] = $p['dict']([[$p['getattr']($m['Game'], 'BLACK'), 0], [$p['getattr']($m['Game'], 'WHITE'), 0], [$p['getattr']($m['Game'], 'DRAW'), 0]]);
 	$m['main_widget'] = null;
 	$m['screen'] = null;
 	$m['game'] = null;
@@ -29,8 +34,8 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['color_black'] = $p['tuple']([0, 0, 0]);
 	$m['color_green'] = $p['tuple']([0, 128, 0]);
 	$m['main'] = function() {
-		var sleep,pygame;
-		if ($p['bool']($m['USING_PYGAME'])) {
+		var $or1,$or2,$and1,sleep,pygame,$and2;
+		if ($p['bool'](($p['bool']($and1=$m['USING_PYGAME'])?!$p['bool']($m['STATMODE']):$and1))) {
 			sleep = $p['___import___']('time.sleep', null, null, false);
 			pygame = $p['___import___']('pygame', null);
 			pygame['init']();
@@ -41,10 +46,10 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 		$m['players'] = $p['list']([]);
 		$m['players']['append']($m['HumanPlayer']($m['game'], $p['getattr']($m['Game'], 'BLACK')));
 		$m['players']['append']($m['ComputerPlayer']($m['game'], $p['getattr']($m['Game'], 'WHITE')));
-		if ($p['bool']($m['USING_PYGAME'])) {
+		if ($p['bool'](($p['bool']($or1=$m['USING_PYGAME'])?$or1:$m['STATMODE']))) {
 			while ($p['bool'](true)) {
 				(typeof update == "undefined"?$m.update:update)();
-				sleep(0.01);
+				(typeof delay == "undefined"?$m.delay:delay)(0.01);
 			}
 		}
 		else {
@@ -65,13 +70,14 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 			while (typeof($p['__wrapped_next']($iter1_nextval).$nextval) != 'undefined') {
 				player = $iter1_nextval.$nextval;
 				if ($p['bool']($p['op_eq']($p['getattr']($m['game'], 'current_player'), $p['getattr'](player, 'player')))) {
-					if ($p['bool']($p['op_eq']($p['len']($m['game']['liberties']()), 0))) {
+					if ($p['bool']($p['op_eq']($p['len']($m['Game']['liberties']($p['getattr'](player, 'player'), $p['getattr']($m['game'], 'state'))), 0))) {
 						$m['game']['pass_move']();
 					}
 					else {
 						player['make_move']();
 					}
 					(typeof draw == "undefined"?$m.draw:draw)();
+					(typeof check_win == "undefined"?$m.check_win:check_win)();
 					break;
 				}
 			}
@@ -83,16 +89,19 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 
 	$m['update'].__bind_type__ = 0;
 	$m['update'].__args__ = [null,null];
-	$m['delay'] = function(ms) {
+	$m['delay'] = function(s) {
 		var timer,Timer,sleep,$mul2,$mul1;
+		if ($p['bool']($m['STATMODE'])) {
+			return null;
+		}
 		if ($p['bool']($m['USING_PYGAME'])) {
 			sleep = $p['___import___']('time.sleep', null, null, false);
-			sleep(ms);
+			sleep(s);
 		}
 		else {
 			Timer = $p['___import___']('pyjamas.Timer.Timer', null, null, false);
 			timer = $pyjs_kwargs_call(null, Timer, null, null, [{notify:$m['update']}]);
-			timer['schedule']((typeof ($mul1=ms)==typeof ($mul2=1000) && typeof $mul1=='number'?
+			timer['schedule']((typeof ($mul1=s)==typeof ($mul2=1000) && typeof $mul1=='number'?
 				$mul1*$mul2:
 				$p['op_mul']($mul1,$mul2)));
 		}
@@ -101,10 +110,10 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['delay'].__name__ = 'delay';
 
 	$m['delay'].__bind_type__ = 0;
-	$m['delay'].__args__ = [null,null,['ms']];
+	$m['delay'].__args__ = [null,null,['s']];
 	$m['event'] = function() {
-		var $iter2_nextval,$iter2_type,$iter2_iter,pos,$iter2_idx,pygame,ev,event,$iter2_array;
-		if ($p['bool']($m['USING_PYGAME'])) {
+		var $iter2_nextval,$iter2_type,$iter2_iter,$and3,$and4,pos,$iter2_idx,pygame,ev,event,$iter2_array;
+		if ($p['bool'](($p['bool']($and3=$m['USING_PYGAME'])?!$p['bool']($m['STATMODE']):$and3))) {
 			pygame = $p['___import___']('pygame', null);
 			ev = pygame['event']['get']();
 			$iter2_iter = ev;
@@ -140,6 +149,7 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 				try {
 					player['make_move'](x, y);
 					(typeof draw == "undefined"?$m.draw:draw)();
+					(typeof check_win == "undefined"?$m.check_win:check_win)();
 					$m['delay'](0.5);
 				} catch($pyjs_try_err) {
 					var $pyjs_try_err_name = (typeof $pyjs_try_err.__name__ == 'undefined' ? $pyjs_try_err.name : $pyjs_try_err.__name__ );
@@ -157,8 +167,38 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 
 	$m['handle_click'].__bind_type__ = 0;
 	$m['handle_click'].__args__ = [null,null,['x'],['y']];
+	$m['check_win'] = function() {
+		var $augexpr1,$or4,$augexpr2,$or3,$augsub2,$augsub1,$add2,$add3,Window,$add1,$add4;
+		if ($p['bool'](!$p['bool']($p['getattr']($m['game'], 'is_running')))) {
+			if ($p['bool'](($p['bool']($or3=$m['STATMODE'])?$or3:$m['USING_PYGAME']))) {
+				var $augsub1 = $p['getattr']($m['game'], 'result');
+				var $augexpr1 = $m['results'];
+				$augexpr1.__setitem__($augsub1, $p['__op_add']($add1=$augexpr1.__getitem__($augsub1),$add2=1));
+				if ($p['bool'](((($p['cmp']($p['sum']($m['results']['values']()), $m['STATMODE_ROUNDS']))|1) == 1))) {
+					$p['printFunc'](['BLACK: {0}\nWHITE: {1}\nDRAW: {2}'['format']($m['results'].__getitem__($p['getattr']($m['Game'], 'BLACK')), $m['results'].__getitem__($p['getattr']($m['Game'], 'WHITE')), $m['results'].__getitem__($p['getattr']($m['Game'], 'DRAW')))], 1);
+					$m['sys']['exit']();
+				}
+			}
+			else {
+				Window = $p['___import___']('pyjamas.Window', null, null, false);
+				var $augsub2 = $p['getattr']($m['game'], 'result');
+				var $augexpr2 = $m['results'];
+				$augexpr2.__setitem__($augsub2, $p['__op_add']($add3=$augexpr2.__getitem__($augsub2),$add4=1));
+				Window['alert']('BLACK: {0}\nWHITE: {1}\nDRAW: {2}'['format']($m['results'].__getitem__($p['getattr']($m['Game'], 'BLACK')), $m['results'].__getitem__($p['getattr']($m['Game'], 'WHITE')), $m['results'].__getitem__($p['getattr']($m['Game'], 'DRAW'))));
+			}
+			$m['game']['restart']();
+		}
+		return null;
+	};
+	$m['check_win'].__name__ = 'check_win';
+
+	$m['check_win'].__bind_type__ = 0;
+	$m['check_win'].__args__ = [null,null];
 	$m['draw'] = function() {
-		var $iter5_nextval,$lambda3,$lambda2,$lambda1,$floordiv21,$iter6_type,$iter5_idx,$floordiv22,$iter5_iter,$iter4_type,$iter5_type,$iter6_iter,$iter4_iter,$iter6_nextval,$floordiv19,$iter9_iter,$iter9_nextval,$iter9_idx,pygame,$iter5_array,$iter9_type,$iter6_idx,$floordiv20,$iter4_array,$iter6_array,$add10,$add11,$add12,$div2,$div3,$div1,$div4,$mul14,$mul13,$mul12,$mul11,$iter4_nextval,$iter4_idx,y,x,$add9,$iter9_array;
+		var $iter5_nextval,$lambda3,$lambda2,$lambda1,$floordiv21,$iter6_type,$iter5_idx,$floordiv22,$iter5_iter,$iter4_type,$iter5_type,$iter6_iter,$iter4_iter,$iter6_nextval,$floordiv19,$iter9_iter,$iter9_nextval,$iter9_idx,pygame,$iter5_array,$iter9_type,$iter6_idx,$floordiv20,$add14,$iter4_array,$iter6_array,$add13,$div2,$div3,$div1,$div4,$mul14,$mul13,$mul12,$mul11,$add15,$iter4_nextval,$add16,$iter4_idx,y,x,$iter9_array;
+		if ($p['bool']($m['STATMODE'])) {
+			return null;
+		}
 		if ($p['bool']($m['USING_PYGAME'])) {
 			pygame = $p['___import___']('pygame', null);
 			$m['screen']['fill']($m['color_green']);
@@ -208,14 +248,14 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 				$lambda1.__bind_type__ = 0;
 				$lambda1.__args__ = [null,null];
 				var 				$lambda2 = function() {
-					var $add2,$floordiv12,$floordiv11,$floordiv10,$floordiv7,$add3,$add1,$add4,$mul6,$mul5,$mul4,$mul3,$floordiv9,$floordiv8;
-					return pygame['draw']['circle']($m['screen'], $m['color_black'], $p['tuple']([$p['__op_add']($add1=(typeof ($mul3=x)==typeof ($mul4=$m['SP']) && typeof $mul3=='number'?
+					var $floordiv12,$floordiv11,$floordiv10,$floordiv7,$add6,$add7,$add5,$mul6,$mul5,$mul4,$mul3,$add8,$floordiv9,$floordiv8;
+					return pygame['draw']['circle']($m['screen'], $m['color_black'], $p['tuple']([$p['__op_add']($add5=(typeof ($mul3=x)==typeof ($mul4=$m['SP']) && typeof $mul3=='number'?
 						$mul3*$mul4:
-						$p['op_mul']($mul3,$mul4)),$add2=(typeof ($floordiv7=$m['SP'])==typeof ($floordiv8=2) && typeof $floordiv7=='number' && $floordiv8 !== 0?
+						$p['op_mul']($mul3,$mul4)),$add6=(typeof ($floordiv7=$m['SP'])==typeof ($floordiv8=2) && typeof $floordiv7=='number' && $floordiv8 !== 0?
 						Math.floor($floordiv7/$floordiv8):
-						$p['op_floordiv']($floordiv7,$floordiv8))), $p['__op_add']($add3=(typeof ($mul5=y)==typeof ($mul6=$m['SP']) && typeof $mul5=='number'?
+						$p['op_floordiv']($floordiv7,$floordiv8))), $p['__op_add']($add7=(typeof ($mul5=y)==typeof ($mul6=$m['SP']) && typeof $mul5=='number'?
 						$mul5*$mul6:
-						$p['op_mul']($mul5,$mul6)),$add4=(typeof ($floordiv9=$m['SP'])==typeof ($floordiv10=2) && typeof $floordiv9=='number' && $floordiv10 !== 0?
+						$p['op_mul']($mul5,$mul6)),$add8=(typeof ($floordiv9=$m['SP'])==typeof ($floordiv10=2) && typeof $floordiv9=='number' && $floordiv10 !== 0?
 						Math.floor($floordiv9/$floordiv10):
 						$p['op_floordiv']($floordiv9,$floordiv10)))]), (typeof ($floordiv11=$m['SP'])==typeof ($floordiv12=2) && typeof $floordiv11=='number' && $floordiv12 !== 0?
 						Math.floor($floordiv11/$floordiv12):
@@ -226,14 +266,14 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 				$lambda2.__bind_type__ = 0;
 				$lambda2.__args__ = [null,null];
 				var 				$lambda3 = function() {
-					var $mul8,$mul10,$floordiv17,$floordiv16,$floordiv15,$floordiv14,$floordiv13,$add6,$add7,$mul9,$add5,$mul7,$floordiv18,$add8;
-					return pygame['draw']['circle']($m['screen'], $m['color_white'], $p['tuple']([$p['__op_add']($add5=(typeof ($mul7=x)==typeof ($mul8=$m['SP']) && typeof $mul7=='number'?
+					var $add12,$mul10,$floordiv17,$floordiv16,$floordiv15,$floordiv14,$floordiv13,$add10,$add11,$mul9,$mul8,$mul7,$floordiv18,$add9;
+					return pygame['draw']['circle']($m['screen'], $m['color_white'], $p['tuple']([$p['__op_add']($add9=(typeof ($mul7=x)==typeof ($mul8=$m['SP']) && typeof $mul7=='number'?
 						$mul7*$mul8:
-						$p['op_mul']($mul7,$mul8)),$add6=(typeof ($floordiv13=$m['SP'])==typeof ($floordiv14=2) && typeof $floordiv13=='number' && $floordiv14 !== 0?
+						$p['op_mul']($mul7,$mul8)),$add10=(typeof ($floordiv13=$m['SP'])==typeof ($floordiv14=2) && typeof $floordiv13=='number' && $floordiv14 !== 0?
 						Math.floor($floordiv13/$floordiv14):
-						$p['op_floordiv']($floordiv13,$floordiv14))), $p['__op_add']($add7=(typeof ($mul9=y)==typeof ($mul10=$m['SP']) && typeof $mul9=='number'?
+						$p['op_floordiv']($floordiv13,$floordiv14))), $p['__op_add']($add11=(typeof ($mul9=y)==typeof ($mul10=$m['SP']) && typeof $mul9=='number'?
 						$mul9*$mul10:
-						$p['op_mul']($mul9,$mul10)),$add8=(typeof ($floordiv15=$m['SP'])==typeof ($floordiv16=2) && typeof $floordiv15=='number' && $floordiv16 !== 0?
+						$p['op_mul']($mul9,$mul10)),$add12=(typeof ($floordiv15=$m['SP'])==typeof ($floordiv16=2) && typeof $floordiv15=='number' && $floordiv16 !== 0?
 						Math.floor($floordiv15/$floordiv16):
 						$p['op_floordiv']($floordiv15,$floordiv16)))]), (typeof ($floordiv17=$m['SP'])==typeof ($floordiv18=2) && typeof $floordiv17=='number' && $floordiv18 !== 0?
 						Math.floor($floordiv17/$floordiv18):
@@ -245,19 +285,19 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 				$lambda3.__args__ = [null,null];
 				$p['dict']([[$p['getattr']($m['Game'], 'NONE'), $lambda1], [$p['getattr']($m['Game'], 'BLACK'), $lambda2], [$p['getattr']($m['Game'], 'WHITE'), $lambda3]]).__getitem__($p['getattr']($m['game'], 'state').__getitem__(x).__getitem__(y))();
 			}
-			$iter9_iter = $m['game']['liberties']();
+			$iter9_iter = $m['Game']['liberties']($p['getattr']($m['game'], 'current_player'), $p['getattr']($m['game'], 'state'));
 			$iter9_nextval=$p['__iter_prepare']($iter9_iter,false);
 			while (typeof($p['__wrapped_next']($iter9_nextval).$nextval) != 'undefined') {
 				var $tupleassign4 = $p['__ass_unpack']($iter9_nextval.$nextval, 2, null);
 				x = $tupleassign4[0];
 				y = $tupleassign4[1];
-				pygame['draw']['circle']($m['screen'], $m['color_white'], $p['tuple']([$p['__op_add']($add9=(typeof ($mul11=x)==typeof ($mul12=$m['SP']) && typeof $mul11=='number'?
+				pygame['draw']['circle']($m['screen'], $m['color_white'], $p['tuple']([$p['__op_add']($add13=(typeof ($mul11=x)==typeof ($mul12=$m['SP']) && typeof $mul11=='number'?
 					$mul11*$mul12:
-					$p['op_mul']($mul11,$mul12)),$add10=(typeof ($floordiv19=$m['SP'])==typeof ($floordiv20=2) && typeof $floordiv19=='number' && $floordiv20 !== 0?
+					$p['op_mul']($mul11,$mul12)),$add14=(typeof ($floordiv19=$m['SP'])==typeof ($floordiv20=2) && typeof $floordiv19=='number' && $floordiv20 !== 0?
 					Math.floor($floordiv19/$floordiv20):
-					$p['op_floordiv']($floordiv19,$floordiv20))), $p['__op_add']($add11=(typeof ($mul13=y)==typeof ($mul14=$m['SP']) && typeof $mul13=='number'?
+					$p['op_floordiv']($floordiv19,$floordiv20))), $p['__op_add']($add15=(typeof ($mul13=y)==typeof ($mul14=$m['SP']) && typeof $mul13=='number'?
 					$mul13*$mul14:
-					$p['op_mul']($mul13,$mul14)),$add12=(typeof ($floordiv21=$m['SP'])==typeof ($floordiv22=2) && typeof $floordiv21=='number' && $floordiv22 !== 0?
+					$p['op_mul']($mul13,$mul14)),$add16=(typeof ($floordiv21=$m['SP'])==typeof ($floordiv22=2) && typeof $floordiv21=='number' && $floordiv22 !== 0?
 					Math.floor($floordiv21/$floordiv22):
 					$p['op_floordiv']($floordiv21,$floordiv22)))]), 4);
 			}
@@ -273,12 +313,27 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 	$m['draw'].__bind_type__ = 0;
 	$m['draw'].__args__ = [null,null];
 	if ($p['bool']($p['op_eq']((typeof __name__ == "undefined"?$m.__name__:__name__), '__main__'))) {
-		if ($p['bool'](((($p['cmp']($p['len']($p['getattr']($m['sys'], 'argv')), 2))|1) == 1))) {
-			if ($p['bool']($p['op_eq']($p['getattr']($m['sys'], 'argv').__getitem__(1), 'pygame'))) {
-				$m['USING_PYGAME'] = true;
+		if ($p['bool']($p['__getslice']($p['getattr']($m['sys'], 'argv'), 1, null).__contains__('pygame'))) {
+			$m['USING_PYGAME'] = true;
+		}
+		if ($p['bool']($p['__getslice']($p['getattr']($m['sys'], 'argv'), 1, null).__contains__('statmode'))) {
+			$m['STATMODE'] = true;
+			$m['getopt'] = $p['___import___']('getopt', null);
+			var $tupleassign5 = $p['__ass_unpack']($m['getopt']['getopt']($p['__getslice']($p['getattr']($m['sys'], 'argv'), 1, null), 'n:'), 2, null);
+			$m['optlist'] = $tupleassign5[0];
+			$m['args'] = $tupleassign5[1];
+			$iter10_iter = $m['optlist'];
+			$iter10_nextval=$p['__iter_prepare']($iter10_iter,false);
+			while (typeof($p['__wrapped_next']($iter10_nextval).$nextval) != 'undefined') {
+				var $tupleassign6 = $p['__ass_unpack']($iter10_nextval.$nextval, 2, null);
+				$m['o'] = $tupleassign6[0];
+				$m['a'] = $tupleassign6[1];
+				if ($p['bool']($p['op_eq']($m['o'], '-n'))) {
+					$m['STATMODE_ROUNDS'] = $p['float_int']($m['a']);
+				}
 			}
 		}
-		if ($p['bool'](!$p['bool']($m['USING_PYGAME']))) {
+		if ($p['bool'](($p['bool']($and5=!$p['bool']($m['USING_PYGAME']))?!$p['bool']($m['STATMODE']):$and5))) {
 			$m['pyjd'] = $p['___import___']('pyjd', null);
 			$m['MainWidget'] = $p['___import___']('main_widget.MainWidget', null, null, false);
 			$m['FocusPanel'] = $p['___import___']('pyjamas.ui.FocusPanel.FocusPanel', null, null, false);
@@ -310,5 +365,5 @@ $pyjs.loaded_modules['main'] = function (__mod_name__) {
 
 
 /*
-PYJS_DEPS: ['sys', 'game.Game', 'game', 'game.InvalidMoveException', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'time.sleep', 'time', 'pygame', 'pyjamas.Timer.Timer', 'pyjamas', 'pyjamas.Timer', 'pyjd', 'main_widget.MainWidget', 'main_widget', 'pyjamas.ui.FocusPanel.FocusPanel', 'pyjamas.ui', 'pyjamas.ui.FocusPanel', 'pyjamas.ui.RootPanel.RootPanel', 'pyjamas.ui.RootPanel']
+PYJS_DEPS: ['sys', 'game.Game', 'game', 'game.InvalidMoveException', 'math.floor', 'math', 'human_player.HumanPlayer', 'human_player', 'computer_player.ComputerPlayer', 'computer_player', 'time.sleep', 'time', 'pygame', 'pyjamas.Timer.Timer', 'pyjamas', 'pyjamas.Timer', 'pyjamas.Window', 'getopt', 'pyjd', 'main_widget.MainWidget', 'main_widget', 'pyjamas.ui.FocusPanel.FocusPanel', 'pyjamas.ui', 'pyjamas.ui.FocusPanel', 'pyjamas.ui.RootPanel.RootPanel', 'pyjamas.ui.RootPanel']
 */

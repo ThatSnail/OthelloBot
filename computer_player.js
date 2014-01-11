@@ -13,10 +13,32 @@ $pyjs.loaded_modules['computer_player'] = function (__mod_name__) {
 	$m['Strategy'] = $p['___import___']('strategy.Strategy', null, null, false);
 	$m['RandomStrategy'] = $p['___import___']('strategy_random.RandomStrategy', null, null, false);
 	$m['CornerStrategy'] = $p['___import___']('strategy_corner.CornerStrategy', null, null, false);
+	$m['LibminStrategy'] = $p['___import___']('strategy_libmin.LibminStrategy', null, null, false);
+	$m['StonemaxStrategy'] = $p['___import___']('strategy_stonemax.StonemaxStrategy', null, null, false);
 	$m['ComputerPlayer'] = (function(){
 		var $cls_definition = new Object();
 		var $method;
 		$cls_definition.__module__ = 'computer_player';
+		$method = $pyjs__bind_method2('__init__', function(game, player, strats) {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+				game = arguments[1];
+				player = arguments[2];
+				strats = arguments[3];
+			}
+			if (typeof strats == 'undefined') strats=arguments.callee.__args__[5][1];
+
+			$m['Player']['__init__'](self, game, player);
+			if ($p['bool']($p['op_eq'](strats, null))) {
+				strats = $p['list']([$p['tuple']([$m['RandomStrategy'], 1]), $p['tuple']([$m['CornerStrategy'], 100]), $p['tuple']([$m['LibminStrategy'], 10]), $p['tuple']([$m['StonemaxStrategy'], 5])]);
+			}
+			self.strats = strats;
+			return null;
+		}
+	, 1, [null,null,['self'],['game'],['player'],['strats', null]]);
+		$cls_definition['__init__'] = $method;
 		$method = $pyjs__bind_method2('make_move', function(x, y) {
 			if (this.__is_instance__ === true) {
 				var self = this;
@@ -27,14 +49,21 @@ $pyjs.loaded_modules['computer_player'] = function (__mod_name__) {
 			}
 			if (typeof x == 'undefined') x=arguments.callee.__args__[3][1];
 			if (typeof y == 'undefined') y=arguments.callee.__args__[4][1];
-			var liberties,heuristic;
+			var heur,$iter1_nextval,$iter1_type,strat,$iter1_iter,liberties,$iter1_array,mult,$iter1_idx;
 			$m['Player']['make_move'](self, x, y);
-			liberties = self['game']['liberties']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'));
-			heuristic = $m['RandomStrategy']['$$apply']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'), liberties);
-			heuristic = $m['CornerStrategy']['$$apply']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'), liberties, heuristic);
-			var $tupleassign1 = $p['__ass_unpack']($m['Strategy']['run'](heuristic), 2, null);
-			x = $tupleassign1[0];
-			y = $tupleassign1[1];
+			liberties = $m['Game']['liberties']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'));
+			heur = null;
+			$iter1_iter = $p['getattr'](self, 'strats');
+			$iter1_nextval=$p['__iter_prepare']($iter1_iter,false);
+			while (typeof($p['__wrapped_next']($iter1_nextval).$nextval) != 'undefined') {
+				var $tupleassign1 = $p['__ass_unpack']($iter1_nextval.$nextval, 2, null);
+				strat = $tupleassign1[0];
+				mult = $tupleassign1[1];
+				heur = strat['$$apply']($p['getattr'](self, 'player'), $p['getattr'](self, 'state'), liberties, mult, heur);
+			}
+			var $tupleassign2 = $p['__ass_unpack']($m['Strategy']['run'](heur), 2, null);
+			x = $tupleassign2[0];
+			y = $tupleassign2[1];
 			self['game']['move'](x, y);
 			return null;
 		}
@@ -53,5 +82,5 @@ $pyjs.loaded_modules['computer_player'] = function (__mod_name__) {
 
 
 /*
-PYJS_DEPS: ['player.Player', 'player', 'game.Game', 'game', 'strategy.Strategy', 'strategy', 'strategy_random.RandomStrategy', 'strategy_random', 'strategy_corner.CornerStrategy', 'strategy_corner']
+PYJS_DEPS: ['player.Player', 'player', 'game.Game', 'game', 'strategy.Strategy', 'strategy', 'strategy_random.RandomStrategy', 'strategy_random', 'strategy_corner.CornerStrategy', 'strategy_corner', 'strategy_libmin.LibminStrategy', 'strategy_libmin', 'strategy_stonemax.StonemaxStrategy', 'strategy_stonemax']
 */

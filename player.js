@@ -23,12 +23,22 @@ $pyjs.loaded_modules['player'] = function (__mod_name__) {
 			}
 
 			self.game = game;
-			self.state = $p['getattr'](game, 'state');
 			self.player = player;
 			return null;
 		}
 	, 1, [null,null,['self'],['game'],['player']]);
 		$cls_definition['__init__'] = $method;
+		$method = $pyjs__bind_method2('state', function() {
+			if (this.__is_instance__ === true) {
+				var self = this;
+			} else {
+				var self = arguments[0];
+			}
+
+			return $p['getattr']($p['getattr'](self, 'game'), 'state');
+		}
+	, 1, [null,null,['self']]);
+		$cls_definition['state'] = $p['property']($p['staticmethod']($method));
 		$method = $pyjs__bind_method2('make_move', function(x, y) {
 			if (this.__is_instance__ === true) {
 				var self = this;

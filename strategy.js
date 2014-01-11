@@ -13,20 +13,22 @@ $pyjs.loaded_modules['strategy'] = function (__mod_name__) {
 		var $cls_definition = new Object();
 		var $method;
 		$cls_definition.__module__ = 'strategy';
-		$method = $pyjs__bind_method2('$$apply', function(state, liberties, heuristic) {
+		$method = $pyjs__bind_method2('$$apply', function(state, liberties, mult, heuristic) {
 			if (this.__is_instance__ === true) {
 				var player = this;
 			} else {
 				var player = arguments[0];
 				state = arguments[1];
 				liberties = arguments[2];
-				heuristic = arguments[3];
+				mult = arguments[3];
+				heuristic = arguments[4];
 			}
-			if (typeof heuristic == 'undefined') heuristic=arguments.callee.__args__[5][1];
+			if (typeof mult == 'undefined') mult=arguments.callee.__args__[5][1];
+			if (typeof heuristic == 'undefined') heuristic=arguments.callee.__args__[6][1];
 
  			return null;
 		}
-	, 1, [null,null,['player'],['state'],['liberties'],['heuristic', null]]);
+	, 1, [null,null,['player'],['state'],['liberties'],['mult', 1],['heuristic', null]]);
 		$cls_definition['$$apply'] = $method;
 		$method = $pyjs__bind_method2('run', function() {
 			if (this.__is_instance__ === true) {

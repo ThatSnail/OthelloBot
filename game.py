@@ -68,7 +68,7 @@ class Game(object):
 
         # Check if game is over
         if len(Game.liberties(Game.BLACK, self.state)) == 0 and len(Game.liberties(Game.WHITE, self.state)) == 0:
-            black, white = self.stones(Game.BLACK), self.stones(Game.WHITE)
+            black, white = len(Game.stones(Game.BLACK, self.state)), len(Game.stones(Game.WHITE, self.state))
             if black > white:
                 self.result = Game.BLACK
             elif white > black:
@@ -101,13 +101,11 @@ class Game(object):
                 liberties.append((x, y))
         return liberties
 
-    def stones(self, player, state=None):
-        if state == None:
-            state = self.state
-        stones = 0
+    def stones(player, state):
+        stones = []
         for (x, y) in [(x, y) for x in range(8) for y in range(8)]:
             if state[x][y] == player:
-                stones += 1
+                stones.append((x, y))
         return stones
 
     @property

@@ -8,7 +8,7 @@ USING_PYGAME = False
 STATMODE = False
 STATMODE_BOT1 = None
 STATMODE_BOT2 = None
-STATMODE_ROUNDS = 0
+STATMODE_ROUNDS = 1
 results = {
     Game.BLACK: 0,
     Game.WHITE: 0,
@@ -101,10 +101,16 @@ def handle_click(x, y):
 
 def check_win():
     if not game.is_running:
-        results[game.result] += 1
-        if sum(results.values()) >= STATMODE_ROUNDS:
-            print("BLACK: {0}\nWHITE: {1}\nDRAW: {2}".format(results[Game.BLACK], results[Game.WHITE], results[Game.DRAW]))
-            sys.exit()
+        if STATMODE or USING_PYGAME:
+            results[game.result] += 1
+            if sum(results.values()) >= STATMODE_ROUNDS:
+                print("BLACK: {0}\nWHITE: {1}\nDRAW: {2}".format(results[Game.BLACK], results[Game.WHITE], results[Game.DRAW]))
+                sys.exit()
+        else:
+            # Alert box
+            from pyjamas import Window
+            results[game.result] += 1
+            Window.alert("BLACK: {0}\nWHITE: {1}\nDRAW: {2}".format(results[Game.BLACK], results[Game.WHITE], results[Game.DRAW]))
         game.restart()
 
 def draw():

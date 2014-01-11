@@ -49,7 +49,7 @@ class MainWidget(HorizontalPanel):
                 self.context.fill()
     
         # Draw liberties
-        for (x, y) in game.liberties():
+        for (x, y) in Game.liberties(game.current_player, game.state):
             self.context.setFillStyle(Color.WHITE)
             self.context.beginPath()
             self.context.arc(x * SP + SP // 2, y * SP + SP // 2, 4, 0, 2 * pi)
