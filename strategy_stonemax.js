@@ -1,19 +1,19 @@
-/* start module: strategy_random */
-$pyjs.loaded_modules['strategy_random'] = function (__mod_name__) {
-	if($pyjs.loaded_modules['strategy_random'].__was_initialized__) return $pyjs.loaded_modules['strategy_random'];
-	var $m = $pyjs.loaded_modules["strategy_random"];
-	$m.__repr__ = function() { return "<module: strategy_random>"; };
+/* start module: strategy_stonemax */
+$pyjs.loaded_modules['strategy_stonemax'] = function (__mod_name__) {
+	if($pyjs.loaded_modules['strategy_stonemax'].__was_initialized__) return $pyjs.loaded_modules['strategy_stonemax'];
+	var $m = $pyjs.loaded_modules["strategy_stonemax"];
+	$m.__repr__ = function() { return "<module: strategy_stonemax>"; };
 	$m.__was_initialized__ = true;
-	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'strategy_random';
+	if ((__mod_name__ === null) || (typeof __mod_name__ == 'undefined')) __mod_name__ = 'strategy_stonemax';
 	$m.__name__ = __mod_name__;
 
 
-	$m['random'] = $p['___import___']('random.random', null, null, false);
 	$m['Strategy'] = $p['___import___']('strategy.Strategy', null, null, false);
-	$m['RandomStrategy'] = (function(){
+	$m['Game'] = $p['___import___']('game.Game', null, null, false);
+	$m['StonemaxStrategy'] = (function(){
 		var $cls_definition = new Object();
 		var $method;
-		$cls_definition.__module__ = 'strategy_random';
+		$cls_definition.__module__ = 'strategy_stonemax';
 		$method = $pyjs__bind_method2('$$apply', function(state, liberties, mult, heuristic) {
 			if (this.__is_instance__ === true) {
 				var player = this;
@@ -26,7 +26,7 @@ $pyjs.loaded_modules['strategy_random'] = function (__mod_name__) {
 			}
 			if (typeof mult == 'undefined') mult=arguments.callee.__args__[5][1];
 			if (typeof heuristic == 'undefined') heuristic=arguments.callee.__args__[6][1];
-			var $iter2_nextval,$iter2_type,$pow1,$iter2_iter,i,heur,$iter2_idx,pos,$mul1,$iter2_array,v,$mul2,$pow2;
+			var stones,pos,heur,$pow2,$iter2_iter,$mul1,$iter2_type,opponent_stones,$iter2_idx,$div2,$div1,$mul2,$iter2_nextval,$pow1,i,newstate,$add2,$add1,v,y,x,$iter2_array;
 			if ($p['bool']($p['op_eq'](heuristic, null))) {
 				heuristic = function(){
 					var $iter1_nextval,$iter1_type,pos,$collcomp1,$iter1_iter,$iter1_idx,$iter1_array;
@@ -47,7 +47,16 @@ $pyjs.loaded_modules['strategy_random'] = function (__mod_name__) {
 				var $tupleassign1 = $p['__ass_unpack'](heuristic.__getitem__(i), 2, null);
 				pos = $tupleassign1[0];
 				heur = $tupleassign1[1];
-				v = $m['random']();
+				var $tupleassign2 = $p['__ass_unpack'](pos, 2, null);
+				x = $tupleassign2[0];
+				y = $tupleassign2[1];
+				newstate = $m['Game']['simulate_move'](x, y, player, state);
+				var $tupleassign3 = $p['__ass_unpack']($p['tuple']([$p['len']($m['Game']['stones'](player, newstate)), $p['len']($m['Game']['stones']($m['Game']['other'](player), newstate))]), 2, null);
+				stones = $tupleassign3[0];
+				opponent_stones = $tupleassign3[1];
+				v = (typeof ($div1=stones)==typeof ($div2=$p['__op_add']($add1=stones,$add2=opponent_stones)) && typeof $div1=='number' && $div2 !== 0?
+					$div1/$div2:
+					$p['op_div']($div1,$div2));
 				heuristic.__setitem__(i, $p['tuple']([pos, (typeof ($mul1=heur)==typeof ($mul2=(typeof ($pow1=v)==typeof ($pow2=mult) && typeof $pow1=='number'?
 					Math.pow($pow1,$pow2):
 					$p['op_pow']($pow1,$pow2))) && typeof $mul1=='number'?
@@ -61,15 +70,15 @@ $pyjs.loaded_modules['strategy_random'] = function (__mod_name__) {
 		var $bases = new Array($m['Strategy']);
 		var $data = $p['dict']();
 		for (var $item in $cls_definition) { $data.__setitem__($item, $cls_definition[$item]); }
-		return $p['_create_class']('RandomStrategy', $p['tuple']($bases), $data);
+		return $p['_create_class']('StonemaxStrategy', $p['tuple']($bases), $data);
 	})();
 	return this;
-}; /* end strategy_random */
+}; /* end strategy_stonemax */
 
 
-/* end module: strategy_random */
+/* end module: strategy_stonemax */
 
 
 /*
-PYJS_DEPS: ['random.random', 'random', 'strategy.Strategy', 'strategy']
+PYJS_DEPS: ['strategy.Strategy', 'strategy', 'game.Game', 'game']
 */
