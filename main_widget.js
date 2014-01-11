@@ -120,7 +120,7 @@ $pyjs.loaded_modules['main_widget'] = function (__mod_name__) {
 					self['context']['fill']();
 				}
 			}
-			$iter6_iter = game['liberties']();
+			$iter6_iter = $m['Game']['liberties']($p['getattr'](game, 'current_player'), $p['getattr'](game, 'state'));
 			$iter6_nextval=$p['__iter_prepare']($iter6_iter,false);
 			while (typeof($p['__wrapped_next']($iter6_nextval).$nextval) != 'undefined') {
 				var $tupleassign2 = $p['__ass_unpack']($iter6_nextval.$nextval, 2, null);

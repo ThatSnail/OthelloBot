@@ -5,6 +5,15 @@ from human_player import HumanPlayer
 from computer_player import ComputerPlayer
 
 USING_PYGAME = False
+STATMODE = False
+STATMODE_BOT1 = None
+STATMODE_BOT2 = None
+STATMODE_ROUNDS = 1
+results = {
+    Game.BLACK: 0,
+    Game.WHITE: 0,
+    Game.DRAW: 0
+}
 
 main_widget = None
 
@@ -19,7 +28,7 @@ color_green = (0, 128, 0)
 
 def main():
     # Init
-    if USING_PYGAME:
+    if USING_PYGAME and not STATMODE:
         from time import sleep
         import pygame
         pygame.init()
@@ -31,12 +40,13 @@ def main():
     game = Game()
     players = []
     players.append(HumanPlayer(game, Game.BLACK))
+    #players.append(ComputerPlayer(game, Game.BLACK))
     players.append(ComputerPlayer(game, Game.WHITE))
 
-    if USING_PYGAME:
+    if USING_PYGAME or STATMODE:
         while True:
             update()
-            sleep(0.01)
+            delay(0.01)
     else:
         update()
 
@@ -46,25 +56,28 @@ def update():
         # Tell bots to do stuff
         for player in players:
             if game.current_player == player.player:
-                if len(game.liberties()) == 0:
+                if len(Game.liberties(player.player, game.state)) == 0:
                     game.pass_move()
                 else:
                     player.make_move()
                 draw()
+                check_win()
                 break
     draw()
 
-def delay(ms):
+def delay(s):
+    if STATMODE:
+        return # NO TIME FOR SLEEP IN STATMODE
     if USING_PYGAME:
         from time import sleep
-        sleep(ms)
+        sleep(s)
     else:
         from pyjamas.Timer import Timer
         timer = Timer(notify=update)
-        timer.schedule(ms * 1000)
+        timer.schedule(s * 1000)
 
 def event():
-    if USING_PYGAME:
+    if USING_PYGAME and not STATMODE:
         import pygame
         # Make player move
         ev = pygame.event.get()
@@ -80,12 +93,29 @@ def handle_click(x, y):
             try:
                 player.make_move(x, y)
                 draw()
+                check_win()
                 delay(0.5)
             except InvalidMoveException:
                 return
             break
 
+def check_win():
+    if not game.is_running:
+        if STATMODE or USING_PYGAME:
+            results[game.result] += 1
+            if sum(results.values()) >= STATMODE_ROUNDS:
+                print("BLACK: {0}\nWHITE: {1}\nDRAW: {2}".format(results[Game.BLACK], results[Game.WHITE], results[Game.DRAW]))
+                sys.exit()
+        else:
+            # Alert box
+            from pyjamas import Window
+            results[game.result] += 1
+            Window.alert("BLACK: {0}\nWHITE: {1}\nDRAW: {2}".format(results[Game.BLACK], results[Game.WHITE], results[Game.DRAW]))
+        game.restart()
+
 def draw():
+    if STATMODE:
+        return # ART IS FOR SILLY HUMANITIES MAJORS, NOT STATMODE!
     if USING_PYGAME:
         import pygame
         global screen
@@ -106,7 +136,7 @@ def draw():
             }[game.state[x][y]]()
     
         # Draw liberties
-        for (x, y) in game.liberties():
+        for (x, y) in Game.liberties(game.current_player, game.state):
             pygame.draw.circle(screen, color_white, (x * SP + SP // 2, y * SP + SP // 2), 4)
 
         # Update
@@ -116,11 +146,17 @@ def draw():
 
 if __name__ == "__main__":
     # Check if run manually
-    if len(sys.argv) >= 2:
-        if sys.argv[1] == 'pygame':
-            USING_PYGAME = True
+    if 'pygame' in sys.argv[1:]:
+        USING_PYGAME = True
+    if 'statmode' in sys.argv[1:]:
+        STATMODE = True
+        import getopt
+        optlist, args = getopt.getopt(sys.argv[1:], 'n:')
+        for o, a in optlist:
+            if o == "-n":
+                STATMODE_ROUNDS = int(a)
 
-    if not USING_PYGAME:
+    if not USING_PYGAME and not STATMODE:
         import pyjd
         from main_widget import MainWidget
         from pyjamas.ui.FocusPanel import FocusPanel
